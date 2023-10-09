@@ -440,7 +440,7 @@ GameObject:
   - component: {fileID: 1426665983}
   - component: {fileID: 1426665982}
   m_Layer: 0
-  m_Name: r
+  m_Name: Sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
