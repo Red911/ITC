@@ -1,8 +1,10 @@
+using Game.Script.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 using EasyButtons;
+
 
 public class PlayerMove : MonoBehaviour
 {
@@ -28,5 +30,13 @@ public class PlayerMove : MonoBehaviour
     private void Move() => _isMoving = true;
 
 
+
+    [SerializeField, Header("AUDIO")] private AudioClip _testSFX;
+
+
+    private void Start()
+    {
+        ServiceLocator.Get().PlaySound(_testSFX);
+    }
 
 }
