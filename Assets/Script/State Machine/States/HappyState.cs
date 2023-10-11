@@ -1,6 +1,7 @@
 using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 namespace Game
@@ -30,8 +31,19 @@ namespace Game
             enemy.CurrentState = null;
             //enemy.Movement.CanMove = false;
         }
+        private IEnumerator HappyTalk()
+        {
+            for(int i = 0; i < _dialog.dialogs.Length; i++)
+            {
+                base.EnemyTalk(false, i);
+                yield return new WaitForSeconds(EnemyController.MaxTimeBetweenDialog);
+            }
+            this.ExitState(EnemyController);
+            EnemyController.NeutralState.EnterState(EnemyController);
+        }
 
-
+        [Button]
+        private void Talk() => StartCoroutine(HappyTalk());
 
     }
 }

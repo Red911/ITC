@@ -19,7 +19,7 @@ namespace Game
         [SerializeField] private MeshRenderer _enemyMaterial;
         public MeshRenderer EnemyMaterial { get => _enemyMaterial; set => _enemyMaterial = value; }
 
-        [SerializeField, BoxGroup("Dialogues"), TextArea()] private string[] _dialog;
+        [SerializeField] protected DialoguesScriptable _dialog;
         private List<string> dialogTalked = new List<string>();
 
         public abstract void EnterState(EnemyController enemy);
@@ -34,23 +34,27 @@ namespace Game
             - Attend avant de finir (pour dialog auto)
          */
         //protected void Talk() => StartCoroutine(EnemyTalk());
-        protected void EnemyTalk()
+        protected void EnemyTalk(bool randomTalk, int talkId = 0)
         {
-            if (_dialog.Length <= 0) return;
-            if (dialogTalked.Count >= _dialog.Length)
+            if (_dialog.dialogs.Length <= 0) return;
+            if (dialogTalked.Count >= _dialog.dialogs.Length)
             {
                 dialogTalked.Clear();
                 Debug.Log("CLEARED");
             }
 
             int randomDialogId;
-            do
+            if(randomTalk)
             {
-                randomDialogId = Random.Range(0, _dialog.Length);
+                do
+                {
+                    randomDialogId = Random.Range(0, _dialog.dialogs.Length);
+                }
+                while (dialogTalked.Contains(_dialog.dialogs[randomDialogId]));
+                Debug.Log(_dialog.dialogs[randomDialogId]);
+                dialogTalked.Add(_dialog.dialogs[randomDialogId]);
             }
-            while (dialogTalked.Contains(_dialog[randomDialogId]));
-            Debug.Log(_dialog[randomDialogId]);
-            dialogTalked.Add(_dialog[randomDialogId]);
+            else Debug.Log(_dialog.dialogs[talkId]);
         }
     }
 }

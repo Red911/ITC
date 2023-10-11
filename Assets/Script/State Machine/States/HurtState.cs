@@ -36,7 +36,7 @@ namespace Game
         private void Talk() => StartCoroutine(HurtTalk());
         private IEnumerator HurtTalk()
         {
-            base.EnemyTalk();
+            base.EnemyTalk(true);
             yield return new WaitForSeconds(EnemyController.MaxTimeBetweenDialog);
             this.ExitState(EnemyController);
             EnemyController.NeutralState.EnterState(EnemyController);
