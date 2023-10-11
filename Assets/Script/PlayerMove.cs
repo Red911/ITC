@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Cinemachine;
-using EasyButtons;
+using NaughtyAttributes;
 
 
 public class PlayerMove : MonoBehaviour
