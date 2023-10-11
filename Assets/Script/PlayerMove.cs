@@ -29,7 +29,6 @@ public class PlayerMove : MonoBehaviour
         if (_isMoving && Vector3.Distance(transform.position, endingPoint.position) > 0.5) 
         {
            
-
             cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = shakeIntensity;
             cinemachineBasicMultiChannelPerlin.m_FrequencyGain = shakeFrequency;
             
