@@ -43,6 +43,7 @@ public class PlayerMove : MonoBehaviour
             rb.velocity = Vector3.zero;
             cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0f;
             cinemachineBasicMultiChannelPerlin.m_FrequencyGain = 0f;
+            _isMoving = false;
         }
     }
 
