@@ -45,6 +45,8 @@ namespace Game
         [Button]
         private void EnterHappyState() => EnemyController.HappyState.EnterState(EnemyController);
 
+        [Button]
+        private void NeutralTalk() => base.EnemyTalk(true);
 
 
     }
