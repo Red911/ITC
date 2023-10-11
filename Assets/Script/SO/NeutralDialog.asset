@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: NeutralDialog
   m_EditorClassIdentifier: 
-  dialogs: []
+  dialogs:
+  - neutral 1
+  - neutral 2
+  - neutral 3

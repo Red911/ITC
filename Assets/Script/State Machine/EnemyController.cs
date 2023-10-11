@@ -51,6 +51,17 @@ namespace Game
 
         bool facingRight;
 
+        public enum Phase
+        {
+            INTRO,
+            PHASE1,
+            INTERMEDIAIRE,
+            PHASE2,
+            WIN
+        }
+
+        public Phase enemyPhase;
+
         private void Start()
         {
             currentState = NeutralState;

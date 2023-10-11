@@ -9,20 +9,29 @@ namespace Game
     public class NeutralState : EnemyState  
     {
         
-        public enum Phase
-        {
-            INTRO,
-            PHASE1,
-            INTERMEDIAIRE,
-            PHASE2
-        }
-
-        public Phase enemyPhase;
+        
+        [SerializeField]
+        private DialoguesScriptable introDialog;
+        
+        [SerializeField]
+        private DialoguesScriptable intermediaireDialog;
         public override void EnterState(EnemyController enemy)
         {
             enemy.CurrentState = this;
             EnemyController = enemy;
             EnemyMaterial.material = _material;
+            switch(enemy.enemyPhase)
+            {
+                case EnemyController.Phase.INTRO:
+                    StartCoroutine(NeutralTalk(introDialog));
+                    enemy.enemyPhase = EnemyController.Phase.PHASE1;
+                break;
+
+                case EnemyController.Phase.INTERMEDIAIRE:
+                    StartCoroutine(NeutralTalk(intermediaireDialog));
+                    enemy.enemyPhase = EnemyController.Phase.PHASE2;
+                break;
+            }
             //enemy.Movement.CanMove = true;
         }
 
@@ -46,8 +55,24 @@ namespace Game
         private void EnterHappyState() => EnemyController.HappyState.EnterState(EnemyController);
 
         [Button]
-        private void NeutralTalk() => base.EnemyTalk(true);
+        private void TalkNeutral() => base.EnemyTalk(true);
 
+        private IEnumerator NeutralTalk(DialoguesScriptable dialog = null)
+        {
+            if(dialog != null)
+            {
+                for (int i = 0; i < dialog.dialogs.Length; i++)
+                {
+                    base.EnemyTalk(dialog, i);
+                    yield return new WaitForSeconds(EnemyController.MaxTimeBetweenDialog);
+                }
+                TalkNeutral();
+            }
+            else base.EnemyTalk(true);
+
+            this.ExitState(EnemyController);
+            EnemyController.NeutralState.EnterState(EnemyController);
+        }
 
     }
 }

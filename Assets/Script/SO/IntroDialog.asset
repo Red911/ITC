@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: HurtDialog
+  m_Name: IntroDialog
   m_EditorClassIdentifier: 
   dialogs:
-  - hurt 1
-  - hurt 2
-  - hurt 3
+  - intro 1
+  - intro 2
+  - intro 3
