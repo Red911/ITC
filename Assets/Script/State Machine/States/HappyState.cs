@@ -17,15 +17,19 @@ namespace Game
             EnemyController = enemy;
             enemy.CurrentState = this;
             EnemyMaterial.material = _material;
+            theDialogue.Ev += OnDialogFinish;
 
             switch(enemy.enemyPhase)
             {
                 case EnemyController.Phase.PHASE1:
-                    StartCoroutine(HappyTalk(_dialog));
+                    //StartCoroutine(HappyTalk(_dialog));
+                    theDialogue.SetDialogAndTypeSentence(_dialog, 0);
+
                     enemy.enemyPhase = EnemyController.Phase.INTERMEDIAIRE;
                 break;
                 case EnemyController.Phase.PHASE2:
-                    StartCoroutine(HappyTalk(_winDialog));
+                    //StartCoroutine(HappyTalk(_winDialog));
+                    theDialogue.SetDialogAndTypeSentence(_winDialog, 0);
                     enemy.enemyPhase = EnemyController.Phase.WIN;
                 break;
             }
@@ -42,15 +46,22 @@ namespace Game
         public override void ExitState(EnemyController enemy)
         {
             enemy.CurrentState = null;
+            theDialogue.Ev -= OnDialogFinish;
             //enemy.Movement.CanMove = false;
         }
         private IEnumerator HappyTalk(DialoguesScriptable dialog)
         {
             for(int i = 0; i < _dialog.dialogs.Length; i++)
             {
-                base.EnemyTalk(false, i);
+                base.EnemyTalk(dialog, i);
                 yield return new WaitForSeconds(EnemyController.MaxTimeBetweenDialog);
             }
+            this.ExitState(EnemyController);
+            EnemyController.NeutralState.EnterState(EnemyController);
+        }
+
+        public override void OnDialogFinish()
+        {
             this.ExitState(EnemyController);
             EnemyController.NeutralState.EnterState(EnemyController);
         }

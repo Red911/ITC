@@ -1280,7 +1280,7 @@ MonoBehaviour:
   _neutralState: {fileID: 2110494477}
   _dashState: {fileID: 2110494478}
   _happyState: {fileID: 2110494479}
-  _maxTimeBetweenDialog: 3
+  _maxTimeBetweenDialog: 0.5
   _timeBetweenDialog: 0
   dashCDMax: 0
   enemyPhase: 0

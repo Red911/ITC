@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GetTheDialogue : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class GetTheDialogue : MonoBehaviour
     [SerializeField] private float speedText = .2f;
     
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private event UnityAction ev;
+    public UnityAction Ev { get => ev;  set => ev = value; }
+
+    private bool randomDialog;
 
     private int _currentLine = 0;
 
@@ -27,7 +32,12 @@ public class GetTheDialogue : MonoBehaviour
     [Button]
     private void NextDialogue()
     {
-        if(_currentLine == _dialoguesSo.dialogs.Length - 1) DialogueFinish();
+        if (_currentLine == _dialoguesSo.dialogs.Length - 1 || randomDialog)
+        {
+            randomDialog = false;
+            DialogueFinish();
+            return;
+        }
 
         _currentLine++;
         
@@ -36,7 +46,11 @@ public class GetTheDialogue : MonoBehaviour
         StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine]));
     }
 
-    private void DialogueFinish() => dialoguePanel.SetActive(false);
+    private void DialogueFinish()
+    {
+        dialoguePanel.SetActive(false);
+        ev?.Invoke();
+    }
 
     IEnumerator TypeSentence(string sentence)
     {
@@ -47,6 +61,19 @@ public class GetTheDialogue : MonoBehaviour
             yield  return new WaitForSeconds(speedText);
         }
     }
+
+    public void SetDialogAndTypeSentence(DialoguesScriptable dialog, int id, bool isRandomDialog = false)
+    {
+        _dialoguesSo = dialog;
+        _currentLine = id;
+        randomDialog = isRandomDialog;
+        //StopAllCoroutines();
+        if (!dialoguePanel.activeSelf) ShowDialogText();
+        StopAllCoroutines();
+        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine]));
+    }
+
+    private void ShowDialogText() => dialoguePanel.SetActive(true);
     
     
 }

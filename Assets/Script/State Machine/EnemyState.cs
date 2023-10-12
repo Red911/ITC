@@ -20,7 +20,10 @@ namespace Game
         public MeshRenderer EnemyMaterial { get => _enemyMaterial; set => _enemyMaterial = value; }
 
         [SerializeField] protected DialoguesScriptable _dialog;
-        private List<string> dialogTalked = new List<string>();
+        protected List<string> _dialogTalked = new List<string>();
+
+        [SerializeField]
+        protected GetTheDialogue theDialogue;
 
         public abstract void EnterState(EnemyController enemy);
         public abstract void UpdateState(EnemyController enemy);
@@ -37,22 +40,22 @@ namespace Game
         protected void EnemyTalk(bool randomTalk, int talkId = 0)
         {
             if (_dialog.dialogs.Length <= 0) return;
-            if (dialogTalked.Count >= _dialog.dialogs.Length)
+            if (_dialogTalked.Count >= _dialog.dialogs.Length)
             {
-                dialogTalked.Clear();
+                _dialogTalked.Clear();
                 Debug.Log("CLEARED");
             }
 
             int randomDialogId;
-            if(randomTalk)
+            if (randomTalk)
             {
                 do
                 {
                     randomDialogId = Random.Range(0, _dialog.dialogs.Length);
                 }
-                while (dialogTalked.Contains(_dialog.dialogs[randomDialogId]));
+                while (_dialogTalked.Contains(_dialog.dialogs[randomDialogId]));
                 Debug.Log(_dialog.dialogs[randomDialogId]);
-                dialogTalked.Add(_dialog.dialogs[randomDialogId]);
+                _dialogTalked.Add(_dialog.dialogs[randomDialogId]);
             }
             else Debug.Log(_dialog.dialogs[talkId]);
         }
@@ -61,5 +64,27 @@ namespace Game
         {
             Debug.Log(dialog.dialogs[id]);
         }
+
+        public void AddDialogOnTalkedDialog(string text)
+        {
+            _dialogTalked.Add(text);
+        }
+
+        public abstract void OnDialogFinish();
+
+        /*public int CheckIdAlreadyTalked()
+        {
+            int randomDialogId;
+            do
+            {
+                randomDialogId = Random.Range(0, _dialog.dialogs.Length);
+            }
+            while (_dialogTalked.Contains(_dialog.dialogs[randomDialogId]));
+            Debug.Log(_dialog.dialogs[randomDialogId]);
+            _dialogTalked.Add(_dialog.dialogs[randomDialogId]);
+            return randomDialogId;
+        }*/
+
+
     }
 }

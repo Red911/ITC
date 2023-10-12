@@ -23,13 +23,22 @@ namespace Game
             switch(enemy.enemyPhase)
             {
                 case EnemyController.Phase.INTRO:
-                    StartCoroutine(NeutralTalk(introDialog));
+                    theDialogue.SetDialogAndTypeSentence(introDialog, 0);
+                    //StartCoroutine(NeutralTalk(introDialog));
                     enemy.enemyPhase = EnemyController.Phase.PHASE1;
+                    _dialogTalked.Clear();
+                    
                 break;
 
                 case EnemyController.Phase.INTERMEDIAIRE:
-                    StartCoroutine(NeutralTalk(intermediaireDialog));
+                    //StartCoroutine(NeutralTalk(intermediaireDialog));
+                    theDialogue.SetDialogAndTypeSentence(intermediaireDialog, 0);
                     enemy.enemyPhase = EnemyController.Phase.PHASE2;
+                    _dialogTalked.Clear();
+                break;
+                case EnemyController.Phase.WIN:
+                    Debug.Log("WINNNN");
+                   EnemyController.gameObject.SetActive(false);
                 break;
             }
             //enemy.Movement.CanMove = true;
@@ -55,7 +64,7 @@ namespace Game
         private void EnterHappyState() => EnemyController.HappyState.EnterState(EnemyController);
 
         [Button]
-        private void TalkNeutral() => base.EnemyTalk(true);
+        private void TalkNeutral() => theDialogue.SetDialogAndTypeSentence(_dialog, Random.Range(0, _dialog.dialogs.Length), true);
 
         private IEnumerator NeutralTalk(DialoguesScriptable dialog = null)
         {
@@ -72,6 +81,11 @@ namespace Game
 
             this.ExitState(EnemyController);
             EnemyController.NeutralState.EnterState(EnemyController);
+        }
+
+        public override void OnDialogFinish()
+        {
+            return;
         }
 
     }

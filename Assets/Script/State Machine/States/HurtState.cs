@@ -14,9 +14,10 @@ namespace Game
         {
             EnemyController = enemy;
             enemy.CurrentState = this;
+            theDialogue.Ev += OnDialogFinish;
             EnemyMaterial.material = _material;
-
-
+            //StartCoroutine(HurtTalk());
+            theDialogue.SetDialogAndTypeSentence(_dialog, Random.Range(0, _dialog.dialogs.Length), true);
         }
 
         public override void UpdateState(EnemyController enemy)
@@ -28,12 +29,13 @@ namespace Game
         public override void ExitState(EnemyController enemy)
         {
             enemy.CurrentState = null;
+            theDialogue.Ev -= OnDialogFinish;
             //if (!enemy.IsMoving) enemy.Movement.Move(Vector2.zero);
 
         }
 
-        [Button]
-        private void Talk() => StartCoroutine(HurtTalk());
+        /*[Button]
+        private void Talk() => StartCoroutine(HurtTalk());*/
         private IEnumerator HurtTalk()
         {
             base.EnemyTalk(true);
@@ -42,6 +44,10 @@ namespace Game
             EnemyController.NeutralState.EnterState(EnemyController);
         }
 
-        
+        public override void OnDialogFinish()
+        {
+            this.ExitState(EnemyController);
+            EnemyController.NeutralState.EnterState(EnemyController);
+        }
     }
 }
