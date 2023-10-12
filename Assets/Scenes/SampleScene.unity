@@ -1129,6 +1129,7 @@ MonoBehaviour:
   _dialoguesSo: {fileID: 11400000, guid: 02372c60e57966143a89a3ed65fd8ea9, type: 2}
   _nameText: {fileID: 643384458}
   _dialogueText: {fileID: 344880437}
+  speedText: 0.2
 --- !u!114 &1309306458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1836,6 +1837,7 @@ MonoBehaviour:
   _maxTimeBetweenDialog: 3
   _timeBetweenDialog: 0
   dashCDMax: 0
+  enemyPhase: 0
 --- !u!114 &2110494477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1851,7 +1853,8 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
   _enemyMaterial: {fileID: 994455540}
   _dialog: {fileID: 0}
-  enemyPhase: 1
+  introDialog: {fileID: 0}
+  intermediaireDialog: {fileID: 0}
 --- !u!114 &2110494478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1882,6 +1885,7 @@ MonoBehaviour:
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
   _enemyMaterial: {fileID: 994455540}
   _dialog: {fileID: 0}
+  _winDialog: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
