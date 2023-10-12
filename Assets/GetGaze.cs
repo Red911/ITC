@@ -10,6 +10,7 @@ public class GetGaze : MonoBehaviour
     [SerializeField] private MeshRenderer mesh;
     [SerializeField] private Material redMat;
     private Material _startMat;
+    
 
     private void Start()
     {
@@ -18,13 +19,6 @@ public class GetGaze : MonoBehaviour
 
     private void Update()
     {
-        if (_gazeAware.HasGazeFocus)
-        {
-            mesh.material = redMat;
-        }
-        else
-        {
-            mesh.material = _startMat;
-        }
+        mesh.material = _gazeAware.HasGazeFocus ? redMat : _startMat;
     }
 }
