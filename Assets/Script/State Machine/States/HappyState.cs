@@ -9,6 +9,7 @@ namespace Game
     public class HappyState : EnemyState
     {
         //[SerializeField, BoxGroup("Dialogues"), TextArea()] private string[] _happyDialog;
+        [SerializeField]private DialoguesScriptable _winDialog;
 
         public override void EnterState(EnemyController enemy)
         {
@@ -16,6 +17,18 @@ namespace Game
             EnemyController = enemy;
             enemy.CurrentState = this;
             EnemyMaterial.material = _material;
+
+            switch(enemy.enemyPhase)
+            {
+                case EnemyController.Phase.PHASE1:
+                    StartCoroutine(HappyTalk(_dialog));
+                    enemy.enemyPhase = EnemyController.Phase.INTERMEDIAIRE;
+                break;
+                case EnemyController.Phase.PHASE2:
+                    StartCoroutine(HappyTalk(_winDialog));
+                    enemy.enemyPhase = EnemyController.Phase.WIN;
+                break;
+            }
             //enemy.Movement.CanMove = true;
         }
 
@@ -31,7 +44,7 @@ namespace Game
             enemy.CurrentState = null;
             //enemy.Movement.CanMove = false;
         }
-        private IEnumerator HappyTalk()
+        private IEnumerator HappyTalk(DialoguesScriptable dialog)
         {
             for(int i = 0; i < _dialog.dialogs.Length; i++)
             {
@@ -42,8 +55,8 @@ namespace Game
             EnemyController.NeutralState.EnterState(EnemyController);
         }
 
-        [Button]
-        private void Talk() => StartCoroutine(HappyTalk());
+        /*[Button]
+        private void Talk() => StartCoroutine(HappyTalk());*/
 
     }
 }

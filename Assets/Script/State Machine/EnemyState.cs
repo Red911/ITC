@@ -56,5 +56,10 @@ namespace Game
             }
             else Debug.Log(_dialog.dialogs[talkId]);
         }
+
+        protected void EnemyTalk(DialoguesScriptable dialog, int id)
+        {
+            Debug.Log(dialog.dialogs[id]);
+        }
     }
 }

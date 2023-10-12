@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: HappyDialog
   m_EditorClassIdentifier: 
-  dialogs: []
+  dialogs:
+  - happy 1
+  - happy 2
+  - happy 3
