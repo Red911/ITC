@@ -72,6 +72,9 @@ namespace Game
 
         public abstract void OnDialogFinish();
 
+        public void ResetTalkedDialog() => _dialogTalked.Clear();
+            
+
         /*public int CheckIdAlreadyTalked()
         {
             int randomDialogId;

@@ -1,3 +1,4 @@
+using Game;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,18 +14,46 @@ public class GetGaze : MonoBehaviour
     private Material _startMat;
 
     [SerializeField]private KeyCode input;
+
+    private Player player;
+
+    public enum GazeType
+    {
+        VALID,
+        INVALID,
+        NEUTRAL
+    
+    }
+
+    public GazeType _type;
     
 
     private void Start()
     {
         _startMat = mesh.material;
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
     private void Update()
     {
         if (_gazeAware.HasGazeFocus && Input.GetKeyDown(input))
         {
-            mesh.material = redMat;
+            if (player.IsTalking) return;
+           switch(_type)
+            {
+                case GazeType.VALID:
+                    player.CurrentEnemy.NeutralState.EnterHappyState();
+                break;
+                
+                case GazeType.INVALID:
+                    player.DamagePlayer(1);
+                    player.CurrentEnemy.NeutralState.EnterHurtState();
+                break;
+                
+                case GazeType.NEUTRAL:
+                    player.CurrentEnemy.NeutralState.TalkNeutral();
+                break;
+            }
         }
         
     }

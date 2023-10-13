@@ -57,14 +57,11 @@ namespace Game
             //enemy.Movement.CanMove = false;
         }
 
-        [Button]
-        private void EnterHurtState() => EnemyController.HurtState.EnterState(EnemyController);
+        public void EnterHurtState() => EnemyController.HurtState.EnterState(EnemyController);
         
-        [Button]
-        private void EnterHappyState() => EnemyController.HappyState.EnterState(EnemyController);
+        public void EnterHappyState() => EnemyController.HappyState.EnterState(EnemyController);
 
-        [Button]
-        private void TalkNeutral() => theDialogue.SetDialogAndTypeSentence(_dialog, Random.Range(0, _dialog.dialogs.Length), true);
+        public void TalkNeutral() => theDialogue.SetDialogAndTypeSentence(_dialog, Random.Range(0, _dialog.dialogs.Length), true);
 
         private IEnumerator NeutralTalk(DialoguesScriptable dialog = null)
         {

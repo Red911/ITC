@@ -9,15 +9,11 @@ namespace Game
     public class EnemyController : MonoBehaviour
     {
         //[SerializeField, BoxGroup("Dependencies")] EntityMovement _movement;
-        [SerializeField, BoxGroup("Dependencies")] Transform _spriteTransform;
-        [SerializeField, BoxGroup("Dependencies")] Transform _cursor;
-        public Transform SpriteTransform { get => _spriteTransform; set => _spriteTransform = value; }
-        public Transform Cursor { get => _cursor; set => _cursor = value; }
 
         #region States
         [SerializeField, BoxGroup("Dependencies")] EnemyStateMachine _stateMachine;
 
-        [SerializeField]EnemyState currentState;
+        [SerializeField] EnemyState currentState;
         public EnemyState CurrentState { get => currentState; set => currentState = value; }
         //public EntityMovement Movement { get => _movement; set => _movement = value; }
         public EnemyStateMachine StateMachine { get => _stateMachine; set => _stateMachine = value; }
@@ -29,27 +25,12 @@ namespace Game
         [SerializeField, BoxGroup("States")] HurtState _dashState;
         [SerializeField, BoxGroup("States")] HappyState _happyState;
 
-        [SerializeField]private float _maxTimeBetweenDialog = 3f;
+        [SerializeField] private float _maxTimeBetweenDialog = 3f;
         public float MaxTimeBetweenDialog { get => _maxTimeBetweenDialog; }
-        [SerializeField]private float _timeBetweenDialog;
+        [SerializeField] private float _timeBetweenDialog;
 
+        private Player player;
         #endregion
-
-        bool isMoving;
-        public bool IsMoving { get => isMoving; set => isMoving = value; }
-        Vector2 move;
-        public Vector2 Move { get => move; set => move = value; }
-
-        Vector2 moveDir { get; set; }
-
-        bool canDash;
-        float dashCD;
-        [SerializeField] float dashCDMax;
-        public bool CanDash { get => canDash; set => canDash = value; }
-        public float DashCD { get => dashCD; set => dashCD = value; }
-        public float DashCDMax { get => dashCDMax; set => dashCDMax = value; }
-
-        bool facingRight;
 
         public enum Phase
         {
@@ -64,31 +45,19 @@ namespace Game
 
         private void Start()
         {
+            player = GameObject.FindWithTag("Player").GetComponent<Player>();
+            player.CurrentEnemy = this;
             currentState = NeutralState;
             currentState.EnterState(this);
 
-            canDash = true;
-            facingRight = true;
             _timeBetweenDialog = _maxTimeBetweenDialog;
         }
 
-        private void FixedUpdate()
+        public void ResetEnemy()
         {
-            currentState.UpdateState(this);
-
-            if (dashCD > 0) dashCD = Mathf.Clamp(dashCD - Time.deltaTime, 0, dashCDMax);
-            else if (!canDash) canDash = true;
-
-            if (move.x > 0 && !facingRight || move.x < 0 && facingRight) Flip();
+            enemyPhase = Phase.PHASE1;
+            _neutralState.ResetTalkedDialog();
         }
 
-        public void SetMoveDir(Vector2 mDir) => moveDir = mDir;
-
-        void Flip()
-        {
-            facingRight = !facingRight;
-
-            _spriteTransform.Rotate(0f, 180f, 0f);
-        }
     }
 }

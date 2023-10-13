@@ -5,6 +5,9 @@ using NaughtyAttributes;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using static GetGaze;
+using UnityEngine.Windows;
+using Unity.VisualScripting;
 
 public class GetTheDialogue : MonoBehaviour
 {
@@ -18,23 +21,36 @@ public class GetTheDialogue : MonoBehaviour
     [SerializeField] private event UnityAction ev;
     public UnityAction Ev { get => ev;  set => ev = value; }
 
-    private bool randomDialog;
+    private bool _randomDialog;
 
     private int _currentLine = 0;
 
+    [SerializeField] private KeyCode input;
+
+    private Player player;
     private void Start()
     {
         _nameText.text = _dialoguesSo.name;
         _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
         StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine]));
+        player = GameObject.FindWithTag("Player").GetComponent<Player>();
+    }
+
+    private void Update()
+    {
+        if (UnityEngine.Input.GetKeyDown(input))
+        {
+            NextDialogue();
+        }
+
     }
 
     [Button]
     private void NextDialogue()
     {
-        if (_currentLine == _dialoguesSo.dialogs.Length - 1 || randomDialog)
+        if (_currentLine == _dialoguesSo.dialogs.Length - 1 || _randomDialog)
         {
-            randomDialog = false;
+            _randomDialog = false;
             DialogueFinish();
             return;
         }
@@ -49,6 +65,7 @@ public class GetTheDialogue : MonoBehaviour
     private void DialogueFinish()
     {
         dialoguePanel.SetActive(false);
+        player.IsTalking = false;
         ev?.Invoke();
     }
 
@@ -66,8 +83,9 @@ public class GetTheDialogue : MonoBehaviour
     {
         _dialoguesSo = dialog;
         _currentLine = id;
-        randomDialog = isRandomDialog;
+        _randomDialog = isRandomDialog;
         //StopAllCoroutines();
+        player.IsTalking = true;
         if (!dialoguePanel.activeSelf) ShowDialogText();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine]));
