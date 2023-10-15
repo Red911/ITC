@@ -15,6 +15,8 @@ namespace Game
         
         [SerializeField]
         private DialoguesScriptable intermediaireDialog;
+
+        [SerializeField] AudioClip sound;
         public override void EnterState(EnemyController enemy)
         {
             enemy.CurrentState = this;
@@ -23,7 +25,7 @@ namespace Game
             switch(enemy.enemyPhase)
             {
                 case EnemyController.Phase.INTRO:
-                    theDialogue.SetDialogAndTypeSentence(introDialog, 0);
+                    theDialogue.SetDialogAndTypeSentence(introDialog, 0, sound);
                     //StartCoroutine(NeutralTalk(introDialog));
                     enemy.enemyPhase = EnemyController.Phase.PHASE1;
                     _dialogTalked.Clear();
@@ -32,7 +34,7 @@ namespace Game
 
                 case EnemyController.Phase.INTERMEDIAIRE:
                     //StartCoroutine(NeutralTalk(intermediaireDialog));
-                    theDialogue.SetDialogAndTypeSentence(intermediaireDialog, 0);
+                    theDialogue.SetDialogAndTypeSentence(intermediaireDialog, 0, sound);
                     enemy.enemyPhase = EnemyController.Phase.PHASE2;
                     _dialogTalked.Clear();
                 break;
@@ -61,6 +63,7 @@ namespace Game
         
         public void EnterHappyState() => EnemyController.HappyState.EnterState(EnemyController);
 
+        [Button]
         public void TalkNeutral() => theDialogue.SetDialogAndTypeSentence(_dialog, Random.Range(0, _dialog.dialogs.Length), true);
 
         private IEnumerator NeutralTalk(DialoguesScriptable dialog = null)

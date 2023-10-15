@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: NeutralDialog
   m_EditorClassIdentifier: 
   name: GPMTV
+  clip: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   dialogs:
   - Je suis GPMTV
   - "Je d\xE9teste Duck"

@@ -8,6 +8,7 @@ using UnityEngine.Events;
 using static GetGaze;
 using UnityEngine.Windows;
 using Unity.VisualScripting;
+using Game.Script.SoundManager;
 
 public class GetTheDialogue : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class GetTheDialogue : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private TextMeshProUGUI _dialogueText;
     
-    [SerializeField] private float speedText = .2f;
+    [SerializeField] private float speedText = .1f;
+    [SerializeField] private float spaceSpeedText = .2f;
     
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private event UnityAction ev;
@@ -28,11 +30,12 @@ public class GetTheDialogue : MonoBehaviour
     [SerializeField] private KeyCode input;
 
     private Player player;
+
     private void Start()
     {
         _nameText.text = _dialoguesSo.name;
         _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
-        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine]));
+        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine], _dialoguesSo.clip));
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
@@ -59,7 +62,7 @@ public class GetTheDialogue : MonoBehaviour
         
         _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine]));
+        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine], _dialoguesSo.clip)) ;
     }
 
     private void DialogueFinish()
@@ -69,13 +72,15 @@ public class GetTheDialogue : MonoBehaviour
         ev?.Invoke();
     }
 
-    IEnumerator TypeSentence(string sentence)
+    IEnumerator TypeSentence(string sentence, AudioClip sound = null)
     {
         _dialogueText.text = "";
         foreach (var letters in sentence)
         {
             _dialogueText.text += letters;
-            yield  return new WaitForSeconds(speedText);
+            ServiceLocator.Get().PlaySound(sound);
+            if (letters != ' ') yield return new WaitForSeconds(speedText);
+            else yield return new WaitForSeconds(spaceSpeedText);
         }
     }
 
@@ -88,7 +93,7 @@ public class GetTheDialogue : MonoBehaviour
         player.IsTalking = true;
         if (!dialoguePanel.activeSelf) ShowDialogText();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine]));
+        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine], dialog.clip));
     }
 
     private void ShowDialogText() => dialoguePanel.SetActive(true);
