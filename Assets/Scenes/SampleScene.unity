@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 670538877}
   - component: {fileID: 670538882}
   m_Layer: 0
-  m_Name: NEUTRAL_EyeKeep
+  m_Name: RIGHT_EyeKeep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -972,7 +972,7 @@ GameObject:
   - component: {fileID: 677434891}
   - component: {fileID: 677434890}
   m_Layer: 0
-  m_Name: VALID_EyeKeep
+  m_Name: UP_EyeKeep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1087,7 +1087,7 @@ Transform:
   m_GameObject: {fileID: 677434889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98, y: 1.73, z: 3.12}
+  m_LocalPosition: {x: 2.98, y: 4.48, z: 3.12}
   m_LocalScale: {x: 1.8485, y: 1.8485, z: 1.8485}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 1143234447}
   - component: {fileID: 1143234446}
   m_Layer: 0
-  m_Name: INVALID_EyeKeep
+  m_Name: LEFT_EyeKeep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1544,7 +1544,7 @@ Transform:
   m_GameObject: {fileID: 1143234445}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98, y: 1.73, z: 3.12}
+  m_LocalPosition: {x: 5.73, y: 1.73, z: 3.12}
   m_LocalScale: {x: 1.8485, y: 1.8485, z: 1.8485}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1606,6 +1606,7 @@ MonoBehaviour:
   _nameText: {fileID: 643384458}
   _dialogueText: {fileID: 344880437}
   speedText: 0.1
+  spaceSpeedText: 0.2
   dialoguePanel: {fileID: 1309306455}
   input: 32
 --- !u!114 &1309306458
@@ -2360,6 +2361,15 @@ MonoBehaviour:
   _happyState: {fileID: 2110494479}
   _maxTimeBetweenDialog: 3
   _timeBetweenDialog: 0
+  _enemyDial:
+  - _phaseName: INTRO
+    _dialog: {fileID: 11400000, guid: 456ce63eb0ec285439e4e1bb9f56cdc8, type: 2}
+    _rightObject: {fileID: 0}
+  - _phaseName: PHASE1
+    _dialog: {fileID: 11400000, guid: 02372c60e57966143a89a3ed65fd8ea9, type: 2}
+    _rightObject: {fileID: 677434890}
+  _maxPhase: 2
+  _currentPhase: 0
   enemyPhase: 0
 --- !u!114 &2110494477
 MonoBehaviour:
@@ -2375,11 +2385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
   _enemyMaterial: {fileID: 994455540}
-  _dialog: {fileID: 11400000, guid: 02372c60e57966143a89a3ed65fd8ea9, type: 2}
   theDialogue: {fileID: 1309306457}
-  introDialog: {fileID: 11400000, guid: 456ce63eb0ec285439e4e1bb9f56cdc8, type: 2}
-  intermediaireDialog: {fileID: 11400000, guid: a29e549612bd56349aac0086a2898531,
-    type: 2}
+  sound: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
 --- !u!114 &2110494478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2394,7 +2401,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
   _enemyMaterial: {fileID: 994455540}
-  _dialog: {fileID: 11400000, guid: ddba68d4746ea3a458bfaeac1b299fb4, type: 2}
   theDialogue: {fileID: 1309306457}
 --- !u!114 &2110494479
 MonoBehaviour:
@@ -2410,7 +2416,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
   _enemyMaterial: {fileID: 994455540}
-  _dialog: {fileID: 11400000, guid: 442ab1e5e8f9cd04899359672d3d1df9, type: 2}
   theDialogue: {fileID: 1309306457}
   _winDialog: {fileID: 11400000, guid: cf35d9e3309ad1040919f7a06f1aadb8, type: 2}
 --- !u!1660057539 &9223372036854775807

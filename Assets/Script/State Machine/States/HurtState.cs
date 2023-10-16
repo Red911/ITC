@@ -17,7 +17,7 @@ namespace Game
             theDialogue.Ev += OnDialogFinish;
             EnemyMaterial.material = _material;
             //StartCoroutine(HurtTalk());
-            theDialogue.SetDialogAndTypeSentence(_dialog, Random.Range(0, _dialog.dialogs.Length), true);
+            theDialogue.SetDialogAndTypeSentence(enemy._enemyDial[EnemyController.CurrentPhase]._dialog, Random.Range(0, enemy._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs.Length), true);
         }
 
         public override void UpdateState(EnemyController enemy)

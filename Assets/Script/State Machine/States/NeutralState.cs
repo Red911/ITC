@@ -2,19 +2,13 @@ using NaughtyAttributes;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using UnityEngine;
 
 namespace Game
 {
     public class NeutralState : EnemyState  
     {
-        
-        
-        [SerializeField]
-        private DialoguesScriptable introDialog;
-        
-        [SerializeField]
-        private DialoguesScriptable intermediaireDialog;
 
         [SerializeField] AudioClip sound;
         public override void EnterState(EnemyController enemy)
@@ -24,24 +18,35 @@ namespace Game
             EnemyMaterial.material = _material;
             switch(enemy.enemyPhase)
             {
-                case EnemyController.Phase.INTRO:
-                    theDialogue.SetDialogAndTypeSentence(introDialog, 0, sound);
+                case EnemyController.EnemyPhase.INTRO:
+                    enemy.CurrentPhase = (int)EnemyController.EnemyPhase.INTRO;
+                    theDialogue.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0, sound);
                     //StartCoroutine(NeutralTalk(introDialog));
-                    enemy.enemyPhase = EnemyController.Phase.PHASE1;
+                    enemy.CurrentPhase = (int)EnemyController.EnemyPhase.PHASE1;
                     _dialogTalked.Clear();
                     
                 break;
 
-                case EnemyController.Phase.INTERMEDIAIRE:
+                case EnemyController.EnemyPhase.BEFOREPHASE2:
+                    if (enemy.CurrentPhase > enemy.MaxPhase) return;
+                    enemy.CurrentPhase = (int)EnemyController.EnemyPhase.BEFOREPHASE2;
                     //StartCoroutine(NeutralTalk(intermediaireDialog));
-                    theDialogue.SetDialogAndTypeSentence(intermediaireDialog, 0, sound);
-                    enemy.enemyPhase = EnemyController.Phase.PHASE2;
+                    theDialogue.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0, sound);
+                    enemy.enemyPhase = EnemyController.EnemyPhase.PHASE2;
+                    enemy.CurrentPhase = (int)EnemyController.EnemyPhase.PHASE2;
                     _dialogTalked.Clear();
                 break;
-                case EnemyController.Phase.WIN:
-                    Debug.Log("WINNNN");
-                   EnemyController.gameObject.SetActive(false);
+                case EnemyController.EnemyPhase.BEFOREPHASE3:
+                    if (enemy.CurrentPhase > enemy.MaxPhase) return;
+                
                 break;
+                case EnemyController.EnemyPhase.WIN:
+                    Debug.Log("WINNNN");
+                    enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
+                    enemy.CurrentPhase = (int)EnemyController.EnemyPhase.WIN;
+                    EnemyController.gameObject.SetActive(false);
+                break;
+
             }
             //enemy.Movement.CanMove = true;
         }
@@ -64,7 +69,7 @@ namespace Game
         public void EnterHappyState() => EnemyController.HappyState.EnterState(EnemyController);
 
         [Button]
-        public void TalkNeutral() => theDialogue.SetDialogAndTypeSentence(_dialog, Random.Range(0, _dialog.dialogs.Length), true);
+        public void TalkNeutral() => theDialogue.SetDialogAndTypeSentence(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog, Random.Range(0, EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs.Length), true);
 
         private IEnumerator NeutralTalk(DialoguesScriptable dialog = null)
         {

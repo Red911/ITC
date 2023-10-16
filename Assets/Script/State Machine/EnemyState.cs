@@ -19,7 +19,8 @@ namespace Game
         [SerializeField] private MeshRenderer _enemyMaterial;
         public MeshRenderer EnemyMaterial { get => _enemyMaterial; set => _enemyMaterial = value; }
 
-        [SerializeField] protected DialoguesScriptable _dialog;
+        //[SerializeField] public DialoguesScriptable _dialog;
+
         protected List<string> _dialogTalked = new List<string>();
 
         [SerializeField]
@@ -39,8 +40,8 @@ namespace Game
         //protected void Talk() => StartCoroutine(EnemyTalk());
         protected void EnemyTalk(bool randomTalk, int talkId = 0)
         {
-            if (_dialog.dialogs.Length <= 0) return;
-            if (_dialogTalked.Count >= _dialog.dialogs.Length)
+            if (EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs.Length <= 0) return;
+            if (_dialogTalked.Count >= EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs.Length)
             {
                 _dialogTalked.Clear();
                 Debug.Log("CLEARED");
@@ -51,13 +52,13 @@ namespace Game
             {
                 do
                 {
-                    randomDialogId = Random.Range(0, _dialog.dialogs.Length);
+                    randomDialogId = Random.Range(0, EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs.Length);
                 }
-                while (_dialogTalked.Contains(_dialog.dialogs[randomDialogId]));
-                Debug.Log(_dialog.dialogs[randomDialogId]);
-                _dialogTalked.Add(_dialog.dialogs[randomDialogId]);
+                while (_dialogTalked.Contains(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs[randomDialogId]));
+                Debug.Log(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs[randomDialogId]);
+                _dialogTalked.Add(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs[randomDialogId]);
             }
-            else Debug.Log(_dialog.dialogs[talkId]);
+            else Debug.Log(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs[talkId]);
         }
 
         protected void EnemyTalk(DialoguesScriptable dialog, int id)

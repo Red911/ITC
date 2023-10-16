@@ -21,16 +21,16 @@ namespace Game
 
             switch(enemy.enemyPhase)
             {
-                case EnemyController.Phase.PHASE1:
+                case EnemyController.EnemyPhase.PHASE1:
                     //StartCoroutine(HappyTalk(_dialog));
-                    theDialogue.SetDialogAndTypeSentence(_dialog, 0);
+                    theDialogue.SetDialogAndTypeSentence(enemy._enemyDial[EnemyController.CurrentPhase]._dialog, 0);
 
-                    enemy.enemyPhase = EnemyController.Phase.INTERMEDIAIRE;
+                    enemy.enemyPhase = EnemyController.EnemyPhase.BEFOREPHASE2;
                 break;
-                case EnemyController.Phase.PHASE2:
+                case EnemyController.EnemyPhase.PHASE2:
                     //StartCoroutine(HappyTalk(_winDialog));
                     theDialogue.SetDialogAndTypeSentence(_winDialog, 0);
-                    enemy.enemyPhase = EnemyController.Phase.WIN;
+                    enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
                 break;
             }
             //enemy.Movement.CanMove = true;
@@ -51,7 +51,7 @@ namespace Game
         }
         private IEnumerator HappyTalk(DialoguesScriptable dialog)
         {
-            for(int i = 0; i < _dialog.dialogs.Length; i++)
+            for(int i = 0; i < EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog.dialogs.Length; i++)
             {
                 base.EnemyTalk(dialog, i);
                 yield return new WaitForSeconds(EnemyController.MaxTimeBetweenDialog);

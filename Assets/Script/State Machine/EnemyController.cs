@@ -31,17 +31,40 @@ namespace Game
 
         private Player player;
         #endregion
+        [System.Serializable]
+        public struct EnemyDial
+        {
+            //[Tooltip("Le nom sert juste à se reperer")]
+            public string _phaseName;   
+            public DialoguesScriptable _dialog;
+            public GetGaze _validObject;
 
-        public enum Phase
+        }
+        public EnemyDial[] _enemyDial;
+
+        [SerializeField]private int _maxPhase = 2;
+        [SerializeField]private int _currentPhase;
+
+        public int MaxPhase { get => _maxPhase; }
+        public int CurrentPhase { get => _currentPhase; set => _currentPhase = value; }
+
+
+
+        public enum EnemyPhase
         {
             INTRO,
             PHASE1,
-            INTERMEDIAIRE,
+            BEFOREPHASE2,
             PHASE2,
+            BEFOREPHASE3,
+            PHASE3,
+            PHASE4_PART1,
+            PHASE4_PART2,
+            PHASE4_PART3,
             WIN
         }
 
-        public Phase enemyPhase;
+        public EnemyPhase enemyPhase;
 
         private void Start()
         {
@@ -55,7 +78,7 @@ namespace Game
 
         public void ResetEnemy()
         {
-            enemyPhase = Phase.PHASE1;
+            enemyPhase = EnemyPhase.PHASE1;
             _neutralState.ResetTalkedDialog();
         }
 
