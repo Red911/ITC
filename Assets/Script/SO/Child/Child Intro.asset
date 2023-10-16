@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: IntermediaireDialog
+  m_Name: Child Intro
   m_EditorClassIdentifier: 
+  name: Enfant
+  clip: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   dialogs:
-  - intermediaire 1
-  - intermediaire 2
-  - intermediaire 3
+  - "Tu veux jouer avec moi ?\r"
+  - "Je m\u2019ennuie tout seul ici\u2026"
+  - "Allez, viens jouer avec moi, s\u2019il te plait"
+  - "Et puis on va manger des g\xE2teaux apr\xE8s !"
+  - "C\u2019est partis !"

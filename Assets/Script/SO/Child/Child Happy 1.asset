@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: HurtDialog
+  m_Name: Child Happy 1
   m_EditorClassIdentifier: 
+  name: Enfant
+  clip: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   dialogs:
-  - hurt 1
-  - hurt 2
-  - hurt 3
+  - happy 1
+  - happy 2
+  - happy 3

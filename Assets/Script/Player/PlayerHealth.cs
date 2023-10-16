@@ -60,40 +60,7 @@ public class PlayerHealth : MonoBehaviour, IHealth
 
     private void Damaged(int amount)
     {
-       // if (IsDead) InternalDie();
-        //else StartCoroutine(DamageVFX());
     }
 
-   /* private IEnumerator DamageVFX()
-    {
-        _entitySR.color = Color.red;
-
-        if (_hitSFX != null)
-        {
-            ServiceLocator.Get().PlaySound(_hitSFX);
-        }
-
-        yield return new WaitForSeconds(.1f);
-        _entitySR.color = Color.white;
-    }*/
-
-    /*private void Death()
-    {
-        //DeathParticle();
-        //DeathVFX();
-
-        if (_deathSFX != null)
-        {
-            ServiceLocator.Get().PlaySound(_deathSFX);
-        }
-    }*/
-
-    /*private void DeathParticle()
-    {
-        if (_deathParticle.isPlaying) return;
-        _deathParticle?.gameObject.SetActive(true);
-        _deathParticle?.Play();
-    }*/
-
-    //private void DeathVFX() => _entitySR.color = Color.black;
+   
 }
