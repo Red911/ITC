@@ -1291,7 +1291,7 @@ MonoBehaviour:
   _gazeAware: {fileID: 9124818627668525085}
   mesh: {fileID: 3706904420574867789}
   redMat: {fileID: 2100000, guid: 4b484fe501fc33b4eba7f037db99617a, type: 2}
-  input: 13
+  timeToGaze: 3
   _type: 2
 --- !u!114 &435755435026273252
 MonoBehaviour:
@@ -1687,7 +1687,7 @@ MonoBehaviour:
   _gazeAware: {fileID: 6186895341653458262}
   mesh: {fileID: 1558322082944372653}
   redMat: {fileID: 2100000, guid: 4b484fe501fc33b4eba7f037db99617a, type: 2}
-  input: 13
+  timeToGaze: 3
   _type: 1
 --- !u!4 &5644079589751915909 stripped
 Transform:
@@ -1958,6 +1958,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UP_EyeKeep
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368358071251942264, guid: e9e70f851e5e3664195008962101a3d8,
+        type: 3}
+      propertyPath: timeToGaze
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

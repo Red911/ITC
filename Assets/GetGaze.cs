@@ -3,6 +3,7 @@ using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using Tobii.Gaming;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -13,11 +14,13 @@ public class GetGaze : MonoBehaviour
     [SerializeField] private GazeAware _gazeAware;
     [SerializeField] private MeshRenderer mesh;
     [SerializeField] private Material redMat;
+
+    [Space(25)]
+    [SerializeField] private float timeToGaze = 3f;
+    
     private Material _startMat;
-
-    [SerializeField]private KeyCode input;
-
     private Player player;
+    private float _timer;
 
     public enum GazeType
     {
@@ -38,9 +41,20 @@ public class GetGaze : MonoBehaviour
 
     private void Update()
     {
-        if (_gazeAware.HasGazeFocus && Input.GetKeyDown(input))
+        
+        if (_gazeAware.HasGazeFocus)
         {
-            GazeCheck();
+            _timer += Time.deltaTime;
+            if (_timer >= timeToGaze)
+            {
+                _timer = 0;
+                GazeCheck();
+            }
+            
+        }
+        else
+        {
+            _timer = 0;
         }
         
     }
