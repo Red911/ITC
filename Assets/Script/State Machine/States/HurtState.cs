@@ -8,40 +8,33 @@ namespace Game
 {
     public class HurtState : EnemyState
     {
-        //[SerializeField, BoxGroup("Dialogues"), TextArea()] private string[] _hurtDialog;
+        [SerializeField, BoxGroup("Dialogues")] private DialoguesScriptable _hurtDialog;
 
         public override void EnterState(EnemyController enemy)
         {
             EnemyController = enemy;
             enemy.CurrentState = this;
+            enemy.TheDialog.Ev += OnDialogFinish;
             EnemyMaterial.material = _material;
-
-
+            enemy.TheDialog.SetDialogAndTypeSentence(_hurtDialog, Random.Range(0, _hurtDialog.dialogs.Length), true);
         }
 
         public override void UpdateState(EnemyController enemy)
         {
             
-            //enemy.Movement.Move(dashDir * dashSpeed * Time.fixedDeltaTime);
         }
 
         public override void ExitState(EnemyController enemy)
         {
             enemy.CurrentState = null;
-            //if (!enemy.IsMoving) enemy.Movement.Move(Vector2.zero);
+            enemy.TheDialog.Ev -= OnDialogFinish;
 
         }
 
-        [Button]
-        private void Talk() => StartCoroutine(HurtTalk());
-        private IEnumerator HurtTalk()
+        public override void OnDialogFinish()
         {
-            base.EnemyTalk();
-            yield return new WaitForSeconds(EnemyController.MaxTimeBetweenDialog);
             this.ExitState(EnemyController);
             EnemyController.NeutralState.EnterState(EnemyController);
         }
-
-        
     }
 }
