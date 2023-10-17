@@ -8,14 +8,12 @@ namespace Game
 {
     public class EnemyController : MonoBehaviour
     {
-        //[SerializeField, BoxGroup("Dependencies")] EntityMovement _movement;
 
         #region States
         [SerializeField, BoxGroup("Dependencies")] EnemyStateMachine _stateMachine;
 
         [SerializeField] EnemyState currentState;
         public EnemyState CurrentState { get => currentState; set => currentState = value; }
-        //public EntityMovement Movement { get => _movement; set => _movement = value; }
         public EnemyStateMachine StateMachine { get => _stateMachine; set => _stateMachine = value; }
         public NeutralState NeutralState { get => _neutralState; set => _neutralState = value; }
         public HurtState HurtState { get => _dashState; set => _dashState = value; }
@@ -31,17 +29,47 @@ namespace Game
 
         private Player player;
         #endregion
+        [System.Serializable]
+        public struct EnemyDial
+        {
+            [Tooltip("Le nom sert juste à se reperer")]
+            public string _phaseName;   
+            public DialoguesScriptable _dialog;
+            public GetGaze _validObject;
 
-        public enum Phase
+        }
+        public EnemyDial[] _enemyDial;
+
+        [SerializeField]private int _maxPhase = 4;
+        [SerializeField]private int _currentPhase;
+
+        public int MaxPhase { get => _maxPhase; }
+        public int CurrentPhase { get => _currentPhase; set => _currentPhase = value; }
+
+        [SerializeField] private GetGaze[] allGaze;
+
+        [SerializeField]
+        private GetTheDialogue _theDialog;
+        public GetTheDialogue TheDialog { get => _theDialog; }
+
+        public enum EnemyPhase
         {
             INTRO,
             PHASE1,
-            INTERMEDIAIRE,
+            BEFORE_PHASE2,
             PHASE2,
-            WIN
+            BEFORE_PHASE3,
+            PHASE3,
+            BEFORE_PHASE4,
+            PHASE4_PART1,
+            BEFORE_PHASE4_PART2,
+            PHASE4_PART2,
+            BEFORE_PHASE4_PART3,
+            PHASE4_PART3,
+            WIN = 333
         }
 
-        public Phase enemyPhase;
+        public EnemyPhase enemyPhase;
 
         private void Start()
         {
@@ -55,9 +83,15 @@ namespace Game
 
         public void ResetEnemy()
         {
-            enemyPhase = Phase.PHASE1;
+            enemyPhase = EnemyPhase.PHASE1;
+            _currentPhase = 1;
             _neutralState.ResetTalkedDialog();
+            
         }
 
+        public void MakeAllGazeFalse()
+        {
+            foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
+        }
     }
 }

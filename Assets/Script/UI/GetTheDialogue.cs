@@ -35,7 +35,6 @@ public class GetTheDialogue : MonoBehaviour
     {
         _nameText.text = _dialoguesSo.name;
         _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
-        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine], _dialoguesSo.clip));
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
@@ -89,7 +88,6 @@ public class GetTheDialogue : MonoBehaviour
         _dialoguesSo = dialog;
         _currentLine = id;
         _randomDialog = isRandomDialog;
-        //StopAllCoroutines();
         player.IsTalking = true;
         if (!dialoguePanel.activeSelf) ShowDialogText();
         StopAllCoroutines();

@@ -1,9 +1,11 @@
 using Game;
+using NaughtyAttributes;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Tobii.Gaming;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class GetGaze : MonoBehaviour
 {
@@ -38,6 +40,14 @@ public class GetGaze : MonoBehaviour
     {
         if (_gazeAware.HasGazeFocus && Input.GetKeyDown(input))
         {
+            GazeCheck();
+        }
+        
+    }
+
+    [Button("Gaze Check", EButtonEnableMode.Playmode)]
+    private void GazeCheck()
+    {
             if (player.IsTalking) return;
            switch(_type)
             {
@@ -54,7 +64,6 @@ public class GetGaze : MonoBehaviour
                     player.CurrentEnemy.NeutralState.TalkNeutral();
                 break;
             }
-        }
-        
+
     }
 }

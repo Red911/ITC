@@ -8,57 +8,43 @@ namespace Game
 {
     public class HappyState : EnemyState
     {
-        //[SerializeField, BoxGroup("Dialogues"), TextArea()] private string[] _happyDialog;
-        [SerializeField]private DialoguesScriptable _winDialog;
+        [SerializeField, BoxGroup("Dialogues")] private DialoguesScriptable _happyDialog1;
+        [SerializeField, BoxGroup("Dialogues")] private DialoguesScriptable _happyDialog2;
 
         public override void EnterState(EnemyController enemy)
         {
-            //base.EnterState(enemy);
             EnemyController = enemy;
             enemy.CurrentState = this;
             EnemyMaterial.material = _material;
-            theDialogue.Ev += OnDialogFinish;
+            enemy.TheDialog.Ev += OnDialogFinish;
 
             switch(enemy.enemyPhase)
             {
-                case EnemyController.Phase.PHASE1:
-                    //StartCoroutine(HappyTalk(_dialog));
-                    theDialogue.SetDialogAndTypeSentence(_dialog, 0);
+                case EnemyController.EnemyPhase.PHASE1:
+                    enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog1, 0);
 
-                    enemy.enemyPhase = EnemyController.Phase.INTERMEDIAIRE;
+                    enemy.enemyPhase = EnemyController.EnemyPhase.BEFORE_PHASE2;
                 break;
-                case EnemyController.Phase.PHASE2:
-                    //StartCoroutine(HappyTalk(_winDialog));
-                    theDialogue.SetDialogAndTypeSentence(_winDialog, 0);
-                    enemy.enemyPhase = EnemyController.Phase.WIN;
+                case EnemyController.EnemyPhase.PHASE2:
+                    enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog2, 0);
+                    enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
+
                 break;
             }
-            //enemy.Movement.CanMove = true;
         }
 
         public override void UpdateState(EnemyController enemy)
         {
             
 
-            //enemy.Movement.Move(theMove);
         }
 
         public override void ExitState(EnemyController enemy)
         {
             enemy.CurrentState = null;
-            theDialogue.Ev -= OnDialogFinish;
-            //enemy.Movement.CanMove = false;
+            enemy.TheDialog.Ev -= OnDialogFinish;
         }
-        private IEnumerator HappyTalk(DialoguesScriptable dialog)
-        {
-            for(int i = 0; i < _dialog.dialogs.Length; i++)
-            {
-                base.EnemyTalk(dialog, i);
-                yield return new WaitForSeconds(EnemyController.MaxTimeBetweenDialog);
-            }
-            this.ExitState(EnemyController);
-            EnemyController.NeutralState.EnterState(EnemyController);
-        }
+       
 
         public override void OnDialogFinish()
         {
@@ -66,8 +52,6 @@ namespace Game
             EnemyController.NeutralState.EnterState(EnemyController);
         }
 
-        /*[Button]
-        private void Talk() => StartCoroutine(HappyTalk());*/
 
     }
 }
