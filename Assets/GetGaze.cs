@@ -8,6 +8,7 @@ using Tobii.Gaming;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+[RequireComponent(typeof(GazeAware))]
 public class GetGaze : MonoBehaviour
 {
     [Header("Component")]
