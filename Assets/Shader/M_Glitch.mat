@@ -70,6 +70,7 @@ Material:
     - _GlitchStrenght: 2
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _TextureIntensity: 1
     - _TimeSpeed: 1
     m_Colors:
     - _GlitchColor: {r: 0.5, g: 0, b: 0.017647266, a: 0}
