@@ -64,6 +64,8 @@ public class GetTheDialogue : MonoBehaviour
         StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine], _dialoguesSo.clip)) ;
     }
 
+    public void SkipDialog() => NextDialogue();
+
     private void DialogueFinish()
     {
         dialoguePanel.SetActive(false);
