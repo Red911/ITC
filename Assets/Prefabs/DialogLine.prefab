@@ -69,8 +69,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: j'aime beaucoup le sport !
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c36aa101d5415194ab28dc9ae57be61f, type: 2}
-  m_sharedMaterial: {fileID: 2673529911974371873, guid: c36aa101d5415194ab28dc9ae57be61f,
+  m_fontAsset: {fileID: 11400000, guid: e6ec1544e7060504c9d68ffb1c3ec174, type: 2}
+  m_sharedMaterial: {fileID: 4893381878569585363, guid: e6ec1544e7060504c9d68ffb1c3ec174,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}

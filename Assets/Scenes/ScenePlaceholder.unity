@@ -189,6 +189,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1295422123}
+    - target: {fileID: 3256582569385497038, guid: 2cafa0d3b1ecb874390cc3120bf6487e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5670231419913836311, guid: 2cafa0d3b1ecb874390cc3120bf6487e,
         type: 3}
       propertyPath: m_DeadZoneHeight
@@ -204,6 +209,11 @@ PrefabInstance:
       propertyPath: m_TrackedObjectOffset.z
       value: -9.66
       objectReference: {fileID: 0}
+    - target: {fileID: 5997081724585255450, guid: 2cafa0d3b1ecb874390cc3120bf6487e,
+        type: 3}
+      propertyPath: _dialogue
+      value: 
+      objectReference: {fileID: 1846796934}
     - target: {fileID: 8771516703764747066, guid: 2cafa0d3b1ecb874390cc3120bf6487e,
         type: 3}
       propertyPath: m_LocalPosition.x
