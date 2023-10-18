@@ -129,7 +129,7 @@ Material:
     - _AddPower: 1
     - _Intensity: 0.08
     - _Intensity_1: 1
-    - _MultiplyPower: 4.9
+    - _MultiplyPower: 2
     - _Saturation: 0
     - _Speed: 0
     - _contrast: 0
