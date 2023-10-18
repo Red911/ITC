@@ -4954,7 +4954,7 @@ Transform:
   m_GameObject: {fileID: 318628254}
   serializedVersion: 2
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: -12.286201, y: 2.532, z: 5.38}
+  m_LocalPosition: {x: -26.286201, y: 2.532, z: 5.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5429,7 +5429,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6af9a499f1023f34d83c10f516cb2d3c, type: 2}
+  - {fileID: 2100000, guid: 07938c2075802f44585d2288e9fafb29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5585,7 +5585,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6af9a499f1023f34d83c10f516cb2d3c, type: 2}
+  - {fileID: 2100000, guid: e8ca95b6d55a78d40bf6a68abc81fc67, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5949,7 +5949,7 @@ Animator:
   m_GameObject: {fileID: 994455538}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d88904cfc51ff8947984bb88c3dabe89, type: 2}
+  m_Controller: {fileID: 9100000, guid: 210c5612c6d19d145ae0f26f5d4a6db0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5980,7 +5980,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6af9a499f1023f34d83c10f516cb2d3c, type: 2}
+  - {fileID: 2100000, guid: 648d22a1f740b5147947edd9e6e78239, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6329,7 +6329,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6af9a499f1023f34d83c10f516cb2d3c, type: 2}
+  - {fileID: 2100000, guid: c91345957c21c0c47b2fbdc28c2779ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6745,7 +6745,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 111208841bbef75408845ef1f15fb90f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.29
+      value: -26.29
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 111208841bbef75408845ef1f15fb90f,
         type: 3}
