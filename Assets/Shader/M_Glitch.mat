@@ -45,6 +45,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2f60ad72209e38a4e8937a64a066a494, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NoiseColorTexture:
+        m_Texture: {fileID: 2800000, guid: 8b962a5e7f5a5b84a9b8c2bcadd5ac04, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_4e4b31e8d10c4dca8f52d40cb12e57e7_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 8b962a5e7f5a5b84a9b8c2bcadd5ac04, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -63,13 +67,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _DistortionActive: 0
     - _DistortionScale: 4.75
     - _DistortionScrollSpeed: 0.33
     - _DistortionStrenght: 2
+    - _GlitchActive: 1
     - _GlitchAmount: 0.4
     - _GlitchStrenght: 2
+    - _NoiseIntensity: 1
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _TextureIntensity: 1
     - _TimeSpeed: 1
     m_Colors:
     - _GlitchColor: {r: 0.5, g: 0, b: 0.017647266, a: 0}
