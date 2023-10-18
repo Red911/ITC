@@ -9,4 +9,6 @@ public class DialoguesScriptable : ScriptableObject
     public AudioClip clip;
     [TextArea]
     public string[] dialogs;
+    [TextArea]
+    public string[] emotions;
 }

@@ -26,10 +26,11 @@ public class GetTheDialogue : MonoBehaviour
     private bool _randomDialog;
 
     private int _currentLine = 0;
+    public int CurrentLine { get => _currentLine; set => _currentLine = value;}
 
     [SerializeField] private KeyCode input;
 
-    private Player player;
+    [SerializeField]private Player player;
 
     private void Start()
     {
@@ -97,6 +98,4 @@ public class GetTheDialogue : MonoBehaviour
     }
 
     private void ShowDialogText() => dialoguePanel.SetActive(true);
-    
-    
 }

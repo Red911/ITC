@@ -42,9 +42,11 @@ namespace Game
 
         [SerializeField]private int _maxPhase = 4;
         [SerializeField]private int _currentPhase;
+        [SerializeField]private int _currentDialogId;
 
         public int MaxPhase { get => _maxPhase; }
         public int CurrentPhase { get => _currentPhase; set => _currentPhase = value; }
+        public int CurrentDialogId { get => _currentDialogId; set => _currentDialogId = value; }
 
         [SerializeField] private GetGaze[] allGaze;
 
@@ -77,6 +79,7 @@ namespace Game
             player.CurrentEnemy = this;
             currentState = NeutralState;
             currentState.EnterState(this);
+            DialogSpawner.enemy = this;
 
             _timeBetweenDialog = _maxTimeBetweenDialog;
         }
@@ -93,5 +96,6 @@ namespace Game
         {
             foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
         }
+
     }
 }

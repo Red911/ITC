@@ -5343,6 +5343,7 @@ GameObject:
   - component: {fileID: 994455541}
   - component: {fileID: 994455540}
   - component: {fileID: 994455539}
+  - component: {fileID: 994455543}
   m_Layer: 0
   m_Name: TEST
   m_TagString: Untagged
@@ -5392,7 +5393,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6af9a499f1023f34d83c10f516cb2d3c, type: 2}
+  - {fileID: 2100000, guid: 2671cb7ec901478449a2be1f71209d79, type: 2}
+  - {fileID: 2100000, guid: 8897e1d16bc334c499e696e1b34f9784, type: 2}
+  - {fileID: 2100000, guid: 24376ac0baf419f44834905fe19941d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5438,6 +5441,27 @@ Transform:
   - {fileID: 2110494474}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+--- !u!95 &994455543
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994455538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d88904cfc51ff8947984bb88c3dabe89, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &996055989
 GameObject:
   m_ObjectHideFlags: 0
@@ -6196,8 +6220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d393f62df6d6f94f82663593053315b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteTransform: {fileID: 0}
-  _cursor: {fileID: 0}
   _stateMachine: {fileID: 2110494475}
   currentState: {fileID: 0}
   _neutralState: {fileID: 2110494477}
@@ -6205,7 +6227,13 @@ MonoBehaviour:
   _happyState: {fileID: 2110494479}
   _maxTimeBetweenDialog: 3
   _timeBetweenDialog: 0
-  dashCDMax: 0
+  _enemyDial: []
+  _maxPhase: 4
+  _currentPhase: 0
+  _currentDialogId: 0
+  allGaze: []
+  _theDialog: {fileID: 0}
+  enemyPhase: 0
 --- !u!114 &2110494477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6220,8 +6248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
   _enemyMaterial: {fileID: 994455540}
-  _dialog: []
-  enemyPhase: 1
+  sound: {fileID: 0}
 --- !u!114 &2110494478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6236,10 +6263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
   _enemyMaterial: {fileID: 994455540}
-  _dialog:
-  - Dialog 1
-  - Dialog 2
-  - Dialog 3
+  _hurtDialog: {fileID: 0}
 --- !u!114 &2110494479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6254,7 +6278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
   _enemyMaterial: {fileID: 994455540}
-  _dialog: []
+  _happyDialog1: {fileID: 0}
+  _happyDialog2: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

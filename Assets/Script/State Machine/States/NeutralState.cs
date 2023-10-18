@@ -30,7 +30,7 @@ namespace Game
             {
                 //avant chaque phase principale
                 enemy.CurrentPhase = (int)enemy.enemyPhase;
-                enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0);
+                //enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0);
                 enemy.CurrentPhase = (int)enemy.enemyPhase +1;
                 enemy.enemyPhase = enemy.enemyPhase + 1;
                 enemy.MakeAllGazeFalse();
