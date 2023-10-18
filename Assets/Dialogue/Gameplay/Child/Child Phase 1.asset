@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Child Phase 1
   m_EditorClassIdentifier: 
   name: Enfant
-  clip: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
-  dialogs:
-  - "J\u2019aime beaucoup le sport\r"
-  - "Je fais du tennis, mais je crois que c\u2019est pas ce que je pr\xE9f\xE8re"
-  - "Je veux jouer \xE0 des jeux ou \xE7a roule"
-  - "A l\u2019\xE9cole j\u2019ai beaucoup d\u2019amis en plus pour jouer avec"
-  emotions:
+  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _dialAndSound:
+  - _dialogs: "J\u2019aime beaucoup le sport"
+    _sound: {fileID: 0}
+  - _dialogs: Je fais du tennis enfaite
+    _sound: {fileID: 0}
+  - _dialogs: "Je veux jouer \xE0 des jeux ou \xE7a roule"
+    _sound: {fileID: 0}
+  - _dialogs: "A l\u2019\xE9cole j\u2019ai beaucoup d\u2019amis en plus pour jouer
+      avec\r"
+    _sound: {fileID: 0}
+  _emotions:
   - "Enjou\xE9"
   - Pensif
   - "Excit\xE9"

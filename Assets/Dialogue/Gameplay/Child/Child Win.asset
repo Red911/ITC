@@ -13,8 +13,24 @@ MonoBehaviour:
   m_Name: Child Win
   m_EditorClassIdentifier: 
   name: Enfant
-  clip: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
-  dialogs:
-  - WIN 1
-  - WIN 2
-  - WIN 3
+  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _dialAndSound:
+  - _dialogs: "Je.. Oh oui ! Je jouais au foot avec des amis\r"
+    _sound: {fileID: 0}
+  - _dialogs: "Et un moment j\u2019essaye de la rattraper"
+    _sound: {fileID: 0}
+  - _dialogs: "Mais il l\u2019a envoy\xE9 tr\xE8s tr\xE8s loin"
+    _sound: {fileID: 0}
+  - _dialogs: "Du coup je cours vite, tr\xE8s vite"
+    _sound: {fileID: 0}
+  - _dialogs: "M\xEAme si ma m\xE8re m\u2019avait dit de ne pas aller sur la route,
+      je l\u2019ai d\xE9sob\xE9i"
+    _sound: {fileID: 0}
+  - _dialogs: "Et l\xE0\u2026 J\u2019ai- Enfin.. Je\u2026"
+    _sound: {fileID: 0}
+  - _dialogs: "\u2026 J\u2019ai compl\xE8tement disparu, j-j\u2019ai jamais pu avoir
+      la balle"
+    _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
+  - _dialogs: "Et tout \xE7a \xE0 cause de\u2026"
+    _sound: {fileID: 0}
+  _emotions: []

@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: Child Phase 2
   m_EditorClassIdentifier: 
   name: Enfant
-  clip: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
-  dialogs:
-  - "J\u2019aime beaucoup le sport\r !"
-  - "Je fais du tennis, mais je crois que c\u2019est pas ce que je pr\xE9f\xE8re"
-  - "Je veux jouer \xE0 des jeux ou \xE7a roule"
-  - "A l\u2019\xE9cole j\u2019ai beaucoup d\u2019amis en plus pour jouer avec"
-  emotions:
+  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _dialAndSound:
+  - _dialogs: "Un jour je jouais un samedi avec des amis\r"
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019\xE9tait un endroit o\xF9 ma m\xE8re m\u2019emmenait"
+    _sound: {fileID: 0}
+  - _dialogs: "Mais je crois que y\u2019avait des toboggans et une route \xE0 c\xF4t\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: A chaque fois je gagne contre mes amis car je suis le meilleur buteur
+      !
+    _sound: {fileID: 0}
+  _emotions:
   - Pensif
   - Heureux
-  - "Agit\xE9"
+  - Peur

@@ -19,6 +19,9 @@ public class GetTheDialogue : MonoBehaviour
     [SerializeField] private float speedText = .1f;
     [SerializeField] private float spaceSpeedText = .2f;
     
+    [SerializeField] private float speedTextInGame = .1f;
+    [SerializeField] private float spaceSpeedTextInGame = .2f;
+
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private event UnityAction ev;
     public UnityAction Ev { get => ev;  set => ev = value; }
@@ -34,8 +37,7 @@ public class GetTheDialogue : MonoBehaviour
 
     private void Start()
     {
-        _nameText.text = _dialoguesSo.name;
-        _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
+        //_dialogueText.text = _dialoguesSo.dialogs[_currentLine];
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
@@ -51,7 +53,7 @@ public class GetTheDialogue : MonoBehaviour
     [Button]
     private void NextDialogue()
     {
-        if (_currentLine == _dialoguesSo.dialogs.Length - 1 || _randomDialog)
+        if (_currentLine == _dialoguesSo._dialAndSound.Length - 1 || _randomDialog)
         {
             _randomDialog = false;
             DialogueFinish();
@@ -60,9 +62,9 @@ public class GetTheDialogue : MonoBehaviour
 
         _currentLine++;
         
-        _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
+        _dialogueText.text = _dialoguesSo._dialAndSound[_currentLine]._dialogs;
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine], _dialoguesSo.clip)) ;
+        StartCoroutine(TypeSentence(_dialoguesSo._dialAndSound[_currentLine]._dialogs, _dialoguesSo._dialAndSound[_currentLine]._sound, _dialoguesSo._animalese));
     }
 
     public void SkipDialog() => NextDialogue();
@@ -74,13 +76,15 @@ public class GetTheDialogue : MonoBehaviour
         ev?.Invoke();
     }
 
-    IEnumerator TypeSentence(string sentence, AudioClip sound = null)
+    IEnumerator TypeSentence(string sentence, AudioClip sound = null, AudioClip animalese = null)
     {
         _dialogueText.text = "";
+        _nameText.text = _dialoguesSo.name;
+        if(sound != null)ServiceLocator.Get().PlaySound(sound);
         foreach (var letters in sentence)
         {
             _dialogueText.text += letters;
-            ServiceLocator.Get().PlaySound(sound);
+            if(animalese != null)ServiceLocator.Get().PlaySound(animalese);
             if (letters != ' ') yield return new WaitForSeconds(speedText);
             else yield return new WaitForSeconds(spaceSpeedText);
         }
@@ -94,7 +98,19 @@ public class GetTheDialogue : MonoBehaviour
         player.IsTalking = true;
         if (!dialoguePanel.activeSelf) ShowDialogText();
         StopAllCoroutines();
-        StartCoroutine(TypeSentence(_dialoguesSo.dialogs[_currentLine], dialog.clip));
+        StartCoroutine(TypeSentence(_dialoguesSo._dialAndSound[_currentLine]._dialogs, dialog._dialAndSound[_currentLine]._sound, dialog._animalese));
+    }
+
+    public IEnumerator EnemySoundInGameDialog(TextMeshProUGUI txt, string sentence, AudioClip audioClip = null)
+    {
+        //txt.text = "";
+        foreach (var letters in sentence)
+        {
+            //txt.text += letters;
+            ServiceLocator.Get().PlaySound(audioClip);
+            if (letters != ' ') yield return new WaitForSeconds(speedTextInGame);
+            else yield return new WaitForSeconds(spaceSpeedTextInGame);
+        }
     }
 
     private void ShowDialogText() => dialoguePanel.SetActive(true);

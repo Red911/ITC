@@ -6,9 +6,15 @@ using UnityEngine;
 public class DialoguesScriptable : ScriptableObject
 {
     public new string name;
-    public AudioClip clip;
+    public AudioClip _animalese;
+    [System.Serializable]
+    public struct DialAndSound
+    {
+        [TextArea]
+        public string _dialogs;
+        public AudioClip _sound;
+    }
+    public DialAndSound[] _dialAndSound;
     [TextArea]
-    public string[] dialogs;
-    [TextArea]
-    public string[] emotions;
+    public string[] _emotions;
 }

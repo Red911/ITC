@@ -15,8 +15,8 @@ namespace Game
             EnemyController = enemy;
             enemy.CurrentState = this;
             enemy.TheDialog.Ev += OnDialogFinish;
-            EnemyMaterial.material = _material;
-            enemy.TheDialog.SetDialogAndTypeSentence(_hurtDialog, Random.Range(0, _hurtDialog.dialogs.Length), true);
+            enemy.DialogSpawner.SetActiveSpawner(false);
+            enemy.TheDialog.SetDialogAndTypeSentence(_hurtDialog, Random.Range(0, _hurtDialog._dialAndSound.Length), true);
         }
 
         public override void UpdateState(EnemyController enemy)
@@ -33,6 +33,7 @@ namespace Game
 
         public override void OnDialogFinish()
         {
+            EnemyController.DialogSpawner.SetActiveSpawner(true);
             this.ExitState(EnemyController);
             EnemyController.NeutralState.EnterState(EnemyController);
         }
