@@ -1,24 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Timers;
 using Tobii.Gaming;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 [RequireComponent(typeof(GazeAware))]
 public class NextDialogue : MonoBehaviour
 {
+    [Header("Component")]
     [SerializeField]private GazeAware _gazeAware;
     [SerializeField]private GetTheDialogue _dialogue;
+    [SerializeField]private Slider nextDialogSlider;
+    
+    [Header("Time")]
     [SerializeField]private float _timeToGaze = 1f;
     private float _timer;
 
-    // Update is called once per frame
+    private void Start()
+    {
+        nextDialogSlider.maxValue = _timeToGaze;
+    }
+
     void Update()
     {
+        _timer = Mathf.Clamp(_timer, 0f, _timeToGaze);
+        
         if (_gazeAware.HasGazeFocus)
         {
             _timer += Time.deltaTime;
+            
             if (_timer >= 1) 
             {
                 _timer = 0;
@@ -27,7 +40,10 @@ public class NextDialogue : MonoBehaviour
         }
         else
         {
-            // _timer = 0;
+            _timer -= Time.deltaTime / 1.5f;
+            
         }
+        
+        nextDialogSlider.value = _timer;
     }
 }
