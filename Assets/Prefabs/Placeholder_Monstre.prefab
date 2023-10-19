@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gazeAware: {fileID: 6727879579407231697}
   mesh: {fileID: 9618709892706940}
-  redMat: {fileID: 2100000, guid: 4b484fe501fc33b4eba7f037db99617a, type: 2}
+  eyeKeepSlider: {fileID: 0}
   timeToGaze: 3
   _type: 2
 --- !u!1 &284547461090849381
@@ -269,7 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gazeAware: {fileID: 2920651986582005222}
   mesh: {fileID: 7736378786267265957}
-  redMat: {fileID: 2100000, guid: 4b484fe501fc33b4eba7f037db99617a, type: 2}
+  eyeKeepSlider: {fileID: 0}
   timeToGaze: 3
   _type: 1
 --- !u!1 &3748966681009753956
@@ -283,6 +283,7 @@ GameObject:
   - component: {fileID: 1985056269110846780}
   - component: {fileID: 6594890579568443160}
   - component: {fileID: 9124157128834815535}
+  - component: {fileID: 2916770136265275587}
   m_Layer: 0
   m_Name: Placeholder_Monstre
   m_TagString: Untagged
@@ -326,7 +327,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 6af9a499f1023f34d83c10f516cb2d3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -403,6 +404,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!95 &2916770136265275587
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3748966681009753956}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 415dd6e2a45eed3428b9d81865d4ddbe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8867348606768075893
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +477,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
-  _enemyMaterial: {fileID: 0}
   _happyDialog1: {fileID: 11400000, guid: 442ab1e5e8f9cd04899359672d3d1df9, type: 2}
   _happyDialog2: {fileID: 11400000, guid: ea42cf5272014dc42bda8283b55ecf9f, type: 2}
 --- !u!114 &3684467051389954744
@@ -471,7 +492,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
-  _enemyMaterial: {fileID: 0}
   _hurtDialog: {fileID: 11400000, guid: ddba68d4746ea3a458bfaeac1b299fb4, type: 2}
 --- !u!114 &9017467673875710975
 MonoBehaviour:
@@ -486,7 +506,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
-  _enemyMaterial: {fileID: 0}
   sound: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
 --- !u!114 &2281125037870852357
 MonoBehaviour:
@@ -531,7 +550,10 @@ MonoBehaviour:
   - {fileID: 1253714097922248485}
   - {fileID: 3547814560606199915}
   _theDialog: {fileID: 0}
+  _dialogSpawner: {fileID: 0}
   enemyPhase: 0
+  _playerMove: {fileID: 0}
+  _endPoint: {fileID: 0}
 --- !u!114 &876131192037687084
 MonoBehaviour:
   m_ObjectHideFlags: 0
