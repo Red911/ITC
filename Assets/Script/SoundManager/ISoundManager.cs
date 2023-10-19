@@ -8,6 +8,6 @@ namespace Game.Script.SoundManager
 
         void PlayMusic(AudioClip audioClip);
 
-        void StopMusic(AudioClip audioClip);
+        void StopMusic();
     }
 }

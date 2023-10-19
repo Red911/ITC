@@ -7,6 +7,6 @@ namespace Game.Script.SoundManager
         public void PlaySound(AudioClip audioClip){}
         public void PlayMusic(AudioClip audioClip){}
 
-        public void StopMusic(AudioClip audioClip){}
+        public void StopMusic(){}
     }
 }

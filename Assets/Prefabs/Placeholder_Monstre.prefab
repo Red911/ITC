@@ -1205,6 +1205,9 @@ MonoBehaviour:
   enemyPhase: 0
   _playerMove: {fileID: 0}
   _endPoint: {fileID: 0}
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &876131192037687084
 MonoBehaviour:
   m_ObjectHideFlags: 0

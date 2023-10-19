@@ -26,5 +26,6 @@ MonoBehaviour:
       avec\r"
     _sound: {fileID: 0}
   emotions:
-  - ui
-  - ui2
+  - "Enjou\xE9"
+  - Pensif
+  - "Excit\xE9"
