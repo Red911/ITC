@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: GF_Win
+  m_EditorClassIdentifier: 
+  name: GF
+  _animalese: {fileID: 0}
+  _dialAndSound:
+  - _dialogs: "C-ce g\xE2teau. Je m\u2019en rappelle. C\u2019\xE9tait lors de notre
+      anniversaire de nos 2 ans de couple\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "J\u2019\xE9tais surprise qu\u2019il me fasse ce g\xE2teau.. Et heureuse,
+      bien s\xFBr\u2026\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "\u2026Mais j\u2019avais d\xE9j\xE0 pris ma d\xE9cision. J\u2019en
+      pouvais plus, ce n\u2019est pas un g\xE2teau qui pouvait r\xE9parer tout ce
+      qu\u2019il a fait\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Quand je lui ai annonc\xE9 que je voulais rompre, il s\u2019est mit
+      dans une col\xE8re noir\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Il a balanc\xE9 le g\xE2teau dans le cuisine puis s\u2019est mit \xE0
+      m\u2019insulter. Je n\u2019ai jamais eu aussi peur de ma vie\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Et puis apr\xE8s *commence \xE0 paniqu\xE9*. Il a\u2026 Il m\u2019a
+      mit une droite\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "E-Et apr\xE8s, j\u2019ai\u2026 Il a\u2026 Ahh\u2026 AAAAHHHHHH ! "
+    _sound: {fileID: 0}
+  _emotions: []

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: GF_Phase1
+  m_EditorClassIdentifier: 
+  name: GF
+  _animalese: {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
+  _dialAndSound:
+  - _dialogs: "Laissez-moi seul ! Je n\u2019ai pas besoin de compassion\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Quand je pense qu\u2019on s\u2019\xE9tait promis de rester ensemble\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Il en avait rien \xE0 foutre en r\xE9alit\xE9\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019est pour \xE7a qu\u2019il m\u2019envoyait chier quand j\u2019en
+      parlais\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: 'Putain. Je veux plus jamais entendre parler de lui
+
+'
+    _sound: {fileID: 0}
+  _emotions:
+  - Solitude
+  - Tristesse
+  - "Col\xE8re"

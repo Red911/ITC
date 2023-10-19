@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: GF_BeforePhase2
+  m_EditorClassIdentifier: 
+  name: GF
+  _animalese: {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
+  _dialAndSound:
+  - _dialogs: 'PourquoI.. Pourquoi me montrer ceci !
+
+'
+    _sound: {fileID: 0}
+  - _dialogs: "N-Nan ! Ne m\u2019en montres pas plus s\u2019il te plait\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Je veux pas revivre ce qu\u2019il m\u2019a fait subir \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Quand je lui ai propos\xE9 qu\u2019on se pacte ensemble, il a commenc\xE9
+      \xE0 m\u2019insulter et \xE0 me faire un tas de reproches\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Pourquoi je lui ai accord\xE9 autant d\u2019importance ? J\u2019aurais
+      d\xFB voir les red flags bien avant\u2026"
+    _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
+  _emotions: []
