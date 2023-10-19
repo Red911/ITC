@@ -31,4 +31,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "Je plains tellement les personnes qui ont c\xF4toy\xE9 ta vie\r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

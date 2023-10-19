@@ -30,7 +30,7 @@ MonoBehaviour:
   - _dialogs: "Il a \xE9t\xE9 tellement insolent avec moi, il m\xE9ritait ce qui
       lui arrive\r\n"
     _sound: {fileID: 0}
-  _emotions:
-  - "Col\xE8re"
+  emotions:
   - Tristesse
+  - "Col\xE8re"
   - "Incompr\xE9hension"

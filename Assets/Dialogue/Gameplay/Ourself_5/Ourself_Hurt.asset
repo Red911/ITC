@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: Ourself_Hurt
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Hahahahah ! T'es path\xE9tique, tu ne comprends rien"
     _sound: {fileID: 0}
-  _emotions:
-  - "Arr\xEAtes le massacre. T'as d\xE9j\xE0 caus\xE9 assez de d\xE9gats, tu ne crois
-    pas ?"
+  emotions: []

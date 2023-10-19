@@ -26,7 +26,7 @@ MonoBehaviour:
   - _dialogs: "T\u2019aurais pu \xE9viter tout \xE7a, mais non. Car t\u2019en as
       rien \xE0 foutre..\r\n"
     _sound: {fileID: 0}
-  _emotions:
+  emotions:
   - "Col\xE8re"
   - Regret
   - Amertume

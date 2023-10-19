@@ -30,7 +30,7 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "En la rabaissant \xE0 chaque occasion ?\r\n"
     _sound: {fileID: 0}
-  _emotions:
-  - "Incompr\xE9hension\r\n"
-  - 'Peur '
+  emotions:
+  - "Incompr\xE9hension"
+  - Peur
   - Rage

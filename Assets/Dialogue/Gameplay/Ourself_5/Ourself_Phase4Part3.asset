@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_Phase4Part3
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "\u201CPardonner\u201D ? Tu veux te faire \u201CPAR-DON-NER ?\u201D\r\n"
     _sound: {fileID: 0}
@@ -35,11 +36,7 @@ MonoBehaviour:
   - _dialogs: "Qui est la personne la plus apte \xE0 t\u2019aider \xE0 avancer si
       elle te pardonne ? "
     _sound: {fileID: 0}
-  _emotions:
-  - Ahahahahaha
-  - Ahahahahaha
-  - Ahahahahaha
-  - Ahahahahaha
-  - Ahahahahaha
-  - Ahahahahaha
-  - Ahahahahaha
+  emotions:
+  - ARRETE
+  - SORS DE MA TETE
+  - C'EST DE MA FAUTE
