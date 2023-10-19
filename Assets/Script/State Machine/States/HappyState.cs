@@ -17,15 +17,16 @@ namespace Game
             enemy.TheDialog.Ev += OnDialogFinish;
             EnemyController.DialogSpawner.SetActiveDialogSpawner(false);
 
+            EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
+            EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
             if(enemy.CurrentPhase >= enemy.MaxPhase - 1)
             {
                 enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
                 this.ExitState(EnemyController);
                 EnemyController.NeutralState.EnterState(EnemyController);
             }
-            EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
-            EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
-            enemy.TheDialog.SetDialogAndTypeSentence(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog, 0);
+            this.ExitState(enemy);
+            //enemy.TheDialog.SetDialogAndTypeSentence(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog, 0);
 
 
             /*switch (enemy.enemyPhase)
@@ -72,6 +73,8 @@ namespace Game
         public override void ExitState(EnemyController enemy)
         {
             enemy.CurrentState = null;
+            if(enemy.enemyPhase != EnemyController.EnemyPhase.WIN)EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
+            EnemyController.NeutralState.EnterState(EnemyController);
             enemy.TheDialog.Ev -= OnDialogFinish;
         }
        
@@ -79,9 +82,8 @@ namespace Game
         public override void OnDialogFinish()
         {
 
-            EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
-            this.ExitState(EnemyController);
-            EnemyController.NeutralState.EnterState(EnemyController);
+            /*this.ExitState(EnemyController);
+            EnemyController.NeutralState.EnterState(EnemyController);*/
         }
 
 

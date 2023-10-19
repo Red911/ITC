@@ -103,17 +103,31 @@ namespace Game
             enemyPhase = EnemyPhase.PHASE1;
             _currentPhase = 1;
             _neutralState.ResetTalkedDialog();
-            
+
+            SetGaze();
+
         }
 
-        public void MakeAllGazeFalse()
+        public void SetGaze()
         {
-            foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
+            ReplaceGazeWithNewGaze();
+            ChangeGazeValid(_enemyDial[CurrentPhase]._validObject);
         }
 
-        public void ReplaceGazeWithNewGaze()
+        private void ChangeGazeValid(GetGaze validGaze)
         {
-            if (_enemyDial[_currentPhase]._phaseGaze.Count <= 2) return;
+            foreach (GetGaze gaze in allGaze)
+            {
+                if (gaze == validGaze)
+                    validGaze._type = GetGaze.GazeType.VALID;
+                else gaze._type = GetGaze.GazeType.INVALID;
+            }
+
+        }
+
+        private void ReplaceGazeWithNewGaze()
+        {
+            if (_enemyDial[_currentPhase]._phaseGaze.Count < 1) return;
             foreach(GetGaze ancientGaze in allGaze)ancientGaze.gameObject.SetActive(false);
             allGaze.Clear();
             foreach (GetGaze newGaze in _enemyDial[_currentPhase]._phaseGaze)

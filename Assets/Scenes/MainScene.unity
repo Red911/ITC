@@ -3822,6 +3822,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 979121118}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &985302212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7263452152277429628, guid: 9240860d04600d24788e2ecbef8dea50,
+    type: 3}
+  m_PrefabInstance: {fileID: 1692893894}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6a7feaebce29cd489215e1ecd6434c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1001914032
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7894,6 +7906,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 37254686042036580, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 222370908203314652, guid: 9240860d04600d24788e2ecbef8dea50,
         type: 3}
       propertyPath: timeToGaze
@@ -7904,6 +7921,11 @@ PrefabInstance:
       propertyPath: eyeKeepSlider
       value: 
       objectReference: {fileID: 1431281022}
+    - target: {fileID: 284547461090849381, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1253714097922248485, guid: 9240860d04600d24788e2ecbef8dea50,
         type: 3}
       propertyPath: timeToGaze
@@ -7914,6 +7936,11 @@ PrefabInstance:
       propertyPath: eyeKeepSlider
       value: 
       objectReference: {fileID: 1473793140}
+    - target: {fileID: 1931885558892497037, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1985056269110846780, guid: 9240860d04600d24788e2ecbef8dea50,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8017,6 +8044,41 @@ PrefabInstance:
     - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
         type: 3}
       propertyPath: _enemyDial.Array.data[1]._validObject
+      value: 
+      objectReference: {fileID: 747468214}
+    - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: _enemyDial.Array.data[2]._validObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: _enemyDial.Array.data[3]._validObject
+      value: 
+      objectReference: {fileID: 985302212}
+    - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: _enemyDial.Array.data[4]._validObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: _enemyDial.Array.data[1]._phaseGaze.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: _enemyDial.Array.data[1]._phaseGaze.Array.data[0]
+      value: 
+      objectReference: {fileID: 447294040}
+    - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: _enemyDial.Array.data[1]._phaseGaze.Array.data[1]
+      value: 
+      objectReference: {fileID: 934665564}
+    - target: {fileID: 2281125037870852357, guid: 9240860d04600d24788e2ecbef8dea50,
+        type: 3}
+      propertyPath: _enemyDial.Array.data[1]._phaseGaze.Array.data[2]
       value: 
       objectReference: {fileID: 747468214}
     - target: {fileID: 2391641622261412800, guid: 9240860d04600d24788e2ecbef8dea50,
@@ -11211,6 +11273,9 @@ MonoBehaviour:
   enemyPhase: 0
   _playerMove: {fileID: 29259478}
   _endPoint: {fileID: 1294107697}
+  _event:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &2814358792774987826
 BoxCollider:
   m_ObjectHideFlags: 0
