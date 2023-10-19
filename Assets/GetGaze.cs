@@ -14,7 +14,6 @@ public class GetGaze : MonoBehaviour
 {
     [Header("Component")]
     [SerializeField] private GazeAware _gazeAware;
-    [SerializeField] private MeshRenderer mesh;
     [SerializeField]private Slider eyeKeepSlider;
 
     [Space(25)]
@@ -37,7 +36,6 @@ public class GetGaze : MonoBehaviour
 
     private void Start()
     {
-        _startMat = mesh.material;
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
         eyeKeepSlider.maxValue = timeToGaze;
     }
