@@ -22,6 +22,10 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float shakeFrequency;
     private bool _isMoving;
 
+    private void Start()
+    {
+        Move();
+    }
     private void FixedUpdate()
     {
         CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin =
