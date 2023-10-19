@@ -15,6 +15,20 @@ MonoBehaviour:
   name: 
   _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
-  - _dialogs: 
+  - _dialogs: "Ces lunettes.. J\u2019ai d\xFB pr\xE9text\xE9 \xE0 mes parents que
+      je les avais cass\xE9 sans faire expr\xE8s"
+    _sound: {fileID: 0}
+  - _dialogs: "J\u2019ai \xE9t\xE9 punis ce jour-l\xE0, j\u2019ai jamais eu le courage
+      de leur avouer la v\xE9rit\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: "Dans mon coll\xE8ge, j\u2019avais un ami qui a toujours \xE9t\xE9
+      gentil avec moi"
+    _sound: {fileID: 0}
+  - _dialogs: "Jusqu\u2019au moment o\xF9.. toutes ces brimades ont commenc\xE9 "
+    _sound: {fileID: 0}
+  - _dialogs: "\xC0 partir de cette instant, j\u2019ai compris sa vraie nature"
+    _sound: {fileID: 0}
+  - _dialogs: "Monsieur populaire, qui ne d\xE9fend pas les plus d\xE9muni si ce
+      n\u2019est pas dans son int\xE9r\xEAt\r\n"
     _sound: {fileID: 0}
   _emotions: []
