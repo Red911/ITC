@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: GF_Phase1
+  m_Name: GF_Phase2
   m_EditorClassIdentifier: 
-  name: GF
+  name: 
   _animalese: {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
   _dialAndSound:
-  - _dialogs: "Laissez-moi seul ! Je n\u2019ai pas besoin de compassion\r\n"
-    _sound: {fileID: 0}
-  - _dialogs: "Quand je pense qu\u2019on s\u2019\xE9tait promis de rester ensemble\r\n"
-    _sound: {fileID: 0}
-  - _dialogs: "Il en avait rien \xE0 foutre en r\xE9alit\xE9\r\n"
-    _sound: {fileID: 0}
-  - _dialogs: "C\u2019est pour \xE7a qu\u2019il m\u2019envoyait chier quand j\u2019en
-      parlais\r\n"
-    _sound: {fileID: 0}
-  - _dialogs: 'Putain. Je veux plus jamais entendre parler de lui
+  - _dialogs: 'Pourquoi ? Pourquoi ? Pourquoi ?
 
 '
     _sound: {fileID: 0}
+  - _dialogs: "Je savais que c\u2019\xE9tait une mauvaise id\xE9e depuis le d\xE9but\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "J\u2019aurais d\xFB savoir que ce connard avait pas de bonnes intentions\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "M\xEAme apr\xE8s qu\u2019il m\u2019ait parl\xE9 de son probl\xE8me
+      je lui ai donn\xE9 une chance\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Et voil\xE0 o\xF9 \xE7a m\u2019a men\xE9 ! Qu\u2019il aille se faire
+      foutre !\r\n"
+    _sound: {fileID: 0}
   _emotions:
-  - Solitude
-  - Tristesse
-  - "Col\xE8re"
+  - "Incompr\xE9hension"
+  - Choc
+  - Rage

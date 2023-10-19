@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Mother Win
   m_EditorClassIdentifier: 
-  name: Mother
+  name: 
   _animalese: {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
   _dialAndSound:
   - _dialogs: "C\u2019est \xE7a, il m\u2019a abandonn\xE9. Moi, son propre parent\r\n"

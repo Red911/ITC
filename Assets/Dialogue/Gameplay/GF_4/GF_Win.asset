@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: GF_Win
   m_EditorClassIdentifier: 
-  name: GF
+  name: 
   _animalese: {fileID: 0}
   _dialAndSound:
   - _dialogs: "C-ce g\xE2teau. Je m\u2019en rappelle. C\u2019\xE9tait lors de notre

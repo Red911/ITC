@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Mother Intro
   m_EditorClassIdentifier: 
-  name: Mother
+  name: 
   _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   _dialAndSound:
   - _dialogs: "Pff.. Quelle d\xE9ception\r\n"

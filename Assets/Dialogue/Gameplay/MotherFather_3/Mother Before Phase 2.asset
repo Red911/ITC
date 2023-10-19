@@ -10,23 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: Mother Phase 1
+  m_Name: Mother Before Phase 2
   m_EditorClassIdentifier: 
-  name: Mother
+  name: 
   _animalese: {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
   _dialAndSound:
-  - _dialogs: "Tous les jours c\u2019\xE9tait pareil, j\u2019en pouvais plus\r\n"
+  - _dialogs: 'Oh oui. Je me bourrais la gueule tous les soirs
+
+'
     _sound: {fileID: 0}
-  - _dialogs: "Apr\xE8s tout ce que je faisais pour lui \xE0 la maison je n\u2019ai
-      pas eu un seul remerciement\r\n"
+  - _dialogs: "Mais en m\xEAme temps, vu tout le travail que je faisais \xE0 la maison,
+      j\u2019avais bien le droit de d\xE9compresser\r\n"
     _sound: {fileID: 0}
-  - _dialogs: "Bordel. Tout ceci me donne envie de ne plus penser \xE0 lui et de
-      me d\xE9tendre\r\n"
+  - _dialogs: 'Suis-je juger parce que je prenais un petit peu de mon temps pour
+      faire ce qui me fait plaisir ?
+
+'
     _sound: {fileID: 0}
-  - _dialogs: "Il aurait d\xFB se d\xE9brouiller seul quand j\u2019\xE9tais dehors
-      avec des amis\r\n"
+  - _dialogs: "En plus avec lui \xE0 la maison je pouvais pas faire autrement.\r\n"
     _sound: {fileID: 0}
-  _emotions:
-  - "Col\xE8re"
-  - Chagrin
-  - Envie
+  - _dialogs: "M\xEAme si un moment, j\u2019avoue que\u2026 \r\n"
+    _sound: {fileID: 0}
+  _emotions: []

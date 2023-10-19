@@ -10,13 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: GF_Hurt
+  m_Name: Ourself_Phase4Part1
   m_EditorClassIdentifier: 
-  name: GF
-  _animalese: {fileID: 0}
-  _dialAndSound:
-  - _dialogs: N-Ne me fais pas souffrir d'autant plus
-    _sound: {fileID: 8300000, guid: 248ddd3972fad52449f3dcb556b7c4c5, type: 3}
-  - _dialogs: "Pourquoi tu me montre \xE7a ? Je ne crois pas comprendre"
-    _sound: {fileID: 8300000, guid: 248ddd3972fad52449f3dcb556b7c4c5, type: 3}
-  _emotions: []
+  name: Ourself
+  clip: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  dialogs:
+  - T ki wesh

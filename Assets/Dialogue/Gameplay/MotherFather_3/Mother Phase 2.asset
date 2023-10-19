@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Mother Phase 2
   m_EditorClassIdentifier: 
-  name: Mother
+  name: 
   _animalese: {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
   _dialAndSound:
   - _dialogs: "J\u2019ai commenc\xE9 \xE0 boire \xE0 la maison. Ils me faisaient
