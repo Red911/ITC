@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_BeforePhase2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Ah oui ? Des s\xE9ance th\xE9rapeutiques. heh ! Mais bien s\xFBr\r\n"
     _sound: {fileID: 0}

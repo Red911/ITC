@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Younglings Phase 1
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
   - _dialogs: "Je me souviens d\u2019une o\xF9 j\u2019\xE9tais dans mon coin"
     _sound: {fileID: 0}

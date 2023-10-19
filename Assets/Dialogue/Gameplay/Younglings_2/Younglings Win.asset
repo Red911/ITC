@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Younglings Win
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
   - _dialogs: "Oui, c\u2019\xE9tait bien cette lettre, celle o\xF9 j\u2019ai tout
       avou\xE9"

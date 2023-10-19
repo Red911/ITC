@@ -72,8 +72,8 @@ Material:
     - _DistortionScrollSpeed: 0.33
     - _DistortionStrenght: 2
     - _GlitchActive: 1
-    - _GlitchAmount: 0.4
-    - _GlitchStrenght: 2
+    - _GlitchAmount: 1
+    - _GlitchStrenght: -1
     - _NoiseIntensity: 1
     - _QueueControl: 0
     - _QueueOffset: 0

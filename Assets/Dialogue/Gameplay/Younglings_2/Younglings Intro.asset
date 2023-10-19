@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Younglings Intro
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
   - _dialogs: "Q-Qui \xEAtes vous ? Qu\u2019est-ce que vous faites ici ? "
     _sound: {fileID: 0}

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Mother Before Phase 2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: 3f005ce831b1df94d9be9d0bb658097e, type: 3}
+  - {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
   _dialAndSound:
   - _dialogs: 'Oh oui. Je me bourrais la gueule tous les soirs
 

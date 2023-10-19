@@ -1,8 +1,6 @@
 using Game;
-using Game.Script.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -14,13 +12,6 @@ public class Player : MonoBehaviour
 
     [SerializeField]private bool _isTalking;
     public bool IsTalking { get => _isTalking; set => _isTalking = value; }
-
-    [SerializeField] private AudioClip _ambiance;
-
-    private void Start()
-    {
-        ServiceLocator.Get().PlaySound(_ambiance);
-    }
 
 
     public void DamagePlayer(int damage)

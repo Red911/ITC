@@ -6,7 +6,7 @@ using UnityEngine;
 public class DialoguesScriptable : ScriptableObject
 {
     public new string name;
-    public AudioClip _animalese;
+    public AudioClip[] _animalese;
     [System.Serializable]
     public struct DialAndSound
     {
@@ -16,5 +16,7 @@ public class DialoguesScriptable : ScriptableObject
     }
     public DialAndSound[] _dialAndSound;
     [TextArea]
-    public string[] _emotions;
+    public string[] dialogs;
+    [TextArea]
+    public string[] emotions;
 }

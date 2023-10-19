@@ -5323,6 +5323,8 @@ MonoBehaviour:
   _currentDialogId: 0
   allGaze: []
   _theDialog: {fileID: 0}
+  _dialogSpawner: {fileID: 0}
+  _enemySound: {fileID: 0}
   enemyPhase: 0
 --- !u!114 &426567806
 MonoBehaviour:
@@ -5337,7 +5339,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
-  _enemyMaterial: {fileID: 0}
   sound: {fileID: 0}
 --- !u!114 &426567807
 MonoBehaviour:
@@ -5352,7 +5353,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
-  _enemyMaterial: {fileID: 0}
   _hurtDialog: {fileID: 0}
 --- !u!114 &426567808
 MonoBehaviour:
@@ -5367,7 +5367,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
-  _enemyMaterial: {fileID: 0}
   _happyDialog1: {fileID: 0}
   _happyDialog2: {fileID: 0}
 --- !u!1 &809321236
@@ -5398,7 +5397,7 @@ Animator:
   m_GameObject: {fileID: 809321236}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e776fd9c0f6c9a644913f93f32fa24ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 07c17f78d9a7f0340ae7cdefb1b79502, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -5706,6 +5705,8 @@ MonoBehaviour:
   _currentDialogId: 0
   allGaze: []
   _theDialog: {fileID: 0}
+  _dialogSpawner: {fileID: 0}
+  _enemySound: {fileID: 0}
   enemyPhase: 0
 --- !u!114 &903234668
 MonoBehaviour:
@@ -5720,7 +5721,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
-  _enemyMaterial: {fileID: 0}
   sound: {fileID: 0}
 --- !u!114 &903234669
 MonoBehaviour:
@@ -5735,7 +5735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
-  _enemyMaterial: {fileID: 0}
   _hurtDialog: {fileID: 0}
 --- !u!114 &903234670
 MonoBehaviour:
@@ -5750,7 +5749,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
-  _enemyMaterial: {fileID: 0}
   _happyDialog1: {fileID: 0}
   _happyDialog2: {fileID: 0}
 --- !u!1 &941797951
@@ -5858,6 +5856,8 @@ MonoBehaviour:
   _currentDialogId: 0
   allGaze: []
   _theDialog: {fileID: 0}
+  _dialogSpawner: {fileID: 0}
+  _enemySound: {fileID: 0}
   enemyPhase: 0
 --- !u!114 &981552595
 MonoBehaviour:
@@ -5872,7 +5872,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
-  _enemyMaterial: {fileID: 0}
   sound: {fileID: 0}
 --- !u!114 &981552596
 MonoBehaviour:
@@ -5887,7 +5886,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
-  _enemyMaterial: {fileID: 0}
   _hurtDialog: {fileID: 0}
 --- !u!114 &981552597
 MonoBehaviour:
@@ -5902,7 +5900,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
-  _enemyMaterial: {fileID: 0}
   _happyDialog1: {fileID: 0}
   _happyDialog2: {fileID: 0}
 --- !u!1 &994455538
@@ -6071,7 +6068,7 @@ Animator:
   m_GameObject: {fileID: 1081017935}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e776fd9c0f6c9a644913f93f32fa24ca, type: 2}
+  m_Controller: {fileID: 9100000, guid: 415dd6e2a45eed3428b9d81865d4ddbe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -6223,6 +6220,8 @@ MonoBehaviour:
   _currentDialogId: 0
   allGaze: []
   _theDialog: {fileID: 0}
+  _dialogSpawner: {fileID: 0}
+  _enemySound: {fileID: 0}
   enemyPhase: 0
 --- !u!114 &1140986128
 MonoBehaviour:
@@ -6237,7 +6236,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
-  _enemyMaterial: {fileID: 0}
   sound: {fileID: 0}
 --- !u!114 &1140986129
 MonoBehaviour:
@@ -6252,7 +6250,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
-  _enemyMaterial: {fileID: 0}
   _hurtDialog: {fileID: 0}
 --- !u!114 &1140986130
 MonoBehaviour:
@@ -6267,7 +6264,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
-  _enemyMaterial: {fileID: 0}
   _happyDialog1: {fileID: 0}
   _happyDialog2: {fileID: 0}
 --- !u!1 &1142989161
@@ -7117,6 +7113,8 @@ MonoBehaviour:
   _currentDialogId: 0
   allGaze: []
   _theDialog: {fileID: 0}
+  _dialogSpawner: {fileID: 0}
+  _enemySound: {fileID: 0}
   enemyPhase: 0
 --- !u!114 &2110494477
 MonoBehaviour:
@@ -7131,7 +7129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 2741e8507c05d3b4eb4bbb17b7474277, type: 2}
-  _enemyMaterial: {fileID: 0}
   sound: {fileID: 0}
 --- !u!114 &2110494478
 MonoBehaviour:
@@ -7146,7 +7143,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: 0fb79142438090846a7b6f4bd2e63392, type: 2}
-  _enemyMaterial: {fileID: 0}
   _hurtDialog: {fileID: 0}
 --- !u!114 &2110494479
 MonoBehaviour:
@@ -7161,7 +7157,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _material: {fileID: 2100000, guid: a1c757bcebfebf94d88dad85a59205a8, type: 2}
-  _enemyMaterial: {fileID: 0}
   _happyDialog1: {fileID: 0}
   _happyDialog2: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

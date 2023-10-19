@@ -54,10 +54,8 @@ namespace Game
         private GetTheDialogue _theDialog;
         public GetTheDialogue TheDialog { get => _theDialog; }
 
-        [SerializeField] private DialogSpawner _dialogSpawner;
+        [SerializeField]private DialogSpawner _dialogSpawner;
         public DialogSpawner DialogSpawner { get => _dialogSpawner; set => _dialogSpawner = value; }
-        [SerializeField] private AudioClip _enemySound;
-
         public enum EnemyPhase
         {
             INTRO,
@@ -93,9 +91,7 @@ namespace Game
             enemyPhase = EnemyPhase.PHASE1;
             _currentPhase = 1;
             _neutralState.ResetTalkedDialog();
-            MakeAllGazeFalse();
-            _enemyDial[_currentPhase]._validObject._type = GetGaze.GazeType.VALID;
-
+            
         }
 
         public void MakeAllGazeFalse()
@@ -103,9 +99,5 @@ namespace Game
             foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
         }
 
-        private void OnDisable()
-        {
-
-        }
     }
 }
