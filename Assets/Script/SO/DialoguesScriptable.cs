@@ -16,7 +16,5 @@ public class DialoguesScriptable : ScriptableObject
     }
     public DialAndSound[] _dialAndSound;
     [TextArea]
-    public string[] dialogs;
-    [TextArea]
     public string[] emotions;
 }

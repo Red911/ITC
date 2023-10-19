@@ -39,7 +39,7 @@ public class GetTheDialogue : MonoBehaviour
     private void Start()
     {
         _nameText.text = _dialoguesSo.name;
-        _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
+        //_dialogueText.text = _dialoguesSo.dialogs[_currentLine];
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
@@ -55,7 +55,7 @@ public class GetTheDialogue : MonoBehaviour
     [Button]
     private void NextDialogue()
     {
-        if (_currentLine == _dialoguesSo.dialogs.Length - 1 || _randomDialog)
+        if (_currentLine == _dialoguesSo._dialAndSound.Length - 1 || _randomDialog)
         {
             _randomDialog = false;
             DialogueFinish();
@@ -63,8 +63,7 @@ public class GetTheDialogue : MonoBehaviour
         }
 
         _currentLine++;
-        
-        _dialogueText.text = _dialoguesSo.dialogs[_currentLine];
+        _dialogueText.text = _dialoguesSo._dialAndSound[_currentLine]._dialogs;
         StopAllCoroutines();
         AudioClip animalese = ReturnAnimalese(_dialoguesSo);
         StartCoroutine(TypeSentence(_dialoguesSo._dialAndSound[_currentLine]._dialogs, _dialoguesSo._dialAndSound[_currentLine]._sound, animalese));
@@ -82,11 +81,11 @@ public class GetTheDialogue : MonoBehaviour
     IEnumerator TypeSentence(string sentence, AudioClip sound = null, AudioClip animalese = null)
     {
         _dialogueText.text = "";
-        if (animalese != null) ServiceLocator.Get().PlaySound(sound);
+        if (sound != null) ServiceLocator.Get().PlaySound(sound);
         foreach (var letters in sentence)
         {
             _dialogueText.text += letters;
-            ServiceLocator.Get().PlaySound(animalese);
+            if(animalese != null)ServiceLocator.Get().PlaySound(animalese);
             if (letters != ' ') yield return new WaitForSeconds(speedText);
             else yield return new WaitForSeconds(spaceSpeedText);
         }

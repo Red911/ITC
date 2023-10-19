@@ -15,22 +15,33 @@ namespace Game
         {
             EnemyController = enemy;
             enemy.CurrentState = this;
-            EnemyMaterial.material = _material;
             enemy.TheDialog.Ev += OnDialogFinish;
+            EnemyController.DialogSpawner.SetActiveDialogSpawner(false);
 
-            switch(enemy.enemyPhase)
+            switch (enemy.enemyPhase)
             {
                 case EnemyController.EnemyPhase.PHASE1:
                     enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog1, 0);
 
-                    enemy.enemyPhase = EnemyController.EnemyPhase.BEFORE_PHASE2;
+                    //enemy.enemyPhase = EnemyController.EnemyPhase.BEFORE_PHASE2;
                 break;
                 case EnemyController.EnemyPhase.PHASE2:
+                    if (enemy.CurrentPhase >= enemy.MaxPhase - 1)
+                    {
+                        enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
+                        this.ExitState(EnemyController);
+                        EnemyController.NeutralState.EnterState(EnemyController);
+                        break;
+                    }
+
                     enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog2, 0);
-                    enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
 
                 break;
             }
+
+            EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
+            EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
+
         }
 
         public override void UpdateState(EnemyController enemy)
@@ -48,6 +59,8 @@ namespace Game
 
         public override void OnDialogFinish()
         {
+
+            EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
             this.ExitState(EnemyController);
             EnemyController.NeutralState.EnterState(EnemyController);
         }

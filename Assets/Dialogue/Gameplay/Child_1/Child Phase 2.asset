@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Child Phase 2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   _dialAndSound:
   - _dialogs: "Un jour je jouais un samedi avec des amis\r"
     _sound: {fileID: 0}
@@ -24,7 +25,6 @@ MonoBehaviour:
   - _dialogs: A chaque fois je gagne contre mes amis car je suis le meilleur buteur
       !
     _sound: {fileID: 0}
-  _emotions:
-  - Pensif
-  - Heureux
-  - Peur
+  emotions:
+  - peur
+  - ui

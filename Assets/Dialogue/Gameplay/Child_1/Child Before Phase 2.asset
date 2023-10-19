@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Child Before Phase 2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   _dialAndSound:
   - _dialogs: "Oh ! C\u2019est \xE7a ! J\u2019aime trop jouer \xE0 la balle !"
     _sound: {fileID: 0}
@@ -25,4 +26,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "Ah oui ! Je m\u2019en souviens\r"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

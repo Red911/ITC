@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Child Win
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   _dialAndSound:
   - _dialogs: "Je.. Oh oui ! Je jouais au foot avec des amis\r"
     _sound: {fileID: 0}
@@ -33,4 +34,4 @@ MonoBehaviour:
     _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
   - _dialogs: "Et tout \xE7a \xE0 cause de\u2026"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

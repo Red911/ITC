@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Child Intro
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   _dialAndSound:
   - _dialogs: Tu veux jouer avec moi ?
     _sound: {fileID: 0}
@@ -23,4 +24,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "C\u2019est parti !\r"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

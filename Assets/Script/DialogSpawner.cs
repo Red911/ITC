@@ -84,12 +84,14 @@ public class DialogSpawner : MonoBehaviour
             _thoughtsSpawnPos[index].DialogSpawned = true;
 
             DialogLine y = thought.GetComponent<DialogLine>();
-            thought.GetComponent<TextMeshProUGUI>().text = enemy._enemyDial[enemy.CurrentPhase]._dialog.emotions[_thoughtsIndex];
+            TextMeshProUGUI ui = thought.GetComponent<TextMeshProUGUI>();
+            ui.text = enemy._enemyDial[enemy.CurrentPhase]._dialog.emotions[_thoughtsIndex];
+            enemy.TheDialog.EnemySoundInGameDialog(ui, enemy._enemyDial[enemy.CurrentPhase]._dialog.emotions[_thoughtsIndex], enemy.TheDialog.ReturnAnimalese(enemy._enemyDial[enemy.CurrentPhase]._dialog));
             y.DialogPos = _thoughtsSpawnPos[index];
             y.TimeBeforeDispawn = _thoughtsDispawnTime;
             y.DialogDir = new Vector3(Random.Range(-1, 1.1f), Random.Range(-1, 1.1f));
 
-            if (_thoughtsIndex >= _thoughtsSpawnPos.Length)_thoughtsIndex = 0;
+            if (_thoughtsIndex >= _thoughtsSpawnPos.Length - 1)_thoughtsIndex = 0;
             else _thoughtsIndex++;
 
             _thoughtsCdSpawn = _maxThoughtsCdSpawn;
@@ -99,8 +101,7 @@ public class DialogSpawner : MonoBehaviour
 
 
     }
-    public static void SetActiveSpawner(bool active) => SetActiveSpawner(active);
-    private void SetActiveDialogSpawner(bool setActive)
+    public void SetActiveDialogSpawner(bool setActive)
     {
        this.gameObject.SetActive(setActive);
     }
