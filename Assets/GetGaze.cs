@@ -7,6 +7,7 @@ using System.Timers;
 using Tobii.Gaming;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(GazeAware))]
 public class GetGaze : MonoBehaviour
@@ -14,7 +15,7 @@ public class GetGaze : MonoBehaviour
     [Header("Component")]
     [SerializeField] private GazeAware _gazeAware;
     [SerializeField] private MeshRenderer mesh;
-    [SerializeField] private Material redMat;
+    [SerializeField]private Slider eyeKeepSlider;
 
     [Space(25)]
     [SerializeField] private float timeToGaze = 3f;
@@ -38,13 +39,17 @@ public class GetGaze : MonoBehaviour
     {
         _startMat = mesh.material;
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
+        eyeKeepSlider.maxValue = timeToGaze;
     }
 
     private void Update()
     {
+        _timer = Mathf.Clamp(_timer, 0f, timeToGaze);
         
         if (_gazeAware.HasGazeFocus)
         {
+            // if (player.IsTalking) return;
+            eyeKeepSlider.gameObject.SetActive(true);
             _timer += Time.deltaTime;
             if (_timer >= timeToGaze)
             {
@@ -55,8 +60,10 @@ public class GetGaze : MonoBehaviour
         }
         else
         {
-            _timer = 0;
+            _timer -= Time.deltaTime / 1.5f;
+            eyeKeepSlider.gameObject.SetActive(false);
         }
+        eyeKeepSlider.value = _timer;
         
     }
 

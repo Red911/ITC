@@ -133,6 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gazeAware: {fileID: 4583040843788317241}
   mesh: {fileID: 1665814196016164202}
-  redMat: {fileID: 2100000, guid: 4b484fe501fc33b4eba7f037db99617a, type: 2}
+  eyeKeepSlider: {fileID: 0}
   timeToGaze: 1
   _type: 0
