@@ -10,17 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: Child Intro
+  m_Name: Younglings Win
   m_EditorClassIdentifier: 
-  name: Enfant
-  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  name: 
+  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
-  - _dialogs: Tu veux jouer avec moi ?
-    _sound: {fileID: 0}
-  - _dialogs: "Je m\u2019ennuie tout seul ici\u2026"
-    _sound: {fileID: 0}
-  - _dialogs: "Et puis on va manger des g\xE2teaux apr\xE8s !"
-    _sound: {fileID: 0}
-  - _dialogs: "C\u2019est parti !\r"
+  - _dialogs: 
     _sound: {fileID: 0}
   _emotions: []

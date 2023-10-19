@@ -17,7 +17,7 @@ MonoBehaviour:
   _dialAndSound:
   - _dialogs: "Un jour je jouais un samedi avec des amis\r"
     _sound: {fileID: 0}
-  - _dialogs: "C\u2019\xE9tait un endroit o\xF9 ma m\xE8re m\u2019emmenait"
+  - _dialogs: "C\u2019\xE9tait un endroit o\xF9 ma m\xE8re m\u2019emmenait souvent"
     _sound: {fileID: 0}
   - _dialogs: "Mais je crois que y\u2019avait des toboggans et une route \xE0 c\xF4t\xE9"
     _sound: {fileID: 0}

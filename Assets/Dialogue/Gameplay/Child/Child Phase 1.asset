@@ -17,7 +17,7 @@ MonoBehaviour:
   _dialAndSound:
   - _dialogs: "J\u2019aime beaucoup le sport"
     _sound: {fileID: 0}
-  - _dialogs: Je fais du tennis enfaite
+  - _dialogs: Je fais du tennis en fait
     _sound: {fileID: 0}
   - _dialogs: "Je veux jouer \xE0 des jeux ou \xE7a roule"
     _sound: {fileID: 0}

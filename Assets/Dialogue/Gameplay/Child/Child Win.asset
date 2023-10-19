@@ -24,7 +24,7 @@ MonoBehaviour:
   - _dialogs: "Du coup je cours vite, tr\xE8s vite"
     _sound: {fileID: 0}
   - _dialogs: "M\xEAme si ma m\xE8re m\u2019avait dit de ne pas aller sur la route,
-      je l\u2019ai d\xE9sob\xE9i"
+      j'ai d\xE9sob\xE9i"
     _sound: {fileID: 0}
   - _dialogs: "Et l\xE0\u2026 J\u2019ai- Enfin.. Je\u2026"
     _sound: {fileID: 0}
