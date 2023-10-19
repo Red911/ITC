@@ -12,7 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Ourself_Win
   m_EditorClassIdentifier: 
-  name: Ourself
-  clip: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
-  dialogs:
-  - T ki wesh
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: "Protag : - Tu ne comprends pas ! C\u2019est de toi dont je veux me
+      faire pardonner"
+    _sound: {fileID: 0}
+  - _dialogs: 'Monstre : - Moi ?'
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - Oui, toi, moi. La personne que j\u2019\xE9tais dans le
+      pass\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - J\u2019ai \xE9t\xE9 trop dur envers moi-m\xEAme. Je me
+      suis parfois inflig\xE9 des souffrances pour des choses auxquels je n\u2019avais
+      pas le contr\xF4le"
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - Mes erreurs du pass\xE9, je les assumes, je m\u2019en excuse.
+      \xC7a ne refl\xE8te plus la personne que je suis \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - J\u2019en ai marre de me faire du mal. Tu- Enfin, je ne
+      m\xE9rite pa autant de souffrance\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Monstre : - Mais- Pourquoi que maintenant ? Qu\u2019est-ce qui s\u2019est
+      pass\xE9 ? \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - Cela n\u2019a plus d\u2019importance maintenant. Continuons
+      \xE0 avancer avec ce que nous avons v\xE9cu\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: 'Protag : *Le protagoniste lui tend la mains*
+
+'
+    _sound: {fileID: 0}
+  - _dialogs: "Monstre : -...H\xE9h\xE9h\xE9h\xE9 *Le monstre se met \xE0 pleurer*\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Monstre : - Je suis content que tu m\u2019acceptes enfin. Merci\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - Oui. Peu importe ce qui nous attend. Je prend le risque
+      d\u2019\xEAtre avec un giga caca comme toi\r\n"
+    _sound: {fileID: 0}
+  _emotions: []

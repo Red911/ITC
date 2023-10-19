@@ -13,8 +13,22 @@ MonoBehaviour:
   m_Name: Younglings Phase 1
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
-  - _dialogs: 
+  - _dialogs: "Je me souviens d\u2019une o\xF9 j\u2019\xE9tais dans mon coin"
     _sound: {fileID: 0}
-  _emotions: []
+  - _dialogs: "Personne ne me d\xE9rangeait et je ne d\xE9rangeais personne"
+    _sound: {fileID: 0}
+  - _dialogs: "Alors qu\u2019est-ce qu\u2019ils sont venu faire \xE0 ma table ?"
+    _sound: {fileID: 0}
+  - _dialogs: "J-J\u2019\xE9tais juste entrain de travailler "
+    _sound: {fileID: 0}
+  - _dialogs: "A cause d\u2019eux je n\u2019en avais plus la possibilit\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: "Je les D\xC9TESTE !"
+    _sound: {fileID: 0}
+  _emotions:
+  - Rancune
+  - "Col\xE8re"
+  - "Incompr\xE9hension"

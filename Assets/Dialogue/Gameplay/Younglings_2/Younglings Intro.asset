@@ -13,8 +13,21 @@ MonoBehaviour:
   m_Name: Younglings Intro
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
-  - _dialogs: 
+  - _dialogs: "Q-Qui \xEAtes vous ? Qu\u2019est-ce que vous faites ici ? "
+    _sound: {fileID: 0}
+  - _dialogs: Je ne veux voir personne, je ne veux pas souffrir encore plus
+    _sound: {fileID: 0}
+  - _dialogs: "Surtout apr\xE8s tout ce qu\u2019il m\u2019ont fait "
+    _sound: {fileID: 0}
+  - _dialogs: "Qu\u2019est-ce que j\u2019ai fais fais ? ..Je m\xE9ritais vraiment
+      de m\u2019en prendre autant dans la gueule ?"
+    _sound: {fileID: 0}
+  - _dialogs: "Et ce, durant toutes ces ann\xE9es"
+    _sound: {fileID: 0}
+  - _dialogs: "Ce sont que des merdes, ils m\xE9ritent de subir tout ce qu\u2019ils
+      m\u2019ont fait "
     _sound: {fileID: 0}
   _emotions: []

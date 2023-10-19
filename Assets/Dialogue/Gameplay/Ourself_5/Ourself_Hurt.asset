@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Ourself_Hurt
   m_EditorClassIdentifier: 
-  name: Ourself
-  clip: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
-  dialogs:
-  - T ki wesh
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: "Hahahahah ! T'es path\xE9tique, tu ne comprends rien"
+    _sound: {fileID: 0}
+  _emotions:
+  - "Arr\xEAtes le massacre. T'as d\xE9j\xE0 caus\xE9 assez de d\xE9gats, tu ne crois
+    pas ?"

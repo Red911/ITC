@@ -27,7 +27,7 @@ public class DialogSpawner : MonoBehaviour
     [SerializeField, BoxGroup("Thoughts")] private int _thoughtsIndex = 0;
 
     // Start is called before the first frame update
-    void OnEnable()
+    void Start()
     {
         _cdSpawn = _maxCdSpawn;
         _thoughtsCdSpawn = _maxThoughtsCdSpawn;
@@ -55,7 +55,8 @@ public class DialogSpawner : MonoBehaviour
             DialogLine y = dialog.GetComponent<DialogLine>();
             TextMeshProUGUI enemyTxt = dialog.GetComponent<TextMeshProUGUI>();
             enemyTxt.text = enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound[_lineIndex]._dialogs;
-            StartCoroutine(enemy.TheDialog.EnemySoundInGameDialog(enemyTxt, enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound[_lineIndex]._dialogs, enemy._enemyDial[enemy.CurrentPhase]._dialog._animalese));
+            AudioClip animalese = enemy.TheDialog.ReturnAnimalese(enemy._enemyDial[enemy.CurrentPhase]._dialog);
+            StartCoroutine(enemy.TheDialog.EnemySoundInGameDialog(enemyTxt, enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound[_lineIndex]._dialogs, animalese));
             if (_lineIndex >= enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound.Length - 1) _lineIndex = 0;
             else _lineIndex++;
             y.DialogPos = _spawnPos[index];
@@ -83,7 +84,7 @@ public class DialogSpawner : MonoBehaviour
             _thoughtsSpawnPos[index].DialogSpawned = true;
 
             DialogLine y = thought.GetComponent<DialogLine>();
-            thought.GetComponent<TextMeshProUGUI>().text = enemy._enemyDial[enemy.CurrentPhase]._dialog._emotions[_thoughtsIndex];
+            thought.GetComponent<TextMeshProUGUI>().text = enemy._enemyDial[enemy.CurrentPhase]._dialog.emotions[_thoughtsIndex];
             y.DialogPos = _thoughtsSpawnPos[index];
             y.TimeBeforeDispawn = _thoughtsDispawnTime;
             y.DialogDir = new Vector3(Random.Range(-1, 1.1f), Random.Range(-1, 1.1f));
@@ -98,14 +99,9 @@ public class DialogSpawner : MonoBehaviour
 
 
     }
-    public void SetActiveSpawner(bool setActive)
+    public static void SetActiveSpawner(bool active) => SetActiveSpawner(active);
+    private void SetActiveDialogSpawner(bool setActive)
     {
        this.gameObject.SetActive(setActive);
-    }
-
-    private void OnDisable()
-    {
-        _lineIndex = 0;
-        _thoughtsIndex = 0;
     }
 }

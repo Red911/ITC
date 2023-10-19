@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GF_BeforePhase2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
   _dialAndSound:
   - _dialogs: 'PourquoI.. Pourquoi me montrer ceci !
 

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GF_Intro
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
   _dialAndSound:
   - _dialogs: "Toutes ces ann\xE9es de g\xE2ch\xE9s. Je croyais \xEAtre aim\xE9\r\n"
     _sound: {fileID: 0}

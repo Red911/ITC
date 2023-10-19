@@ -13,8 +13,24 @@ MonoBehaviour:
   m_Name: Younglings Phase 2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
-  - _dialogs: 
+  - _dialogs: "Le jour o\xF9 il m'ont enferm\xE9 dans les toilettes.."
     _sound: {fileID: 0}
-  _emotions: []
+  - _dialogs: "Il n\u2019a absolument rien dit."
+    _sound: {fileID: 0}
+  - _dialogs: "Pourtant il m\u2019a regard\xE9 de loin, je l\u2019avais appel\xE9
+      \xE0 l\u2019aide, il avait lu ce que j\u2019avais \xE9cris"
+    _sound: {fileID: 0}
+  - _dialogs: P-Pas une seule aide de sa part ! Rien du tout !
+    _sound: {fileID: 0}
+  - _dialogs: "Il aurait pu au moins pr\xE9venir les profs ce connard ! "
+    _sound: {fileID: 0}
+  - _dialogs: "Faut croire qu\u2019on m\u2019a d\xE9finitivement abandonn\xE9 ce
+      jour-l\xE0"
+    _sound: {fileID: 0}
+  _emotions:
+  - Amertume
+  - Irritation
+  - Rage

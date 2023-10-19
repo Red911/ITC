@@ -15,6 +15,8 @@ MonoBehaviour:
   name: 
   _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
-  - _dialogs: 
+  - _dialogs: "C'est pas \xE7a !"
+    _sound: {fileID: 0}
+  - _dialogs: "Tu es proche, mais pas tr\xE8s loin aussi"
     _sound: {fileID: 0}
   _emotions: []

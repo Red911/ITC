@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_BeforePhase3
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "H\xE9h\xE9.. Hahahaha ! \u2026Bien content que tu reconnaisses enfin
       ce que tu as fais\r\n"

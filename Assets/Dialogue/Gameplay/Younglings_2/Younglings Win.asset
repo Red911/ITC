@@ -13,8 +13,20 @@ MonoBehaviour:
   m_Name: Younglings Win
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
-  - _dialogs: 
+  - _dialogs: "Oui, c\u2019\xE9tait bien cette lettre, celle o\xF9 j\u2019ai tout
+      avou\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: "Toutes mes pens\xE9s, ressentis, douleurs, ma tristesse"
+    _sound: {fileID: 0}
+  - _dialogs: "D\xE9munis d\u2019autres choix, j'en \xE9tais tourment\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: "Je ne voulais m\xEAme pas qu\u2019il aille \xE0 ma messe"
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019\xE9tait bien la peine d'esp\xE9rer, il s\u2019en foutait"
+    _sound: {fileID: 0}
+  - _dialogs: "Je ne pouvais plus rendre la monnaie de leur pi\xE8ce\u2026 \n"
     _sound: {fileID: 0}
   _emotions: []

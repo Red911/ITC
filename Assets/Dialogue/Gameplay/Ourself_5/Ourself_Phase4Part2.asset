@@ -12,7 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Ourself_Phase4Part2
   m_EditorClassIdentifier: 
-  name: Ourself
-  clip: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
-  dialogs:
-  - T ki wesh
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: "De l\u2019espoir ? Ahahahahahah\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Tu vas me faire mourir de rire si \xE7a continue ! \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Tu n\u2019as rien \xE0 esp\xE9rer de la vie ! Elle t\u2019a d\xE9j\xE0
+      abandonn\xE9 !\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Tu n\u2019as plus personne sur lequel tu peux t\u2019appuyer !\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019est la fin pour toi  \r"
+    _sound: {fileID: 0}
+  _emotions:
+  - "Anxi\xE9t\xE9"
+  - "D\xE9termination"
+  - Pensif
+  - 'Serein '

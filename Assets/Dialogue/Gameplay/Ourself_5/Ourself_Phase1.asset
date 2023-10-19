@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_Phase1
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Permet moi de te faire un r\xE9capitulatif \xE0 ton image : monstreux\r\n"
     _sound: {fileID: 0}

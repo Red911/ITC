@@ -12,7 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Ourself_Phase3Part2
   m_EditorClassIdentifier: 
-  name: Ourself
-  clip: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
-  dialogs:
-  - T ki wesh
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: 'Quoi ? Pourquoi tu ne choisis rien ?
+
+'
+    _sound: {fileID: 0}
+  - _dialogs: "Tu te moques de moi c\u2019est \xE7a ? Ahahahah ! Tr\xE8s dr\xF4le
+      ! \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Allez je t\u2019ai rendu la chose encore plus \xE9vidente ! "
+    _sound: {fileID: 0}
+  - _dialogs: CHOISIS MAINTENANT !
+    _sound: {fileID: 0}
+  _emotions:
+  - Pensif
+  - Anxieux
+  - "Excit\xE9"
+  - "Appeur\xE9"
+  - "D\xE9termin\xE9"
