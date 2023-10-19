@@ -1,4 +1,5 @@
 using Game;
+using Game.Script.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,10 +14,21 @@ public class Player : MonoBehaviour
     [SerializeField]private bool _isTalking;
     public bool IsTalking { get => _isTalking; set => _isTalking = value; }
 
+    [SerializeField] AudioClip _music;
 
+    private void Start()
+    {
+        ServiceLocator.Get().PlayMusic(_music);
+    }
     public void DamagePlayer(int damage)
     {
         _health.Damage(damage);
+    }
+
+    public void ChangeMusic(AudioClip newMusic)
+    {
+        ServiceLocator.Get().StopMusic(_music);
+        ServiceLocator.Get().PlayMusic(newMusic);
     }
 
     public void ResetEnemy() => _currentEnemy.ResetEnemy();

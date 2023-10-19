@@ -6716,6 +6716,11 @@ PrefabInstance:
       objectReference: {fileID: 1370803739}
     - target: {fileID: 7976572156040893809, guid: ffd5468f7f23e6d42b74266d01eaaf99,
         type: 3}
+      propertyPath: _music
+      value: 
+      objectReference: {fileID: 8300000, guid: 96c1791463c69644c821126918781882, type: 3}
+    - target: {fileID: 7976572156040893809, guid: ffd5468f7f23e6d42b74266d01eaaf99,
+        type: 3}
       propertyPath: _dialogSpawner
       value: 
       objectReference: {fileID: 1869916670}
@@ -11062,7 +11067,7 @@ PrefabInstance:
     - target: {fileID: 8208801888088815332, guid: 849e4b56f1d8e2144b9e4b6701af0f91,
         type: 3}
       propertyPath: speed
-      value: 5000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 8208801888088815332, guid: 849e4b56f1d8e2144b9e4b6701af0f91,
         type: 3}

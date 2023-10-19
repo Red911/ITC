@@ -15,7 +15,7 @@ namespace Game
         [SerializeField] AudioClip sound;
         public override void EnterState(EnemyController enemy)
         {
-            Debug.Log("FEUR");
+            //Debug.Log("FEUR");
             enemy.CurrentState = this;
             EnemyController = enemy;
             enemy.TheDialog.Ev += OnDialogFinish;
@@ -61,6 +61,7 @@ namespace Game
         {
             if (EnemyController.enemyPhase == EnemyController.EnemyPhase.WIN)
             {
+                EnemyController.DialogSpawner?.SetActiveDialogSpawner(false);
                 EnemyController.transform.root.gameObject.SetActive(false);
                 return;
             }

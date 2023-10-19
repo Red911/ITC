@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Game.Script.SoundManager
@@ -15,6 +16,25 @@ namespace Game.Script.SoundManager
 
             var audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.PlayOneShot(audioClip);
+        }
+
+        public void PlayMusic(AudioClip audioClip)
+        {
+            if (gameObject.GetComponent<AudioSource>() == null)
+            {
+                gameObject.AddComponent<AudioSource>();
+            }
+
+            var audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+        
+        public void StopMusic(AudioClip audioClip)
+        {
+            var audioSource = gameObject?.GetComponent<AudioSource>();
+            if (audioSource.clip == null) return;
+            audioSource.Stop();
         }
     }
 }
