@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,6 +43,11 @@ public class SwitchPostProcValues : MonoBehaviour
     [SerializeField] private Texture2D _monster5GradientTexture;
     [SerializeField] private Texture2D _monster5MaskTexture;
 
+
+    private void Start()
+    {
+        SetPostProcess(0);
+    }
 
     public void SetPostProcess(int monsterNumber)
     {
