@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_PostProcess
+  m_Name: M_PostProcess 2
   m_Shader: {fileID: -6465566751694194690, guid: 6b09bbb22fec9a344b9b405cb2a99b56,
     type: 3}
   m_Parent: {fileID: 0}
@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Gradient:
-        m_Texture: {fileID: 2800000, guid: 2d54322f4dd4c1747be3f674b2b188c7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9688a8dc19a7fa3458987d367f5c1887, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Mask:
