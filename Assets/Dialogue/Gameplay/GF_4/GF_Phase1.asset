@@ -29,7 +29,7 @@ MonoBehaviour:
 
 '
     _sound: {fileID: 0}
-  _emotions:
+  emotions:
   - Solitude
+  - Chagrin
   - Tristesse
-  - "Col\xE8re"

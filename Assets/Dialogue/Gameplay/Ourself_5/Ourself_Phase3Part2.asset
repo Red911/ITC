@@ -27,4 +27,7 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: CHOISIS MAINTENANT !
     _sound: {fileID: 0}
-  emotions: []
+  emotions:
+  - TU NE VAUX RIEN
+  - TU N'AS AUCUN BUT
+  - TOUT EST DE TA FAUTE

@@ -28,7 +28,7 @@ MonoBehaviour:
   - _dialogs: "Il aurait d\xFB se d\xE9brouiller seul quand j\u2019\xE9tais dehors
       avec des amis\r\n"
     _sound: {fileID: 0}
-  _emotions:
+  emotions:
   - "Col\xE8re"
   - Chagrin
   - Envie

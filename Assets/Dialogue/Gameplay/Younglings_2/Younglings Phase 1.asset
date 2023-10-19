@@ -28,7 +28,7 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "Je les D\xC9TESTE !"
     _sound: {fileID: 0}
-  _emotions:
-  - Rancune
+  emotions:
+  - Rancoeur
   - "Col\xE8re"
   - "Incompr\xE9hension"

@@ -30,7 +30,7 @@ MonoBehaviour:
   - _dialogs: "Faut croire qu\u2019on m\u2019a d\xE9finitivement abandonn\xE9 ce
       jour-l\xE0"
     _sound: {fileID: 0}
-  _emotions:
+  emotions:
   - Amertume
-  - Irritation
+  - "Irrit\xE9"
   - Rage

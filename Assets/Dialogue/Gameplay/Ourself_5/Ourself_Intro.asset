@@ -31,4 +31,4 @@ MonoBehaviour:
   - _dialogs: "Je n\u2019ai jamais vu quelqu\u2019un d\u2019aussi antipathique que
       toi\r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

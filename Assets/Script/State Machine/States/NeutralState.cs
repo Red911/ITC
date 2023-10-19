@@ -31,7 +31,6 @@ namespace Game
                 //avant chaque phase principale
                 enemy.CurrentPhase = (int)enemy.enemyPhase;
                 enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0);
-                EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
                 if (EnemyController._enemyDial[EnemyController.CurrentPhase]._validObject != null) EnemyController._enemyDial[EnemyController.CurrentPhase]._validObject._type = GetGaze.GazeType.VALID;
                 EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
                 EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
@@ -65,7 +64,8 @@ namespace Game
                 EnemyController.transform.root.gameObject.SetActive(false);
                 return;
             }
-            
+            if(!EnemyController.DialogSpawner.gameObject.activeSelf)EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
+
         }
 
     }

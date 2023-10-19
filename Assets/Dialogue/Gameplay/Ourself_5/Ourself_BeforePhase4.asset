@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_BeforePhase4
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: 'Protag : - Je veux vivre'
     _sound: {fileID: 0}
@@ -31,4 +32,4 @@ MonoBehaviour:
   - _dialogs: "Monstre : - Menteur ! Menteur, menteur, menteur ! Ahahahahah ! T\u2019es
       qu\u2019un menteur ! Et je vais te le prouver"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

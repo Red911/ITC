@@ -29,4 +29,4 @@ MonoBehaviour:
   - _dialogs: "Alors maintenant : petit quizz. Qu\u2019est-ce qui te restes \xE0
       faire \xE0 pr\xE9sent ? \r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

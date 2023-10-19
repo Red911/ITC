@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_Phase4Part1
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "T\u2019es qu\u2019un moins que rien !\r"
     _sound: {fileID: 0}
@@ -29,8 +30,8 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "Tu peux mourir aujourd\u2019hui tu ne manqueras \xE0 PERSONNE \r"
     _sound: {fileID: 0}
-  _emotions:
+  emotions:
   - "D\xE9termination"
   - Peur
-  - Confiant
-  - 'Serein '
+  - Bravoure
+  - Serein

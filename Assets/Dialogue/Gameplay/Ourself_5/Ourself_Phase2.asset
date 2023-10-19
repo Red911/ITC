@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_Phase2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Comment parler de toi sans mentionner ce qui est arriv\xE9 \xE0 ta
       m\xE8re ? \r\n"
@@ -34,7 +35,7 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "C\u2019est totalement de ta faute ! Ahahahahahah !\r\n"
     _sound: {fileID: 0}
-  _emotions:
+  emotions:
   - Regret
   - "Anxi\xE9t\xE9"
   - Peur

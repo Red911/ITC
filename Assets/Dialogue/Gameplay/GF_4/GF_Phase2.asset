@@ -30,7 +30,7 @@ MonoBehaviour:
   - _dialogs: "Et voil\xE0 o\xF9 \xE7a m\u2019a men\xE9 ! Qu\u2019il aille se faire
       foutre !\r\n"
     _sound: {fileID: 0}
-  _emotions:
+  emotions:
   - "Incompr\xE9hension"
   - Choc
   - Rage

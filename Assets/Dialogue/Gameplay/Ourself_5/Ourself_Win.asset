@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_Win
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Protag : - Tu ne comprends pas ! C\u2019est de toi dont je veux me
       faire pardonner"
@@ -50,4 +51,4 @@ MonoBehaviour:
   - _dialogs: "Protag : - Oui. Peu importe ce qui nous attend. Je prend le risque
       d\u2019\xEAtre avec un giga caca comme toi\r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

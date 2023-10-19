@@ -80,7 +80,6 @@ public class DialogSpawner : MonoBehaviour
             while (_thoughtsSpawnPos[index].DialogSpawned);
 
             GameObject thought = Instantiate(_thoughtsGO, _thoughtsSpawnPos[index].transform);
-            //Debug.Log("UI2");
             _thoughtsSpawnPos[index].DialogSpawned = true;
 
             DialogLine y = thought.GetComponent<DialogLine>();
