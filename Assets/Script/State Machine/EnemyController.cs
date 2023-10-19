@@ -75,6 +75,12 @@ namespace Game
 
         public EnemyPhase enemyPhase;
 
+        [SerializeField]
+        private PlayerMove _playerMove;
+
+        [SerializeField]
+        private Transform _endPoint;
+
         private void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<Player>();
@@ -97,6 +103,12 @@ namespace Game
         public void MakeAllGazeFalse()
         {
             foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
+        }
+
+        private void OnDisable()
+        {
+            _playerMove.EndingPoint = _endPoint;
+            _playerMove.Move();
         }
 
     }

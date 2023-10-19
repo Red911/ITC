@@ -23,15 +23,14 @@ namespace Game
             {
                 enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
                 enemy.CurrentPhase = (int)EnemyController.EnemyPhase.WIN;
-                Debug.Log(enemy._enemyDial.Length - 1);
                 enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy._enemyDial.Length - 1]._dialog, 0);
             }
             else if((int)enemy.enemyPhase % 2 == 0)
             {
                 //avant chaque phase principale
                 enemy.CurrentPhase = (int)enemy.enemyPhase;
+                Debug.Log("ui");
                 enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0);
-                
                 _dialogTalked.Clear();
             }
         }
@@ -61,11 +60,11 @@ namespace Game
                 EnemyController.transform.root.gameObject.SetActive(false);
                 return;
             }
+            EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
             EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
             EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
             EnemyController.MakeAllGazeFalse();
             EnemyController._enemyDial[EnemyController.CurrentPhase]._validObject._type = GetGaze.GazeType.VALID;
-            EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
             
         }
 

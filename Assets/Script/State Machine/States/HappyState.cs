@@ -23,7 +23,6 @@ namespace Game
                 case EnemyController.EnemyPhase.PHASE1:
                     enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog1, 0);
 
-                    //enemy.enemyPhase = EnemyController.EnemyPhase.BEFORE_PHASE2;
                 break;
                 case EnemyController.EnemyPhase.PHASE2:
                     if (enemy.CurrentPhase >= enemy.MaxPhase - 1)
@@ -38,7 +37,7 @@ namespace Game
 
                 break;
             }
-
+            if (enemy.enemyPhase == EnemyController.EnemyPhase.WIN) return;
             EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
             EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
 
