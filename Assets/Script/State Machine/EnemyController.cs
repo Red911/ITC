@@ -37,7 +37,7 @@ namespace Game
             public DialoguesScriptable _dialog;
             public GetGaze _validObject;
 
-            public GetGaze[] _phaseGaze;
+            public List<GetGaze> _phaseGaze;
 
         }
         public EnemyDial[] _enemyDial;
@@ -50,7 +50,7 @@ namespace Game
         public int CurrentPhase { get => _currentPhase; set => _currentPhase = value; }
         public int CurrentDialogId { get => _currentDialogId; set => _currentDialogId = value; }
 
-        [SerializeField] private GetGaze[] allGaze;
+        [SerializeField] private List<GetGaze> allGaze;
 
         [SerializeField]
         private GetTheDialogue _theDialog;
@@ -109,9 +109,16 @@ namespace Game
 
         public void ReplaceGazeWithNewGaze()
         {
-            if (_enemyDial[_currentPhase]._phaseGaze.Length <= 2) return;
+            if (_enemyDial[_currentPhase]._phaseGaze.Count <= 2) return;
             foreach(GetGaze ancientGaze in allGaze)ancientGaze.gameObject.SetActive(false);
-            allGaze = _enemyDial[_currentPhase]._phaseGaze;
+            allGaze.Clear();
+            foreach (GetGaze newGaze in _enemyDial[_currentPhase]._phaseGaze)
+            {
+                newGaze.gameObject.SetActive(true);
+                allGaze.Add(newGaze);
+            }
+
+
         }
 
         private void OnDisable()

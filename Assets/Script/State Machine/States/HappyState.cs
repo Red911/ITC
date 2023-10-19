@@ -27,8 +27,6 @@ namespace Game
             EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
             enemy.TheDialog.SetDialogAndTypeSentence(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog, 0);
 
-            EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
-            EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
 
             /*switch (enemy.enemyPhase)
             {
