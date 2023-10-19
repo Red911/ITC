@@ -142,7 +142,7 @@ namespace Game
         private void OnDisable()
         {
             _playerMove.EndingPoint = _endPoint;
-            DialogSpawner.SetActiveDialogSpawner(false);
+            //DialogSpawner?.SetActiveDialogSpawner(false);
             _playerMove.Move();
             _event.Invoke();
         }

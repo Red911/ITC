@@ -102,6 +102,6 @@ public class DialogSpawner : MonoBehaviour
     }
     public void SetActiveDialogSpawner(bool setActive)
     {
-       this.gameObject.SetActive(setActive);
+        this.gameObject.SetActive(setActive);
     }
 }
