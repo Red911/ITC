@@ -16,8 +16,8 @@ namespace Game
         [SerializeField]
         protected Material _material;
 
-        [SerializeField] private MeshRenderer _enemyMaterial;
-        public MeshRenderer EnemyMaterial { get => _enemyMaterial; set => _enemyMaterial = value; }
+        //[SerializeField] private MeshRenderer _enemyMaterial;
+        //public MeshRenderer EnemyMaterial { get => _enemyMaterial; set => _enemyMaterial = value; }
 
         //[SerializeField] public DialoguesScriptable _dialog;
 

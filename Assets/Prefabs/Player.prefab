@@ -364,6 +364,7 @@ MonoBehaviour:
   _health: {fileID: 811043577938592639}
   _currentEnemy: {fileID: 0}
   _isTalking: 0
+  _ambiance: {fileID: 8300000, guid: f4a58ceb0c55c09449ec626484414802, type: 3}
 --- !u!114 &811043577938592639
 MonoBehaviour:
   m_ObjectHideFlags: 0

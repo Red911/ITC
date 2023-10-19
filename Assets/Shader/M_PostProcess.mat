@@ -28,6 +28,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 1f4141414a2bd5f41ba89eeb2115b000, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 9afac4ba1d605d246a893e0284c0a8e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_010f4c44cbfc4f0d85b7b000d608de46_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 228e3f8364bf2f6448a731a47bfbdacf, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -124,15 +128,15 @@ Material:
     m_Floats:
     - _AddPower: 1
     - _Intensity: 0.08
-    - _Intensity_1: 0.5
-    - _MultiplyPower: 2.5
+    - _Intensity_1: 1
+    - _MultiplyPower: 2
     - _Saturation: 0
     - _Speed: 0
     - _contrast: 0
     - _distance: 0.1
     m_Colors:
-    - _TilingSpeed: {r: 0.5, g: 0, b: 0, a: 0}
-    - _TilingSpeed_1: {r: -0.5, g: 0, b: 0, a: 0}
+    - _TilingSpeed: {r: 1, g: 0.2, b: 0, a: 0}
+    - _TilingSpeed_1: {r: -1, g: -0.1, b: 0, a: 0}
     - _TilingSpeed_2: {r: -0.7, g: 0, b: 0, a: 0}
     - _TilingSpeed_3: {r: 0, g: -2, b: 0, a: 0}
     - _Vector3: {r: 1, g: 1, b: 1, a: 0}
