@@ -10,11 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: Mother
+  m_Name: GF 4
   m_EditorClassIdentifier: 
-  name: Mother
-  clip: {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
+  name: GF
+  clip: {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
   dialogs:
-  - 'T''es gros wesh
-
-'
+  - T'es moche wesh

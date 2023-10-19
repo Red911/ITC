@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Mother Intro
+  m_EditorClassIdentifier: 
+  name: Mother
+  _animalese: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _dialAndSound:
+  - _dialogs: "Pff.. Quelle d\xE9ception\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Je ne sais m\xEAme pas pourquoi je suis surpris\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Il n\u2019y a pas un seul moment o\xF9 j\u2019ai \xE9t\xE9 compris\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Ce n\u2019\xE9tait qu\u2019un incapable. En plus d\u2019\xEAtre un
+      l\xE2che\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "\xC0 aucun moment il n\u2019a su se d\xE9brouiller tout seul\r\n"
+    _sound: {fileID: 0}
+  _emotions: []
