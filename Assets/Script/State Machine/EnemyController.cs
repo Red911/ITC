@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
@@ -37,21 +38,27 @@ namespace Game
             public DialoguesScriptable _dialog;
             public GetGaze _validObject;
 
+            public List<GetGaze> _phaseGaze;
+
         }
         public EnemyDial[] _enemyDial;
 
         [SerializeField]private int _maxPhase = 4;
         [SerializeField]private int _currentPhase;
+        [SerializeField]private int _currentDialogId;
 
         public int MaxPhase { get => _maxPhase; }
         public int CurrentPhase { get => _currentPhase; set => _currentPhase = value; }
+        public int CurrentDialogId { get => _currentDialogId; set => _currentDialogId = value; }
 
-        [SerializeField] private GetGaze[] allGaze;
+        [SerializeField] private List<GetGaze> allGaze;
 
         [SerializeField]
         private GetTheDialogue _theDialog;
         public GetTheDialogue TheDialog { get => _theDialog; }
 
+        [SerializeField]private DialogSpawner _dialogSpawner;
+        public DialogSpawner DialogSpawner { get => _dialogSpawner; set => _dialogSpawner = value; }
         public enum EnemyPhase
         {
             INTRO,
@@ -71,12 +78,22 @@ namespace Game
 
         public EnemyPhase enemyPhase;
 
+        [SerializeField]
+        private PlayerMove _playerMove;
+
+        [SerializeField]
+        private Transform _endPoint;
+
+        [SerializeField, InfoBox("LANCE EVENT QUAND LE MONSTRE MEURT"), BoxGroup("EVENT")]
+        private UnityEvent _event;
+
         private void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<Player>();
             player.CurrentEnemy = this;
             currentState = NeutralState;
             currentState.EnterState(this);
+            DialogSpawner.enemy = this;
 
             _timeBetweenDialog = _maxTimeBetweenDialog;
         }
@@ -86,12 +103,48 @@ namespace Game
             enemyPhase = EnemyPhase.PHASE1;
             _currentPhase = 1;
             _neutralState.ResetTalkedDialog();
-            
+
+            SetGaze();
+
         }
 
-        public void MakeAllGazeFalse()
+        public void SetGaze()
         {
-            foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
+            ReplaceGazeWithNewGaze();
+            ChangeGazeValid(_enemyDial[CurrentPhase]._validObject);
         }
+
+        private void ChangeGazeValid(GetGaze validGaze)
+        {
+            foreach (GetGaze gaze in allGaze)
+            {
+                if (gaze == validGaze)
+                    validGaze._type = GetGaze.GazeType.VALID;
+                else gaze._type = GetGaze.GazeType.INVALID;
+            }
+
+        }
+
+        private void ReplaceGazeWithNewGaze()
+        {
+            if (_enemyDial[_currentPhase]._phaseGaze.Count < 1) return;
+            foreach(GetGaze ancientGaze in allGaze)ancientGaze.gameObject.SetActive(false);
+            allGaze.Clear();
+            foreach (GetGaze newGaze in _enemyDial[_currentPhase]._phaseGaze)
+            {
+                newGaze.gameObject.SetActive(true);
+                allGaze.Add(newGaze);
+            }
+
+
+        }
+
+        private void OnDisable()
+        {
+            _playerMove.EndingPoint = _endPoint;
+            _playerMove.Move();
+            _event.Invoke();
+        }
+
     }
 }

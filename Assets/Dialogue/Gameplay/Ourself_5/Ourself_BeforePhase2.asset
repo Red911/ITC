@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Ourself_BeforePhase2
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: "Ah oui ? Des s\xE9ance th\xE9rapeutiques. heh ! Mais bien s\xFBr\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Ne me fais pas croire que tu voulais changer, ou m\xEAme te comprendre\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Tu n\u2019as jamais pu avouer ce que se passait r\xE9ellement dans
+      ta vie\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Et surtout tes m\xE9faits. Oui, tu sais tr\xE8s bien de quoi je parle
+      \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Esp\xE8ce de menteur qui n\u2019a jamais pu confesser quoi que ce
+      soit \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Je plains tellement les personnes qui ont c\xF4toy\xE9 ta vie\r\n"
+    _sound: {fileID: 0}
+  _emotions: []

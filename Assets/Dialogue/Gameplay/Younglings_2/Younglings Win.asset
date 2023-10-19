@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Younglings Win
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _dialAndSound:
+  - _dialogs: "Oui, c\u2019\xE9tait bien cette lettre, celle o\xF9 j\u2019ai tout
+      avou\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: "Toutes mes pens\xE9s, ressentis, douleurs, ma tristesse"
+    _sound: {fileID: 0}
+  - _dialogs: "D\xE9munis d\u2019autres choix, j'en \xE9tais tourment\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: "Je ne voulais m\xEAme pas qu\u2019il aille \xE0 ma messe"
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019\xE9tait bien la peine d'esp\xE9rer, il s\u2019en foutait"
+    _sound: {fileID: 0}
+  - _dialogs: "Je ne pouvais plus rendre la monnaie de leur pi\xE8ce\u2026 \n"
+    _sound: {fileID: 0}
+  _emotions: []

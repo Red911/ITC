@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Child Before Phase 2
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese:
+  - {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _dialAndSound:
+  - _dialogs: "Oh ! C\u2019est \xE7a ! J\u2019aime trop jouer \xE0 la balle !"
+    _sound: {fileID: 0}
+  - _dialogs: "Ma m\xE8re m\u2019a inscrit au stade de foot\r"
+    _sound: {fileID: 0}
+  - _dialogs: Je suis le meilleur pour rattraper les balles
+    _sound: {fileID: 0}
+  - _dialogs: "Du coup j\u2019y joue aussi avec des amis en dehors du stade"
+    _sound: {fileID: 0}
+  - _dialogs: "Ah oui ! Je m\u2019en souviens\r"
+    _sound: {fileID: 0}
+  emotions: []

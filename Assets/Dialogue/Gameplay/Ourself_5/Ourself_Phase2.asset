@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Ourself_Phase2
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: "Comment parler de toi sans mentionner ce qui est arriv\xE9 \xE0 ta
+      m\xE8re ? \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019est \xE0 cause de toi qu\u2019elle s\u2019est retrouv\xE9 dans
+      cette \xE9tat\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Tu n\u2019\xE9prouves aucun remords ?\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Te souviens-tu au moins de comment tu as r\xE9agis apr\xE8s ce qui
+      s\u2019est pass\xE9 avec ta copine ?\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Oui, apr\xE8s que tu l\u2019ai frapp\xE9. Ne parlons pas \xE0 demi-mot\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: 'Ne justifie pas ta violence par son comportement
+
+'
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019est totalement de ta faute ! Ahahahahahah !\r\n"
+    _sound: {fileID: 0}
+  _emotions:
+  - Regret
+  - "Anxi\xE9t\xE9"
+  - Peur

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Child Phase 2
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese:
+  - {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _dialAndSound:
+  - _dialogs: "Un jour je jouais un samedi avec des amis\r"
+    _sound: {fileID: 0}
+  - _dialogs: "C\u2019\xE9tait un endroit o\xF9 ma m\xE8re m\u2019emmenait souvent"
+    _sound: {fileID: 0}
+  - _dialogs: "Mais je crois que y\u2019avait des toboggans et une route \xE0 c\xF4t\xE9"
+    _sound: {fileID: 0}
+  - _dialogs: A chaque fois je gagne contre mes amis car je suis le meilleur buteur
+      !
+    _sound: {fileID: 0}
+  emotions:
+  - peur
+  - ui

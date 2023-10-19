@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Ourself_Phase4Part1
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: "T\u2019es qu\u2019un moins que rien !\r"
+    _sound: {fileID: 0}
+  - _dialogs: "Un fain\xE9ant !\r"
+    _sound: {fileID: 0}
+  - _dialogs: "Un l\xE2che !\r"
+    _sound: {fileID: 0}
+  - _dialogs: "Et tu vas me faire croire maintenant que tu ne regrettes pas ce que
+      t\u2019as fais ?\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Qu\u2019est-ce qui t\u2019accroches \xE0 la vie d\u2019ailleurs ?
+      T\u2019as litt\xE9ralement plus rien \xE0 perdre\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Tu peux mourir aujourd\u2019hui tu ne manqueras \xE0 PERSONNE \r"
+    _sound: {fileID: 0}
+  _emotions:
+  - "D\xE9termination"
+  - Peur
+  - Confiant
+  - 'Serein '
