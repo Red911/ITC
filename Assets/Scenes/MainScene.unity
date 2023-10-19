@@ -2410,26 +2410,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _postProcessMat: {fileID: 2100000, guid: 6250f7694f80cd542a454251e76ee048, type: 2}
-  _monster1Intensity: 0
-  _monster1ColorMultiplier: 0
-  _monster1GradientTexture: {fileID: 0}
-  _monster1MaskTexture: {fileID: 0}
-  _monster2Intensity: 0
-  _monster2ColorMultiplier: 0
-  _monster2GradientTexture: {fileID: 0}
-  _monster2MaskTexture: {fileID: 0}
-  _monster3Intensity: 0
-  _monster3ColorMultiplier: 0
-  _monster3GradientTexture: {fileID: 0}
-  _monster3MaskTexture: {fileID: 0}
-  _monster4Intensity: 0
-  _monster4ColorMultiplier: 0
-  _monster4GradientTexture: {fileID: 0}
-  _monster4MaskTexture: {fileID: 0}
-  _monster5Intensity: 0
-  _monster5ColorMultiplier: 0
-  _monster5GradientTexture: {fileID: 0}
-  _monster5MaskTexture: {fileID: 0}
+  _monster1Intensity: 0.08
+  _monster1ColorMultiplier: 2.2
+  _monster1GradientTexture: {fileID: 2800000, guid: 3c617209442483e469587c630b9f9f9e,
+    type: 3}
+  _monster1MaskTexture: {fileID: 2800000, guid: 9afac4ba1d605d246a893e0284c0a8e3,
+    type: 3}
+  _monster2Intensity: 0.08
+  _monster2ColorMultiplier: 2.2
+  _monster2GradientTexture: {fileID: 2800000, guid: 61a9e1b13f592c84fb6d4d8782a0b50c,
+    type: 3}
+  _monster2MaskTexture: {fileID: 2800000, guid: 9afac4ba1d605d246a893e0284c0a8e3,
+    type: 3}
+  _monster3Intensity: 0.08
+  _monster3ColorMultiplier: 3
+  _monster3GradientTexture: {fileID: 2800000, guid: 9688a8dc19a7fa3458987d367f5c1887,
+    type: 3}
+  _monster3MaskTexture: {fileID: 2800000, guid: 9afac4ba1d605d246a893e0284c0a8e3,
+    type: 3}
+  _monster4Intensity: 0.08
+  _monster4ColorMultiplier: 5.7
+  _monster4GradientTexture: {fileID: 2800000, guid: 1f4141414a2bd5f41ba89eeb2115b000,
+    type: 3}
+  _monster4MaskTexture: {fileID: 2800000, guid: 9afac4ba1d605d246a893e0284c0a8e3,
+    type: 3}
+  _monster5Intensity: 0.08
+  _monster5ColorMultiplier: 17.7
+  _monster5GradientTexture: {fileID: 2800000, guid: 1da476b1b59f0304b84eea6b74a12b17,
+    type: 3}
+  _monster5MaskTexture: {fileID: 2800000, guid: 5f8aad37a1338774085bc42d489397ca,
+    type: 3}
 --- !u!1 &733806827
 GameObject:
   m_ObjectHideFlags: 0
