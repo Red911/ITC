@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: GF_Hurt
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese: {fileID: 0}
+  _dialAndSound:
+  - _dialogs: N-Ne me fais pas souffrir d'autant plus
+    _sound: {fileID: 8300000, guid: 248ddd3972fad52449f3dcb556b7c4c5, type: 3}
+  - _dialogs: "Pourquoi tu me montre \xE7a ? Je ne crois pas comprendre"
+    _sound: {fileID: 8300000, guid: 248ddd3972fad52449f3dcb556b7c4c5, type: 3}
+  _emotions: []

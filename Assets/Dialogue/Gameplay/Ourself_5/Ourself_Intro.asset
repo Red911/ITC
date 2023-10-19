@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: Ourself_Intro
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: 'Tu es enfin venu..
+
+'
+    _sound: {fileID: 0}
+  - _dialogs: "Qu\u2019est-ce que t\u2019es path\xE9tique tout de m\xEAme \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Est-ce que tu t\u2019es au moins rendu compte une seule fois de ce
+      que t\u2019as fais ?\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Nan s\xFBrement pas, tu t\u2019en fous compl\xE8tement, c\u2019est
+      certains\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Je n\u2019ai jamais vu quelqu\u2019un d\u2019aussi antipathique que
+      toi\r\n"
+    _sound: {fileID: 0}
+  _emotions: []

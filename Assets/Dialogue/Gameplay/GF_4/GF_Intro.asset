@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
+  m_Name: GF_Intro
+  m_EditorClassIdentifier: 
+  name: 
+  _animalese: {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
+  _dialAndSound:
+  - _dialogs: "Toutes ces ann\xE9es de g\xE2ch\xE9s. Je croyais \xEAtre aim\xE9\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Comment je ne m\u2019en suis pas rendue compte plus t\xF4t\r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Depuis le d\xE9but, notre relation n\u2019\xE9tait qu\u2019un mirage
+      \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "Je ne sais m\xEAme pas comment je pourrais garder mon sang froid si
+      je le voyais \r\n"
+    _sound: {fileID: 0}
+  - _dialogs: "J\u2019en ai marre de penser \xE0 lui. Laissez-moi tranquille ! \r\n"
+    _sound: {fileID: 0}
+  _emotions: []
