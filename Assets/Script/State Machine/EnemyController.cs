@@ -33,7 +33,7 @@ namespace Game
         [System.Serializable]
         public struct EnemyDial
         {
-            [Tooltip("Le nom sert juste à se reperer")]
+            [Tooltip("Le nom sert juste Ã  se reperer")]
             public string _phaseName;   
             public DialoguesScriptable _dialog;
             public GetGaze _validObject;

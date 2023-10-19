@@ -80,6 +80,6 @@ Material:
     - _TextureIntensity: 1
     - _TimeSpeed: 1
     m_Colors:
-    - _GlitchColor: {r: 0.5, g: 0, b: 0.017647266, a: 0}
-    - _GlitchColor2: {r: 0.1509434, g: 0, b: 0, a: 0}
+    - _GlitchColor: {r: 0.651258, g: 0, b: 0.745283, a: 0}
+    - _GlitchColor2: {r: 0.3062939, g: 0.024296913, b: 0.3962264, a: 0}
   m_BuildTextureStacks: []
