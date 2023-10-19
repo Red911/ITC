@@ -37,6 +37,8 @@ namespace Game
             public DialoguesScriptable _dialog;
             public GetGaze _validObject;
 
+            public GetGaze[] _phaseGaze;
+
         }
         public EnemyDial[] _enemyDial;
 
@@ -103,6 +105,13 @@ namespace Game
         public void MakeAllGazeFalse()
         {
             foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
+        }
+
+        public void ReplaceGazeWithNewGaze()
+        {
+            if (_enemyDial[_currentPhase]._phaseGaze.Length <= 2) return;
+            foreach(GetGaze ancientGaze in allGaze)ancientGaze.gameObject.SetActive(false);
+            allGaze = _enemyDial[_currentPhase]._phaseGaze;
         }
 
         private void OnDisable()

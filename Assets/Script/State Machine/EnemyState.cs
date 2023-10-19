@@ -13,8 +13,8 @@ namespace Game
 
         public EnemyController EnemyController { get => _enemyController; set => _enemyController = value; }
 
-        [SerializeField]
-        protected Material _material;
+        /*[SerializeField]
+        protected Material _material;*/
 
         //[SerializeField] public DialoguesScriptable _dialog;
 

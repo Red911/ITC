@@ -29,7 +29,6 @@ namespace Game
             {
                 //avant chaque phase principale
                 enemy.CurrentPhase = (int)enemy.enemyPhase;
-                Debug.Log("ui");
                 enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0);
                 _dialogTalked.Clear();
             }
@@ -63,6 +62,7 @@ namespace Game
             EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
             EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
             EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
+            EnemyController.ReplaceGazeWithNewGaze();
             EnemyController.MakeAllGazeFalse();
             EnemyController._enemyDial[EnemyController.CurrentPhase]._validObject._type = GetGaze.GazeType.VALID;
             

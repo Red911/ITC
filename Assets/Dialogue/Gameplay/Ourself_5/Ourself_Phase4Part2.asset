@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_Phase4Part2
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 0}
   _dialAndSound:
   - _dialogs: "De l\u2019espoir ? Ahahahahahah\r\n"
     _sound: {fileID: 0}
@@ -26,8 +27,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "C\u2019est la fin pour toi  \r"
     _sound: {fileID: 0}
-  _emotions:
-  - "Anxi\xE9t\xE9"
-  - "D\xE9termination"
-  - Pensif
-  - 'Serein '
+  emotions: []

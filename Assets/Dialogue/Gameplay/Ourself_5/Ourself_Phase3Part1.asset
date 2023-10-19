@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ourself_Phase3Part1
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Vas-y. Mets fin d\xE9finitivement \xE0 tes souffrances et \xE0 ceux
       des autres\r\n"
@@ -30,9 +31,6 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: Vas-y
     _sound: {fileID: 0}
-  _emotions:
-  - Triste
-  - Heureux
-  - Confiant
-  - Peur
-  - "D\xE9gout"
+  emotions:
+  - VAS Y
+  - QU'ATTENDS-TU

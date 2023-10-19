@@ -9,7 +9,6 @@ namespace Game
     public class HappyState : EnemyState
     {
         [SerializeField, BoxGroup("Dialogues")] private DialoguesScriptable _happyDialog1;
-        [SerializeField, BoxGroup("Dialogues")] private DialoguesScriptable _happyDialog2;
 
         public override void EnterState(EnemyController enemy)
         {
@@ -18,13 +17,37 @@ namespace Game
             enemy.TheDialog.Ev += OnDialogFinish;
             EnemyController.DialogSpawner.SetActiveDialogSpawner(false);
 
-            switch (enemy.enemyPhase)
+            if(enemy.CurrentPhase >= enemy.MaxPhase - 1)
+            {
+                enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
+                this.ExitState(EnemyController);
+                EnemyController.NeutralState.EnterState(EnemyController);
+            }
+            EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
+            EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
+            enemy.TheDialog.SetDialogAndTypeSentence(EnemyController._enemyDial[EnemyController.CurrentPhase]._dialog, 0);
+
+            EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
+            EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
+
+            /*switch (enemy.enemyPhase)
             {
                 case EnemyController.EnemyPhase.PHASE1:
-                    enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog1, 0);
+
 
                 break;
                 case EnemyController.EnemyPhase.PHASE2:
+                    if (enemy.CurrentPhase >= enemy.MaxPhase - 1)
+                    {
+                        
+                        break;
+                    }
+
+                    enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog2, 0);
+
+                break;
+
+                case EnemyController.EnemyPhase.PHASE3:
                     if (enemy.CurrentPhase >= enemy.MaxPhase - 1)
                     {
                         enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
@@ -33,13 +56,12 @@ namespace Game
                         break;
                     }
 
-                    enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog2, 0);
+                    enemy.TheDialog.SetDialogAndTypeSentence(_happyDialog3, 0);
 
-                break;
+                    break;
             }
-            if (enemy.enemyPhase == EnemyController.EnemyPhase.WIN) return;
-            EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
-            EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
+            if (enemy.enemyPhase == EnemyController.EnemyPhase.WIN) return;*/
+            
 
         }
 
