@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
@@ -83,6 +84,9 @@ namespace Game
         [SerializeField]
         private Transform _endPoint;
 
+        [SerializeField, InfoBox("LANCE EVENT QUAND LE MONSTRE MEURT"), BoxGroup("EVENT")]
+        private UnityEvent _event;
+
         private void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<Player>();
@@ -125,6 +129,7 @@ namespace Game
         {
             _playerMove.EndingPoint = _endPoint;
             _playerMove.Move();
+            _event.Invoke();
         }
 
     }
