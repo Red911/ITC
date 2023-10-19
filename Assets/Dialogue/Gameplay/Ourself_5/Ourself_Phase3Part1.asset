@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Ourself_Phase3Part1
   m_EditorClassIdentifier: 
-  name: Ourself
-  _animalese: {fileID: 0}
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Vas-y. Mets fin d\xE9finitivement \xE0 tes souffrances et \xE0 ceux
       des autres\r\n"

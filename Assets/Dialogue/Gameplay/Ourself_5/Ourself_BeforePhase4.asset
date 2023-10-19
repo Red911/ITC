@@ -12,7 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
   m_Name: Ourself_BeforePhase4
   m_EditorClassIdentifier: 
-  name: Ourself
-  clip: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
-  dialogs:
-  - T ki wesh
+  name: 
+  _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
+  _dialAndSound:
+  - _dialogs: 'Protag : - Je veux vivre'
+    _sound: {fileID: 0}
+  - _dialogs: 'Monstre : - H-Hein ?!'
+    _sound: {fileID: 0}
+  - _dialogs: 'Protag : - Tu ne racontes que des mensonges. J-Je suis au courant
+      de tout ce que tu me racontes '
+    _sound: {fileID: 0}
+  - _dialogs: 'Monstre : - Alors ! Fais ce que tu as toujours eu envie de faire'
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - Tais-toi ! Je veux changer, r\xE9parer mes erreurs"
+    _sound: {fileID: 0}
+  - _dialogs: 'Protag : - Je veux commencer une nouvelle vie ! '
+    _sound: {fileID: 0}
+  - _dialogs: "Monstre : - Menteur ! Menteur, menteur, menteur ! Ahahahahah ! T\u2019es
+      qu\u2019un menteur ! Et je vais te le prouver"
+    _sound: {fileID: 0}
+  _emotions: []
