@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dea44a02b0d73234f97bd9c69a896053, type: 3}
-  m_Name: OurselfPhase4Part3
+  m_Name: Ourself_Phase4Part3
   m_EditorClassIdentifier: 
   name: 
   _animalese: {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}

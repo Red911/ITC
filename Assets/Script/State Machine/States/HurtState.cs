@@ -28,6 +28,7 @@ namespace Game
         {
             enemy.CurrentState = null;
             enemy.TheDialog.Ev -= OnDialogFinish;
+            enemy.NeutralState.EnterState(enemy);
 
         }
 
@@ -35,7 +36,6 @@ namespace Game
         {
             EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
             this.ExitState(EnemyController);
-            EnemyController.NeutralState.EnterState(EnemyController);
         }
     }
 }

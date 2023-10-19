@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
@@ -37,6 +38,8 @@ namespace Game
             public DialoguesScriptable _dialog;
             public GetGaze _validObject;
 
+            public List<GetGaze> _phaseGaze;
+
         }
         public EnemyDial[] _enemyDial;
 
@@ -48,7 +51,7 @@ namespace Game
         public int CurrentPhase { get => _currentPhase; set => _currentPhase = value; }
         public int CurrentDialogId { get => _currentDialogId; set => _currentDialogId = value; }
 
-        [SerializeField] private GetGaze[] allGaze;
+        [SerializeField] private List<GetGaze> allGaze;
 
         [SerializeField]
         private GetTheDialogue _theDialog;
@@ -81,6 +84,9 @@ namespace Game
         [SerializeField]
         private Transform _endPoint;
 
+        [SerializeField, InfoBox("LANCE EVENT QUAND LE MONSTRE MEURT"), BoxGroup("EVENT")]
+        private UnityEvent _event;
+
         private void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<Player>();
@@ -97,18 +103,47 @@ namespace Game
             enemyPhase = EnemyPhase.PHASE1;
             _currentPhase = 1;
             _neutralState.ResetTalkedDialog();
-            
+
+            SetGaze();
+
         }
 
-        public void MakeAllGazeFalse()
+        public void SetGaze()
         {
-            foreach (GetGaze gaze in allGaze)gaze._type = GetGaze.GazeType.INVALID;
+            ReplaceGazeWithNewGaze();
+            ChangeGazeValid(_enemyDial[CurrentPhase]._validObject);
+        }
+
+        private void ChangeGazeValid(GetGaze validGaze)
+        {
+            foreach (GetGaze gaze in allGaze)
+            {
+                if (gaze == validGaze)
+                    validGaze._type = GetGaze.GazeType.VALID;
+                else gaze._type = GetGaze.GazeType.INVALID;
+            }
+
+        }
+
+        private void ReplaceGazeWithNewGaze()
+        {
+            if (_enemyDial[_currentPhase]._phaseGaze.Count < 1) return;
+            foreach(GetGaze ancientGaze in allGaze)ancientGaze.gameObject.SetActive(false);
+            allGaze.Clear();
+            foreach (GetGaze newGaze in _enemyDial[_currentPhase]._phaseGaze)
+            {
+                newGaze.gameObject.SetActive(true);
+                allGaze.Add(newGaze);
+            }
+
+
         }
 
         private void OnDisable()
         {
             _playerMove.EndingPoint = _endPoint;
             _playerMove.Move();
+            _event.Invoke();
         }
 
     }

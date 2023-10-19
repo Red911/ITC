@@ -15,6 +15,7 @@ public class StartEnemy : MonoBehaviour
             _enemy.transform.root.gameObject.SetActive(true);
             //_dialogSpawner.gameObject.SetActive(true);
             _enemy.DialogSpawner = _dialogSpawner;
+            this.gameObject.SetActive(false);
         }
 
     }
