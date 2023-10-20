@@ -16,6 +16,8 @@ namespace Game
 
         [SerializeField] private float _m5P31MaxTimer = 20f;
         private float _m5P31Timer = 0;
+
+        [SerializeField]private Animator _m5Animator;
         public override void EnterState(EnemyController enemy)
         {
             //Debug.Log("FEUR");
@@ -29,6 +31,11 @@ namespace Game
             {
                 enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
                 enemy.CurrentPhase = (int)EnemyController.EnemyPhase.WIN;
+                if(enemy.transform.root.name == "M5")
+                {
+                    _m5Animator?.SetBool("Phase 3", false);
+                    _m5Animator?.SetBool("Phase 2", false);
+                }
                 enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy._enemyDial.Length - 1]._dialog, 0);
             }
             else if((int)enemy.enemyPhase % 2 == 0)
@@ -45,8 +52,10 @@ namespace Game
                 if (enemy.enemyPhase == EnemyController.EnemyPhase.PHASE3_PART1)
                 {
                     _m5P31Timer = _m5P31MaxTimer;
+                    _m5Animator?.SetBool("Phase 2", true);
                     return;
                 }
+                if (enemy.enemyPhase == EnemyController.EnemyPhase.PHASE4_PART1) _m5Animator?.SetBool("Phase 3", true);
 
             }
         }

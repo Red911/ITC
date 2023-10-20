@@ -27,10 +27,11 @@ public class DialogSpawner : MonoBehaviour
     [SerializeField, BoxGroup("Thoughts")] private int _thoughtsIndex = 0;
 
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
         _cdSpawn = _maxCdSpawn;
         _thoughtsCdSpawn = _maxThoughtsCdSpawn;
+        ResetIndex();
     }
 
     // Update is called once per frame
