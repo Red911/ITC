@@ -38383,8 +38383,11 @@ MonoBehaviour:
     _phaseGaze: []
   - _phaseName: PHASE 2
     _dialog: {fileID: 11400000, guid: fac3db1cc3a9569409d1d1f7af064905, type: 2}
-    _validObject: {fileID: 3547814559939571020}
-    _phaseGaze: []
+    _validObject: {fileID: 1998801806}
+    _phaseGaze:
+    - {fileID: 18018477}
+    - {fileID: 1561656871}
+    - {fileID: 1998801806}
   - _phaseName: BEFORE PHASE 3.1
     _dialog: {fileID: 11400000, guid: 2770bd566e7a452438e6fe18cdc22681, type: 2}
     _validObject: {fileID: 0}
@@ -38427,7 +38430,7 @@ MonoBehaviour:
     _validObject: {fileID: 0}
     _phaseGaze: []
   - _phaseName: PHASE 4.1
-    _dialog: {fileID: 11400000, guid: c6b42587f8974cd4399ca782955e6da3, type: 2}
+    _dialog: {fileID: 11400000, guid: 88e1e43db0983d04390b06af204dc663, type: 2}
     _validObject: {fileID: 897178010}
     _phaseGaze:
     - {fileID: 13674806}
@@ -38452,11 +38455,11 @@ MonoBehaviour:
     - {fileID: 766327870}
     - {fileID: 1488940385}
   - _phaseName: BEFORE 4.3
-    _dialog: {fileID: 11400000, guid: 844ec6ef5e35b7e4bb8c8fbee6b13017, type: 2}
+    _dialog: {fileID: 11400000, guid: 170e3c0d0e80f13469f133b9a54ca4bb, type: 2}
     _validObject: {fileID: 0}
     _phaseGaze: []
   - _phaseName: PHASE 4.3
-    _dialog: {fileID: 11400000, guid: 88e1e43db0983d04390b06af204dc663, type: 2}
+    _dialog: {fileID: 11400000, guid: 844ec6ef5e35b7e4bb8c8fbee6b13017, type: 2}
     _validObject: {fileID: 1469118753}
     _phaseGaze:
     - {fileID: 1030617818}
@@ -38605,7 +38608,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3935977741136042735
 Transform:
   m_ObjectHideFlags: 0
