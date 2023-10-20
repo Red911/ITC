@@ -11,7 +11,8 @@ using UnityEngine.UI;
 public class NextDialogue : MonoBehaviour
 {
     [Header("Component")]
-    [SerializeField]private GazeAware _gazeAware;
+    //[SerializeField]private GazeAware _gazeAware;
+    private bool _hasGazeFocus;
     [SerializeField]private GetTheDialogue _dialogue;
     [SerializeField]private Slider nextDialogSlider;
     
@@ -28,7 +29,7 @@ public class NextDialogue : MonoBehaviour
     {
         _timer = Mathf.Clamp(_timer, 0f, _timeToGaze);
         
-        if (_gazeAware.HasGazeFocus)
+        if (_hasGazeFocus)
         {
             _timer += Time.deltaTime;
             
@@ -45,5 +46,20 @@ public class NextDialogue : MonoBehaviour
         }
         
         nextDialogSlider.value = _timer;
+    }
+
+    private void OnMouseEnter()
+    {
+        _hasGazeFocus = true;
+    }
+
+    private void OnMouseExit()
+    {
+        _hasGazeFocus = false;
+    }
+
+    private void OnDisable()
+    {
+        _hasGazeFocus = false;
     }
 }

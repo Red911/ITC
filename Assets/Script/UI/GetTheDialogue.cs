@@ -35,6 +35,7 @@ public class GetTheDialogue : MonoBehaviour
     [SerializeField] private KeyCode input;
 
     [SerializeField]private Player player;
+    public GameObject feur;
 
     private void Start()
     {
@@ -122,6 +123,16 @@ public class GetTheDialogue : MonoBehaviour
             if (letters != ' ') yield return new WaitForSeconds(speedTextInGame);
             else yield return new WaitForSeconds(spaceSpeedTextInGame);
         }
+    }
+
+    private void OnDisable()
+    {
+        feur.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        feur.SetActive(true);
     }
 
     private void ShowDialogText() => dialoguePanel.SetActive(true);

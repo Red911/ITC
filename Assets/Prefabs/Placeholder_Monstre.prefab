@@ -131,7 +131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7feaebce29cd489215e1ecd6434c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gazeAware: {fileID: 6727879579407231697}
   eyeKeepSlider: {fileID: 0}
   timeToGaze: 3
   _type: 2
@@ -266,7 +265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7feaebce29cd489215e1ecd6434c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gazeAware: {fileID: 2920651986582005222}
   eyeKeepSlider: {fileID: 0}
   timeToGaze: 3
   _type: 1
@@ -504,7 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7feaebce29cd489215e1ecd6434c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gazeAware: {fileID: 1282004712795083447}
   eyeKeepSlider: {fileID: 5263785917862044755}
   timeToGaze: 1.5
   _type: 1
@@ -827,7 +824,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7feaebce29cd489215e1ecd6434c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gazeAware: {fileID: 6806968269935519027}
   eyeKeepSlider: {fileID: 6071178102470185321}
   timeToGaze: 1.5
   _type: 2
@@ -1147,7 +1143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   _m5P31MaxTimer: 20
-  _M5P32Obj: {fileID: 0}
+  _m5Animator: {fileID: 0}
 --- !u!114 &2281125037870852357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1868,6 +1864,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeToGaze
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8102934790890268166, guid: e9e70f851e5e3664195008962101a3d8,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

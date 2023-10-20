@@ -13,7 +13,8 @@ using UnityEngine.UI;
 public class GetGaze : MonoBehaviour
 {
     [Header("Component")]
-    [SerializeField] private GazeAware _gazeAware;
+    //[SerializeField] private GazeAware _gazeAware;
+    private bool _hasGazeFocus = false;
     [SerializeField]private Slider eyeKeepSlider;
 
     [Space(25)]
@@ -32,7 +33,11 @@ public class GetGaze : MonoBehaviour
     }
 
     public GazeType _type;
-    
+
+    private void OnEnable()
+    {
+        _hasGazeFocus = false;
+    }
 
     private void Start()
     {
@@ -44,8 +49,8 @@ public class GetGaze : MonoBehaviour
     {
         _timer = Mathf.Clamp(_timer, 0f, timeToGaze);
         
-        if (_gazeAware.HasGazeFocus)
-        {
+        if (/*_gazeAware.HasGazeFocus*/_hasGazeFocus)
+        {   
             // if (player.IsTalking) return;
             eyeKeepSlider.gameObject.SetActive(true);
             _timer += Time.deltaTime;
@@ -63,6 +68,21 @@ public class GetGaze : MonoBehaviour
         }
         eyeKeepSlider.value = _timer;
         
+    }
+
+    private void OnMouseEnter()
+    {
+        _hasGazeFocus = true;
+    }
+
+    private void OnMouseExit()
+    {
+        _hasGazeFocus = false;
+    }
+
+    private void OnDisable()
+    {
+        _hasGazeFocus = false;
     }
 
     [Button("Gaze Check", EButtonEnableMode.Playmode)]
