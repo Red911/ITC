@@ -101,6 +101,11 @@ namespace Game
             _timeBetweenDialog = _maxTimeBetweenDialog;
         }
 
+        private void Update()
+        {
+            currentState?.UpdateState(this);
+        }
+
         public void ResetEnemy()
         {
             enemyPhase = EnemyPhase.PHASE1;

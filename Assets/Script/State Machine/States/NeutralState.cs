@@ -63,7 +63,6 @@ namespace Game
         public override void UpdateState(EnemyController enemy)
         {
             if (enemy.enemyPhase != EnemyController.EnemyPhase.PHASE3_PART1) return;
-            Debug.Log("UU");
             if(_m5P31Timer <= 0)
             {
                 EnemyController.HappyState.EnterState(enemy);
