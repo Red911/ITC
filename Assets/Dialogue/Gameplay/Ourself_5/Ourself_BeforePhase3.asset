@@ -16,17 +16,16 @@ MonoBehaviour:
   _animalese:
   - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
-  - _dialogs: "H\xE9h\xE9.. Hahahaha ! \u2026Bien content que tu reconnaisses enfin
-      ce que tu as fais\r\n"
+  - _dialogs: Heh, Bien content que tu reconnaisses enfin ce que tu as fais
     _sound: {fileID: 0}
   - _dialogs: "C\u2019\xE9tait la seul solution \xE0 port\xE9e de mains pour mettre
-      fin \xE0 tes souffrances\r\n"
+      fin \xE0 tes souffrances"
     _sound: {fileID: 0}
   - _dialogs: "Ne soit pas \xE9tonn\xE9, c\u2019\xE9tait plut\xF4t pr\xE9visible.
       Et puis, si \xE7a peut te rassurer beaucoup ont prit le m\xEAme chemin que
-      toi\r\n"
+      toi"
     _sound: {fileID: 0}
   - _dialogs: "Alors maintenant : petit quizz. Qu\u2019est-ce qui te restes \xE0
-      faire \xE0 pr\xE9sent ? \r\n"
+      faire \xE0 pr\xE9sent ? "
     _sound: {fileID: 0}
   emotions: []

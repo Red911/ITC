@@ -17,19 +17,19 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f005ce831b1df94d9be9d0bb658097e, type: 3}
   - {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
   _dialAndSound:
-  - _dialogs: "C\u2019est \xE7a, il m\u2019a abandonn\xE9. Moi, son propre parent\r\n"
+  - _dialogs: "C\u2019est \xE7a, il nous a abandonn\xE9. Nous, ses propres parents"
     _sound: {fileID: 0}
-  - _dialogs: "Comment a-t-il pu me faire \xE7a ? \r\n"
+  - _dialogs: "Comment a-t-il pu nous faire \xE7a ? "
     _sound: {fileID: 0}
-  - _dialogs: "Le pire, c\u2019est qu\u2019il n\u2019est jamais revenu me voir, pas
-      une seule fois\r\n"
+  - _dialogs: "Le pire, c\u2019est qu\u2019il n\u2019est jamais revenu nous voir,
+      pas une seule fois"
     _sound: {fileID: 0}
-  - _dialogs: "Qu\u2019est-ce que je fais ? \r\n"
+  - _dialogs: "Qu\u2019est-ce que nous allons faire ? "
     _sound: {fileID: 0}
-  - _dialogs: "Peut-\xEAtre que je le m\xE9rite apr\xE8s tout \r\n"
+  - _dialogs: "Peut-\xEAtre que nous le m\xE9ritons apr\xE8s tout "
     _sound: {fileID: 0}
-  - _dialogs: "C-Car quand je buvais, je perdais le contr\xF4le, et il m\u2019arrivait
-      de\u2026\r\n"
+  - _dialogs: "Car quand on buvait.. on perdait le contr\xF4le, et il nous arrivait
+      de\u2026"
     _sound: {fileID: 0}
   - _dialogs: "*Commence \xE0 se tenir la t\xEAte* D-De\u2026 Ah.. Ahhh.. ! Reviens
       par piti\xE9 ! Ahhh ! *le monstre disparait*\r\n"

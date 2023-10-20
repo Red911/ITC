@@ -23,12 +23,12 @@ MonoBehaviour:
   - _dialogs: "Un l\xE2che !\r"
     _sound: {fileID: 0}
   - _dialogs: "Et tu vas me faire croire maintenant que tu ne regrettes pas ce que
-      t\u2019as fais ?\r\n"
+      t\u2019as fais ?"
     _sound: {fileID: 0}
   - _dialogs: "Qu\u2019est-ce qui t\u2019accroches \xE0 la vie d\u2019ailleurs ?
-      T\u2019as litt\xE9ralement plus rien \xE0 perdre\r\n"
+      T\u2019as litt\xE9ralement plus rien \xE0 perdre"
     _sound: {fileID: 0}
-  - _dialogs: "Tu peux mourir aujourd\u2019hui tu ne manqueras \xE0 PERSONNE \r"
+  - _dialogs: "Tu peux mourir aujourd\u2019hui tu ne manqueras \xE0 PERSONNE "
     _sound: {fileID: 0}
   emotions:
   - "D\xE9termination"

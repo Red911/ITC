@@ -16,7 +16,8 @@ MonoBehaviour:
   _animalese:
   - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
-  - _dialogs: "Ah oui ? Des s\xE9ance th\xE9rapeutiques. heh ! Mais bien s\xFBr\r\n"
+  - _dialogs: "Ah oui ? ta essayer de changer en te voyant dans le miroir ? heh !
+      Mais bien s\xFBr"
     _sound: {fileID: 0}
   - _dialogs: "Ne me fais pas croire que tu voulais changer, ou m\xEAme te comprendre\r\n"
     _sound: {fileID: 0}

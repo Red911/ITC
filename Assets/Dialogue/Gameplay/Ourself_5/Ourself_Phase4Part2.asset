@@ -16,12 +16,12 @@ MonoBehaviour:
   _animalese:
   - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
-  - _dialogs: "De l\u2019espoir ? Ahahahahahah\r\n"
+  - _dialogs: "De l\u2019espoir ? Ah !"
     _sound: {fileID: 0}
-  - _dialogs: "Tu vas me faire mourir de rire si \xE7a continue ! \r\n"
+  - _dialogs: Tu me fais bien rire !
     _sound: {fileID: 0}
   - _dialogs: "Tu n\u2019as rien \xE0 esp\xE9rer de la vie ! Elle t\u2019a d\xE9j\xE0
-      abandonn\xE9 !\r\n"
+      abandonn\xE9 !"
     _sound: {fileID: 0}
   - _dialogs: "Tu n\u2019as plus personne sur lequel tu peux t\u2019appuyer !\r\n"
     _sound: {fileID: 0}

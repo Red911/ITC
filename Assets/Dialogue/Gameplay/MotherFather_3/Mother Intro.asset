@@ -19,12 +19,12 @@ MonoBehaviour:
   _dialAndSound:
   - _dialogs: "Pff.. Quelle d\xE9ception\r\n"
     _sound: {fileID: 0}
-  - _dialogs: "Je ne sais m\xEAme pas pourquoi je suis surpris\r\n"
+  - _dialogs: "Je ne sais m\xEAme pas pourquoi nous sommes surpris"
     _sound: {fileID: 0}
-  - _dialogs: "Il n\u2019y a pas un seul moment o\xF9 j\u2019ai \xE9t\xE9 compris\r\n"
+  - _dialogs: "Il n\u2019y a pas un seul moment o\xF9 il a essay\xE9\u2026"
     _sound: {fileID: 0}
   - _dialogs: "Ce n\u2019\xE9tait qu\u2019un incapable. En plus d\u2019\xEAtre un
-      l\xE2che\r\n"
+      assist\xE9"
     _sound: {fileID: 0}
   - _dialogs: "\xC0 aucun moment il n\u2019a su se d\xE9brouiller tout seul\r\n"
     _sound: {fileID: 0}

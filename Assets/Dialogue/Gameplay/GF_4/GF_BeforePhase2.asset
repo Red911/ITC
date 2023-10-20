@@ -24,10 +24,10 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "Je veux pas revivre ce qu\u2019il m\u2019a fait subir \r\n"
     _sound: {fileID: 0}
-  - _dialogs: "Quand je lui ai propos\xE9 qu\u2019on se pacte ensemble, il a commenc\xE9
-      \xE0 m\u2019insulter et \xE0 me faire un tas de reproches\r\n"
+  - _dialogs: "Quand je lui ai propos\xE9 qu\u2019on se fiance, il a commenc\xE9
+      \xE0 m\u2019insulter et \xE0 me faire un tas de reproches"
     _sound: {fileID: 0}
-  - _dialogs: "Pourquoi je lui ai accord\xE9 autant d\u2019importance ? J\u2019aurais
-      d\xFB voir les red flags bien avant\u2026"
+  - _dialogs: "*Pleure* Pourquoi je lui ai accord\xE9 autant d\u2019importance ?
+      J\u2019aurais d\xFB voir les signes bien avant\u2026"
     _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
   emotions: []

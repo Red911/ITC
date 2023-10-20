@@ -20,8 +20,8 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: 'Monstre : - H-Hein ?!'
     _sound: {fileID: 0}
-  - _dialogs: 'Protag : - Tu ne racontes que des mensonges. J-Je suis au courant
-      de tout ce que tu me racontes '
+  - _dialogs: 'Protag : - Tu ne racontes que des mensonges. Je suis au courant de
+      tout ce que tu me racontes '
     _sound: {fileID: 0}
   - _dialogs: 'Monstre : - Alors ! Fais ce que tu as toujours eu envie de faire'
     _sound: {fileID: 0}
@@ -29,7 +29,7 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: 'Protag : - Je veux commencer une nouvelle vie ! '
     _sound: {fileID: 0}
-  - _dialogs: "Monstre : - Menteur ! Menteur, menteur, menteur ! Ahahahahah ! T\u2019es
-      qu\u2019un menteur ! Et je vais te le prouver"
+  - _dialogs: "Monstre : - Tu ments ! T\u2019es qu\u2019un menteur ! Et je vais te
+      le prouver"
     _sound: {fileID: 0}
   emotions: []

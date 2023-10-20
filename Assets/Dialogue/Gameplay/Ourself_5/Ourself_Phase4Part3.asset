@@ -16,25 +16,24 @@ MonoBehaviour:
   _animalese:
   - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
-  - _dialogs: "\u201CPardonner\u201D ? Tu veux te faire \u201CPAR-DON-NER ?\u201D\r\n"
+  - _dialogs: "\u201CPardonner\u201D ? Tu veux te faire pardonner ???"
     _sound: {fileID: 0}
-  - _dialogs: Ahahahahaha
+  - _dialogs: "C\u2019est l\u2019id\xE9e la plus idiote que j\u2019ai jamais entendu"
     _sound: {fileID: 0}
-  - _dialogs: "C\u2019est l\u2019id\xE9e la plus idiote que j\u2019ai entendu\r\n"
+  - _dialogs: "Et tu crois vraiment que ceux que tu as bless\xE9s vont te pardonner
+      si facilement ? "
     _sound: {fileID: 0}
   - _dialogs: "Et tu crois vraiment que ceux que tu as bless\xE9s vont te pardonner
       si facilement ? \r\n"
     _sound: {fileID: 0}
-  - _dialogs: "C\u2019est impossible ! \r\n"
+  - _dialogs: "C\u2019est impossible ! "
     _sound: {fileID: 0}
-  - _dialogs: "Mais soit ! Je vais accepter ta th\xE9orie fumeuse\r\n"
+  - _dialogs: "Mais soit ! Je vais accepter ta th\xE9orie"
     _sound: {fileID: 0}
-  - _dialogs: 'Si pour toi la meilleur solution est de se faire pardonner
-
-'
+  - _dialogs: Si pour toi la meilleur solution est de se faire pardonner
     _sound: {fileID: 0}
   - _dialogs: "Qui est la personne la plus apte \xE0 t\u2019aider \xE0 avancer si
-      elle te pardonne ? "
+      elle te pardonne ?"
     _sound: {fileID: 0}
   emotions:
   - ARRETE

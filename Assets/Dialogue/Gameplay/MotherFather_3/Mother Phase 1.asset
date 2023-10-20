@@ -17,16 +17,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f005ce831b1df94d9be9d0bb658097e, type: 3}
   - {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
   _dialAndSound:
-  - _dialogs: "Tous les jours c\u2019\xE9tait pareil, j\u2019en pouvais plus\r\n"
+  - _dialogs: "Tous les jours c\u2019\xE9tait pareil, nous n\u2019en pouvions plus"
     _sound: {fileID: 0}
-  - _dialogs: "Apr\xE8s tout ce que je faisais pour lui \xE0 la maison je n\u2019ai
-      pas eu un seul remerciement\r\n"
+  - _dialogs: "Apr\xE8s tout ce que nous avons fait pour lui \xE0 la maison nous
+      n\u2019avons pas eu un seul remerciement"
     _sound: {fileID: 0}
-  - _dialogs: "Bordel. Tout ceci me donne envie de ne plus penser \xE0 lui et de
-      me d\xE9tendre\r\n"
+  - _dialogs: "Bordel. Tout ceci nous donne envie de ne plus penser \xE0 lui et de
+      nous d\xE9tendre"
     _sound: {fileID: 0}
-  - _dialogs: "Il aurait d\xFB se d\xE9brouiller seul quand j\u2019\xE9tais dehors
-      avec des amis\r\n"
+  - _dialogs: "Il aurait d\xFB se d\xE9brouiller seul quand nous \xE9tions dehors
+      avec des amis"
     _sound: {fileID: 0}
   emotions:
   - "Col\xE8re"

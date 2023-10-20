@@ -17,18 +17,18 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f005ce831b1df94d9be9d0bb658097e, type: 3}
   - {fileID: 8300000, guid: 3843ac53a1cfbc048bd10eb7f2a934a9, type: 3}
   _dialAndSound:
-  - _dialogs: "J\u2019ai commenc\xE9 \xE0 boire \xE0 la maison. Ils me faisaient
-      tellement chier en m\xEAme temps \r\n"
+  - _dialogs: "Nous avons commenc\xE9 \xE0 boire \xE0 la maison. Il me faisait tellement
+      chier en m\xEAme temps "
     _sound: {fileID: 0}
-  - _dialogs: "J\u2019\xE9tais le seul \xE0 faire quelque chose \xE0 la maison\r\n"
+  - _dialogs: "Nous \xE9tions les seuls \xE0 faire quelque chose \xE0 la maison"
     _sound: {fileID: 0}
   - _dialogs: "Alors pourquoi a-t-il pris cette d\xE9cision ?\r\n"
     _sound: {fileID: 0}
-  - _dialogs: "M\xEAme si je n\u2019en avais plus l\u2019occasion apr\xE8s, je devais
-      lui faire comprendre le respect\r\n"
+  - _dialogs: "M\xEAme si nous n'avons plus l\u2019occasion maintenant, nous avons
+      d\xFB lui faire comprendre le respect"
     _sound: {fileID: 0}
-  - _dialogs: "Il a \xE9t\xE9 tellement insolent avec moi, il m\xE9ritait ce qui
-      lui arrive\r\n"
+  - _dialogs: "Il a \xE9t\xE9 tellement insolent avec nous, il m\xE9ritait ce qui
+      lui arrive."
     _sound: {fileID: 0}
   emotions:
   - Tristesse

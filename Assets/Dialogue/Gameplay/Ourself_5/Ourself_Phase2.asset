@@ -27,7 +27,7 @@ MonoBehaviour:
   - _dialogs: "Te souviens-tu au moins de comment tu as r\xE9agis apr\xE8s ce qui
       s\u2019est pass\xE9 avec ta copine ?\r\n"
     _sound: {fileID: 0}
-  - _dialogs: "Oui, apr\xE8s que tu l\u2019ai frapp\xE9. Ne parlons pas \xE0 demi-mot\r\n"
+  - _dialogs: "Oui, apr\xE8s que tu l\u2019ai frapp\xE9. Ne nous voilons pas la face."
     _sound: {fileID: 0}
   - _dialogs: 'Ne justifie pas ta violence par son comportement
 

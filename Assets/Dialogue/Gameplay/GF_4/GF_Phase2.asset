@@ -16,9 +16,7 @@ MonoBehaviour:
   _animalese:
   - {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
   _dialAndSound:
-  - _dialogs: 'Pourquoi ? Pourquoi ? Pourquoi ?
-
-'
+  - _dialogs: Pourquoi.. Pourquoi ?
     _sound: {fileID: 0}
   - _dialogs: "Je savais que c\u2019\xE9tait une mauvaise id\xE9e depuis le d\xE9but\r\n"
     _sound: {fileID: 0}

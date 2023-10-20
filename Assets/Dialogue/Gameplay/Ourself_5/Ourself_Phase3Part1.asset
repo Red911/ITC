@@ -17,9 +17,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Vas-y. Mets fin d\xE9finitivement \xE0 tes souffrances et \xE0 ceux
-      des autres\r\n"
+      des autres"
     _sound: {fileID: 0}
-  - _dialogs: Allez, vas-y
+  - _dialogs: "Allez, vas-y ! t\u2019attends quoi ?!"
     _sound: {fileID: 0}
   - _dialogs: Vas-y
     _sound: {fileID: 0}

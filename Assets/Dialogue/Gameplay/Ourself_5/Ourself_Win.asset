@@ -16,36 +16,39 @@ MonoBehaviour:
   _animalese:
   - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
-  - _dialogs: "Protag : - Tu ne comprends pas ! C\u2019est de toi dont je veux me
-      faire pardonner"
+  - _dialogs: "Protag : -Tu ne comprends pas ! C\u2019est avec toi que je veux faire
+      la paix"
     _sound: {fileID: 0}
   - _dialogs: 'Monstre : - Moi ?'
     _sound: {fileID: 0}
-  - _dialogs: "Protag : - Oui, toi, moi. La personne que j\u2019\xE9tais dans le
+  - _dialogs: "Protag : -Oui, toi. Enfin La personne que j\u2019\xE9tais dans le
       pass\xE9"
     _sound: {fileID: 0}
-  - _dialogs: "Protag : - J\u2019ai \xE9t\xE9 trop dur envers moi-m\xEAme. Je me
-      suis parfois inflig\xE9 des souffrances pour des choses auxquels je n\u2019avais
-      pas le contr\xF4le"
+  - _dialogs: "Protag : - J\u2019ai \xE9t\xE9 trop dur envers moi-m\xEAme. Mon immaturit\xE9
+      m\u2019a parfois inflig\xE9 des souffrances pour des choses auxquels je n\u2019avais
+      pas le contr\xF4le\u2026"
     _sound: {fileID: 0}
   - _dialogs: "Protag : - Mes erreurs du pass\xE9, je les assumes, je m\u2019en excuse.
-      \xC7a ne refl\xE8te plus la personne que je suis \r\n"
+      \xC7a ne refl\xE8te plus la personne que je suis \n"
     _sound: {fileID: 0}
   - _dialogs: "Protag : - J\u2019en ai marre de me faire du mal. Tu- Enfin, je ne
-      m\xE9rite pa autant de souffrance\r\n"
+      m\xE9rite pa autant de souffrance"
     _sound: {fileID: 0}
-  - _dialogs: "Monstre : - Mais- Pourquoi que maintenant ? Qu\u2019est-ce qui s\u2019est
-      pass\xE9 ? \r\n"
+  - _dialogs: "Monstre : -Qu\u2019est-ce qui s\u2019est pass\xE9 ?! Pourquoi changer
+      que maintenant ??\n"
     _sound: {fileID: 0}
-  - _dialogs: "Protag : - Cela n\u2019a plus d\u2019importance maintenant. Continuons
-      \xE0 avancer avec ce que nous avons v\xE9cu\r\n"
+  - _dialogs: "Protag : - J\u2019ai.. grandi, je ne me retrouve plus dans les actes
+      immatures que j\u2019ai commis dans ma jeunesse.\n"
     _sound: {fileID: 0}
   - _dialogs: 'Protag : *Le protagoniste lui tend la mains*
 
 '
     _sound: {fileID: 0}
-  - _dialogs: "Monstre : -...H\xE9h\xE9h\xE9h\xE9"
+  - _dialogs: "Monstre : - ... *Le monstre se met \xE0 pleurer*"
     _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
-  - _dialogs: "Monstre : - Je suis content que tu m\u2019acceptes enfin. Merci\r...\n"
+  - _dialogs: "Monstre : - \u2026Alors c\u2019est comme \xE7a que tout se finit ?"
+    _sound: {fileID: 0}
+  - _dialogs: "Protag : - Oui, il est temps de prendre un nouveau d\xE9part, qu\u2019en
+      pense tu ?"
     _sound: {fileID: 0}
   emotions: []
