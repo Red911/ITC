@@ -65,9 +65,11 @@ namespace Game
             PHASE1,
             BEFORE_PHASE2,
             PHASE2,
-            BEFORE_PHASE3,
-            PHASE3,
-            BEFORE_PHASE4,
+            BEFORE_PHASE3_PART1,
+            PHASE3_PART1,
+            BEFORE_PHASE3_PART2,
+            PHASE3_PART2,
+            BEFORE_PHASE4_PART1,
             PHASE4_PART1,
             BEFORE_PHASE4_PART2,
             PHASE4_PART2,
@@ -111,7 +113,7 @@ namespace Game
         public void SetGaze()
         {
             ReplaceGazeWithNewGaze();
-            ChangeGazeValid(_enemyDial[CurrentPhase]._validObject);
+            if(_enemyDial[CurrentPhase]._validObject != null)ChangeGazeValid(_enemyDial[CurrentPhase]._validObject);
         }
 
         private void ChangeGazeValid(GetGaze validGaze)

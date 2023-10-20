@@ -13,6 +13,10 @@ namespace Game
     {
 
         [SerializeField] AudioClip sound;
+
+        [SerializeField] private float _m5P31MaxTimer;
+        private float _m5P31Timer = 0;
+        [SerializeField] private GameObject _M5P32Obj;
         public override void EnterState(EnemyController enemy)
         {
             //Debug.Log("FEUR");
@@ -28,20 +32,35 @@ namespace Game
             }
             else if((int)enemy.enemyPhase % 2 == 0)
             {
+                
                 //avant chaque phase principale
                 enemy.CurrentPhase = (int)enemy.enemyPhase;
                 enemy.TheDialog.SetDialogAndTypeSentence(enemy._enemyDial[enemy.CurrentPhase]._dialog, 0);
                 if (EnemyController._enemyDial[EnemyController.CurrentPhase]._validObject != null) EnemyController._enemyDial[EnemyController.CurrentPhase]._validObject._type = GetGaze.GazeType.VALID;
                 EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
                 EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
-                EnemyController.SetGaze();
                 _dialogTalked.Clear();
+                if (enemy.enemyPhase == EnemyController.EnemyPhase.BEFORE_PHASE3_PART1)
+                {
+                    _m5P31Timer = _m5P31MaxTimer;
+                    return;
+                }
+                else if(enemy.enemyPhase == EnemyController.EnemyPhase.BEFORE_PHASE3_PART2)
+                    _M5P32Obj.SetActive(true);
+
+                EnemyController.SetGaze();
             }
         }
 
         public override void UpdateState(EnemyController enemy)
         {
-
+            if (enemy.enemyPhase != EnemyController.EnemyPhase.BEFORE_PHASE3_PART1) return;
+            if(_m5P31Timer <= 0)
+            {
+                EnemyController.HappyState.EnterState(enemy);
+                this.ExitState(enemy);
+            }
+            else _m5P31Timer -= Time.deltaTime;
         }
 
         public override void ExitState(EnemyController enemy)
