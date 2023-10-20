@@ -26,5 +26,6 @@ MonoBehaviour:
       !
     _sound: {fileID: 0}
   emotions:
-  - peur
-  - ui
+  - Peur
+  - Pensif
+  - Heureux

@@ -44,11 +44,8 @@ MonoBehaviour:
 
 '
     _sound: {fileID: 0}
-  - _dialogs: "Monstre : -...H\xE9h\xE9h\xE9h\xE9 *Le monstre se met \xE0 pleurer*\r\n"
-    _sound: {fileID: 0}
-  - _dialogs: "Monstre : - Je suis content que tu m\u2019acceptes enfin. Merci\r\n"
-    _sound: {fileID: 0}
-  - _dialogs: "Protag : - Oui. Peu importe ce qui nous attend. Je prend le risque
-      d\u2019\xEAtre avec un giga caca comme toi\r\n"
+  - _dialogs: "Monstre : -...H\xE9h\xE9h\xE9h\xE9"
+    _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
+  - _dialogs: "Monstre : - Je suis content que tu m\u2019acceptes enfin. Merci\r...\n"
     _sound: {fileID: 0}
   emotions: []

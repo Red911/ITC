@@ -27,14 +27,15 @@ namespace Game.Script.SoundManager
 
             var audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.clip = audioClip;
+            audioSource.loop = true;
             audioSource.Play();
         }
         
-        public void StopMusic(AudioClip audioClip)
+        public void StopMusic()
         {
             var audioSource = gameObject?.GetComponent<AudioSource>();
             if (audioSource.clip == null) return;
-            audioSource.Stop();
+            audioSource.Pause();
         }
     }
 }

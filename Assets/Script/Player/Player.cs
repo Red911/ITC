@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
     public void ChangeMusic(AudioClip newMusic)
     {
-        ServiceLocator.Get().StopMusic(_music);
+        ServiceLocator.Get().StopMusic();
         ServiceLocator.Get().PlayMusic(newMusic);
     }
 
