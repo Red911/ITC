@@ -73,7 +73,7 @@ namespace Game
         public override void ExitState(EnemyController enemy)
         {
             enemy.CurrentState = null;
-            if(enemy.enemyPhase != EnemyController.EnemyPhase.WIN)EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
+            //if(enemy.enemyPhase != EnemyController.EnemyPhase.WIN)EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
             EnemyController.NeutralState.EnterState(EnemyController);
             enemy.TheDialog.Ev -= OnDialogFinish;
         }

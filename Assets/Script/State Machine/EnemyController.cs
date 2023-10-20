@@ -96,6 +96,7 @@ namespace Game
             currentState = NeutralState;
             currentState.EnterState(this);
             DialogSpawner.enemy = this;
+            _dialogSpawner.ResetIndex();
 
             _timeBetweenDialog = _maxTimeBetweenDialog;
         }

@@ -14,17 +14,18 @@ namespace Game
 
         [SerializeField] AudioClip sound;
 
-        [SerializeField] private float _m5P31MaxTimer;
+        [SerializeField] private float _m5P31MaxTimer = 20f;
         private float _m5P31Timer = 0;
-        [SerializeField] private GameObject _M5P32Obj;
         public override void EnterState(EnemyController enemy)
         {
             //Debug.Log("FEUR");
             enemy.CurrentState = this;
             EnemyController = enemy;
+            if (!EnemyController.DialogSpawner.gameObject.activeSelf) EnemyController.DialogSpawner.SetActiveDialogSpawner(false);
+            else EnemyController.DialogSpawner.SetActiveDialogSpawner(true);
             enemy.TheDialog.Ev += OnDialogFinish;
 
-            if(enemy.enemyPhase == EnemyController.EnemyPhase.WIN)
+            if (enemy.enemyPhase == EnemyController.EnemyPhase.WIN)
             {
                 enemy.enemyPhase = EnemyController.EnemyPhase.WIN;
                 enemy.CurrentPhase = (int)EnemyController.EnemyPhase.WIN;
@@ -40,21 +41,20 @@ namespace Game
                 EnemyController.CurrentPhase = (int)EnemyController.enemyPhase + 1;
                 EnemyController.enemyPhase = EnemyController.enemyPhase + 1;
                 _dialogTalked.Clear();
-                if (enemy.enemyPhase == EnemyController.EnemyPhase.BEFORE_PHASE3_PART1)
+                EnemyController.SetGaze();
+                if (enemy.enemyPhase == EnemyController.EnemyPhase.PHASE3_PART1)
                 {
                     _m5P31Timer = _m5P31MaxTimer;
                     return;
                 }
-                else if(enemy.enemyPhase == EnemyController.EnemyPhase.BEFORE_PHASE3_PART2)
-                    _M5P32Obj.SetActive(true);
 
-                EnemyController.SetGaze();
             }
         }
 
         public override void UpdateState(EnemyController enemy)
         {
-            if (enemy.enemyPhase != EnemyController.EnemyPhase.BEFORE_PHASE3_PART1) return;
+            if (enemy.enemyPhase != EnemyController.EnemyPhase.PHASE3_PART1) return;
+            Debug.Log("UU");
             if(_m5P31Timer <= 0)
             {
                 EnemyController.HappyState.EnterState(enemy);

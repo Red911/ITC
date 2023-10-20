@@ -54,7 +54,7 @@ public class DialogSpawner : MonoBehaviour
             GameObject dialog = Instantiate(_dialogGO, _spawnPos[index].transform);
             DialogLine y = dialog.GetComponent<DialogLine>();
             TextMeshProUGUI enemyTxt = dialog.GetComponent<TextMeshProUGUI>();
-            enemyTxt.text = enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound[_lineIndex]._dialogs;
+            enemyTxt.text = enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound[_lineIndex]._dialogs;    
             AudioClip animalese = enemy.TheDialog.ReturnAnimalese(enemy._enemyDial[enemy.CurrentPhase]._dialog);
             StartCoroutine(enemy.TheDialog.EnemySoundInGameDialog(enemyTxt, enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound[_lineIndex]._dialogs, animalese));
             if (_lineIndex >= enemy._enemyDial[enemy.CurrentPhase]._dialog._dialAndSound.Length - 1) _lineIndex = 0;
@@ -103,5 +103,11 @@ public class DialogSpawner : MonoBehaviour
     public void SetActiveDialogSpawner(bool setActive)
     {
         this.gameObject.SetActive(setActive);
+    }
+
+    public void ResetIndex()
+    {
+        _lineIndex = 0;
+        _thoughtsIndex = 0;
     }
 }

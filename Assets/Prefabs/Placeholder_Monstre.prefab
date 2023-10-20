@@ -132,7 +132,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gazeAware: {fileID: 6727879579407231697}
-  mesh: {fileID: 9618709892706940}
   eyeKeepSlider: {fileID: 0}
   timeToGaze: 3
   _type: 2
@@ -268,7 +267,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gazeAware: {fileID: 2920651986582005222}
-  mesh: {fileID: 7736378786267265957}
   eyeKeepSlider: {fileID: 0}
   timeToGaze: 3
   _type: 1
@@ -507,7 +505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gazeAware: {fileID: 1282004712795083447}
-  mesh: {fileID: 7961153001276315222}
   eyeKeepSlider: {fileID: 5263785917862044755}
   timeToGaze: 1.5
   _type: 1
@@ -831,7 +828,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gazeAware: {fileID: 6806968269935519027}
-  mesh: {fileID: 6939118591697162254}
   eyeKeepSlider: {fileID: 6071178102470185321}
   timeToGaze: 1.5
   _type: 2
@@ -952,7 +948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5688475456747529847
 Transform:
   m_ObjectHideFlags: 0
@@ -1150,6 +1146,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
+  _m5P31MaxTimer: 20
+  _M5P32Obj: {fileID: 0}
 --- !u!114 &2281125037870852357
 MonoBehaviour:
   m_ObjectHideFlags: 0
