@@ -33,4 +33,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "M\xEAme si un moment, j\u2019avoue que\u2026 \r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

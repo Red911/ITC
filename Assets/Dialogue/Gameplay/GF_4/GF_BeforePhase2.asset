@@ -30,4 +30,4 @@ MonoBehaviour:
   - _dialogs: "Pourquoi je lui ai accord\xE9 autant d\u2019importance ? J\u2019aurais
       d\xFB voir les red flags bien avant\u2026"
     _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
-  _emotions: []
+  emotions: []

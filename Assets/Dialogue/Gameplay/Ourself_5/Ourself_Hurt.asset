@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c886183212b53654199fdba1a7dcc3de, type: 3}
   _dialAndSound:
   - _dialogs: "Hahahahah ! T'es path\xE9tique, tu ne comprends rien"
-    _sound: {fileID: 0}
+    _sound: {fileID: 8300000, guid: cd541a0a7676a4b47b26080bc5ea1901, type: 3}
   emotions: []

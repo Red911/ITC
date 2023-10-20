@@ -17,7 +17,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6b890e35bd71d6d499d257b3a6c12953, type: 3}
   _dialAndSound:
   - _dialogs: "C'est pas \xE7a !"
-    _sound: {fileID: 0}
+    _sound: {fileID: 8300000, guid: cd541a0a7676a4b47b26080bc5ea1901, type: 3}
   - _dialogs: "Tu es proche, mais pas tr\xE8s loin aussi"
-    _sound: {fileID: 0}
+    _sound: {fileID: 8300000, guid: cd541a0a7676a4b47b26080bc5ea1901, type: 3}
   emotions: []

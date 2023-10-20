@@ -28,4 +28,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "\xC0 aucun moment il n\u2019a su se d\xE9brouiller tout seul\r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

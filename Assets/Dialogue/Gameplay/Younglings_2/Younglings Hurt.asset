@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Younglings Hurt
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
+  _animalese:
+  - {fileID: 8300000, guid: f125244bc39a9ee4aa716196b1843a15, type: 3}
   _dialAndSound:
   - _dialogs: "C'est pas \xE7a !"
-    _sound: {fileID: 0}
+    _sound: {fileID: 8300000, guid: cd541a0a7676a4b47b26080bc5ea1901, type: 3}
   - _dialogs: "Tu es proche, mais pas tr\xE8s loin aussi"
-    _sound: {fileID: 0}
-  _emotions: []
+    _sound: {fileID: 8300000, guid: cd541a0a7676a4b47b26080bc5ea1901, type: 3}
+  emotions: []

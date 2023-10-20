@@ -34,4 +34,4 @@ MonoBehaviour:
   - _dialogs: "*Commence \xE0 se tenir la t\xEAte* D-De\u2026 Ah.. Ahhh.. ! Reviens
       par piti\xE9 ! Ahhh ! *le monstre disparait*\r\n"
     _sound: {fileID: 8300000, guid: a1d39d41eae9d5048bc96bee35fbab78, type: 3}
-  _emotions: []
+  emotions: []

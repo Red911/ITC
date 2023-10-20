@@ -28,4 +28,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "J\u2019en ai marre de penser \xE0 lui. Laissez-moi tranquille ! \r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

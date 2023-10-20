@@ -29,4 +29,4 @@ MonoBehaviour:
   - _dialogs: "Quelle erreur. \xC7a s\u2019est empir\xE9 \xE0 partir du moment o\xF9
       il est entr\xE9 dans ma vie\r\n"
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []

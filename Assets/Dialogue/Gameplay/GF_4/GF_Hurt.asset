@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: GF_Hurt
   m_EditorClassIdentifier: 
   name: 
-  _animalese: {fileID: 0}
+  _animalese:
+  - {fileID: 8300000, guid: 651479339e5132c418f3afb39a476d87, type: 3}
   _dialAndSound:
   - _dialogs: N-Ne me fais pas souffrir d'autant plus
-    _sound: {fileID: 8300000, guid: 248ddd3972fad52449f3dcb556b7c4c5, type: 3}
+    _sound: {fileID: 8300000, guid: cd541a0a7676a4b47b26080bc5ea1901, type: 3}
   - _dialogs: "Pourquoi tu me montre \xE7a ? Je ne crois pas comprendre"
-    _sound: {fileID: 8300000, guid: 248ddd3972fad52449f3dcb556b7c4c5, type: 3}
-  _emotions: []
+    _sound: {fileID: 8300000, guid: cd541a0a7676a4b47b26080bc5ea1901, type: 3}
+  emotions: []

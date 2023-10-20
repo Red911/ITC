@@ -37,4 +37,4 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: "E-Et apr\xE8s, j\u2019ai\u2026 Il a\u2026 Ahh\u2026 AAAAHHHHHH ! "
     _sound: {fileID: 0}
-  _emotions: []
+  emotions: []
