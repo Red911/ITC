@@ -9,14 +9,8 @@ public class StartEnemy : MonoBehaviour
 {
     [SerializeField]private EnemyController _enemy;
     [SerializeField]private DialogSpawner _dialogSpawner;
-
-    [SerializeField] private AudioClip _music;
-
-    private Player _player;
-
     private void Start()
     {
-        _player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,8 +19,7 @@ public class StartEnemy : MonoBehaviour
         {
             _enemy.transform.root.gameObject.SetActive(true);
             //_dialogSpawner.gameObject.SetActive(true);
-            _enemy.DialogSpawner = _dialogSpawner;
-            if(_music != null) _player.ChangeMusic(_music);                
+            _enemy.DialogSpawner = _dialogSpawner;           
             
             this.gameObject.SetActive(false);
         }

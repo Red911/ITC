@@ -72,6 +72,7 @@ public class GetGaze : MonoBehaviour
 
     private void OnMouseEnter()
     {
+        if (player.IsTalking) return;
         _hasGazeFocus = true;
     }
 

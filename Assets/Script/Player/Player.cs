@@ -25,11 +25,5 @@ public class Player : MonoBehaviour
         _health.Damage(damage);
     }
 
-    public void ChangeMusic(AudioClip newMusic)
-    {
-        ServiceLocator.Get().StopMusic();
-        ServiceLocator.Get().PlayMusic(newMusic);
-    }
-
     public void ResetEnemy() => _currentEnemy.ResetEnemy();
 }

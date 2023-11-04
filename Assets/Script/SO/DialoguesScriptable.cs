@@ -13,6 +13,7 @@ public class DialoguesScriptable : ScriptableObject
         [TextArea]
         public string _dialogs;
         public AudioClip _sound;
+        public AudioClip _music;
     }
     public DialAndSound[] _dialAndSound;
     [TextArea]

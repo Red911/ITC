@@ -79,10 +79,16 @@ public class GetTheDialogue : MonoBehaviour
         ev?.Invoke();
     }
 
-    IEnumerator TypeSentence(string sentence, AudioClip sound = null, AudioClip animalese = null)
+    IEnumerator TypeSentence(string sentence, AudioClip sound = null, AudioClip animalese = null, AudioClip music = null)
     {
         _dialogueText.text = "";
         if (sound != null) ServiceLocator.Get().PlaySound(sound);
+        if(music != null)
+        {
+            ServiceLocator.Get().StopMusic();
+            ServiceLocator.Get().PlayMusic(music);
+
+        }
         foreach (var letters in sentence)
         {
             _dialogueText.text += letters;

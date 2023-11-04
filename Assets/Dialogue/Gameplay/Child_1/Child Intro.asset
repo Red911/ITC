@@ -18,10 +18,14 @@ MonoBehaviour:
   _dialAndSound:
   - _dialogs: Tu veux jouer avec moi ?
     _sound: {fileID: 0}
+    _music: {fileID: 0}
   - _dialogs: "Je m\u2019ennuie tout seul ici\u2026"
     _sound: {fileID: 0}
+    _music: {fileID: 0}
   - _dialogs: "Et puis on va manger des g\xE2teaux apr\xE8s !"
     _sound: {fileID: 0}
+    _music: {fileID: 0}
   - _dialogs: "C\u2019est parti !\r"
     _sound: {fileID: 0}
+    _music: {fileID: 8300000, guid: 19d9b52377333ab47b1a48abe721f912, type: 3}
   emotions: []

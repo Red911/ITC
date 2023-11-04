@@ -20,9 +20,6 @@ MonoBehaviour:
     _sound: {fileID: 0}
   - _dialogs: Je fais du tennis en fait
     _sound: {fileID: 0}
-  - _dialogs: "Je parle m\xEAme pas de ton ami, enfin ancien ami, maintenant que
-      tu l\u2019as laiss\xE9 \xEAtre martyris\xE9."
-    _sound: {fileID: 0}
   - _dialogs: "A l\u2019\xE9cole j\u2019ai beaucoup d\u2019amis en plus pour jouer
       avec\r"
     _sound: {fileID: 0}
